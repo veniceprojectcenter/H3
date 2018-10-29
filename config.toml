@@ -2,7 +2,7 @@
 baseURL = "https://h3-sdpt.firebaseapp.com/"
 languageCode = "en-us"
 title = "H3"
-theme = "forty"
+theme = "H3-Theme"
 
 # Enter your tracking code to enable Google Analytics
 googleAnalytics = ""
@@ -41,7 +41,7 @@ disqusShortname = ""
     subtitle = "Welcome to H3"
     menu = "Menu"
     # Optional logo as brand stored in img/
-    # logo = "H3.png"
+    logo = "H3 Logo.png"
 
     [[params.navigation.links]]
       name = "Home"
@@ -57,7 +57,7 @@ disqusShortname = ""
 
     [[params.navigation.links]]
       name = "Events"
-      url = "events.html"
+      url = "events"
 
     # Add custom links here by uncommenting code below. To remove links just delete
     # the [[params.navigation.links]] map associated with that link. Copy and paste

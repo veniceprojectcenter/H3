@@ -8,14 +8,30 @@
   </url>
   
   <url>
+    <loc>https://h3-sdpt.firebaseapp.com/about/</loc>
+  </url>
+  
+  <url>
     <loc>https://h3-sdpt.firebaseapp.com/categories/</loc>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://h3-sdpt.firebaseapp.com/companies/</loc>
+  </url>
+  
+  <url>
+    <loc>https://h3-sdpt.firebaseapp.com/events/</loc>
   </url>
   
   <url>
     <loc>https://h3-sdpt.firebaseapp.com/</loc>
     <lastmod>2018-10-24T15:00:38+02:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://h3-sdpt.firebaseapp.com/companies/hive/</loc>
   </url>
   
   <url>

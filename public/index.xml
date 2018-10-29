@@ -17,7 +17,16 @@
       <pubDate>Wed, 24 Oct 2018 15:00:38 +0200</pubDate>
       
       <guid>https://h3-sdpt.firebaseapp.com/posts/my-first-post/</guid>
-      <description>gfdbb</description>
+      <description>Primero</description>
+    </item>
+    
+    <item>
+      <title>Hive</title>
+      <link>https://h3-sdpt.firebaseapp.com/companies/hive/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://h3-sdpt.firebaseapp.com/companies/hive/</guid>
+      <description>We are the Hive company at H3</description>
     </item>
     
   </channel>
