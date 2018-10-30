@@ -1,3 +1,8 @@
-@import 'components/logo';
+@import 'font-awesome.min.css';
 
-@import 'layout/nav';
+body {
+    margin: 0;
+    padding: 0;
+}
+
+@import 'layout/header';
