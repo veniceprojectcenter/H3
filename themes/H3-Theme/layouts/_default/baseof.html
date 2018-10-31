@@ -6,15 +6,18 @@
 
     <body>
 
-        <div id="wrapper">
-            {{ partial "header.html" . }}
-            <p> hello </p>
-            {{ partial "footer.html" . }}
+        {{ partial "header.html" . }}
+        <div id="base-content" class="content">
+
+            {{ block "main" . }}
+
+            {{end}}
+
         </div>
+        {{ partial "footer.html" . }}
 
     </body>
 
-    <script>
-        {{ partial "main.js" . }}
-    </script>
+    {{ partial "scripts.html" . }}
+
 </html>

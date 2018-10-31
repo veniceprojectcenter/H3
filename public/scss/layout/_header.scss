@@ -1,26 +1,34 @@
 #header {
     margin: 0;
     padding: 0;
-    background-color: red;
+    background-color: #1a1a1a;
     height: 50px;
+    position: fixed;
+    width: 100%;
 
     img {
         height: 30px;
         margin: 10px;
     }
 
-    #menuBtn {
-        float: right;
-        &:hover {
-            color: green;
-        }
-    }
+
+}
+
+#menuBtn{
+    float: right;
+    margin-right: 10px;
+}
+#menuClose {
+    float: right;
+    margin-right: 10px;
 }
 
 nav#menu {
-    //visibility: hidden;
+    visibility: hidden;
     position: fixed;
     width: 100%;
+    height: 100%;
+    background-color: rgba(26, 26, 26, 0.8);
     ul {
         text-align: center;
         list-style-type: none;

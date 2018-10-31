@@ -1,11 +1,13 @@
 body, p, a {
     color: white;
     text-decoration: none;
-    font-size: 18pt;
-    font-family: "Playfair Display";
+    font-size: 14pt;
+    font-weight: 500;
+    //font-family: "Playfair Display";
+    //font-family: 'Source Sans Pro';
 }
 
-*:hover, a:hover {
+*:hover, a:hover{
     color: desaturate(darken(white, 25), 5);
     cursor: pointer;
 }

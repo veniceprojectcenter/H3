@@ -5,6 +5,7 @@ body, p, a {
     font-family: "Playfair Display";
 }
 
-*:hover {
-    color: desaturate(darken(white, 15), 5);
+*:hover, a:hover{
+    color: desaturate(darken(white, 25), 5);
+    cursor: pointer;
 }

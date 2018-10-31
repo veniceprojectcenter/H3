@@ -6,6 +6,7 @@
 </header>
 
 <nav id="menu">
+    <i id="menuClose" class="fas fa-times"></i>
     <ul class="links">
         {{ range .Site.Params.Navigation.links }}
             <li><a href="{{ .url | absURL}}">{{ .name }}</a></li>
@@ -14,9 +15,6 @@
     <ul class="actions vertical">
         {{ range .Site.Params.Navigation.button1 }}
             <li><a href="{{ .url | absURL}}" class="button special fit">{{ .name }}</a></li>
-        {{ end }}
-        {{ range .Site.Params.Navigation.button2 }}
-            <li><a href="{{ .url | absURL}}" class="button fit">{{ .name }}</a></li>
         {{ end }}
     </ul>
 </nav>
