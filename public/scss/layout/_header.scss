@@ -9,16 +9,8 @@
         margin: 10px;
     }
 
-    #menu {
+    #menuBtn {
         float: right;
-        &:after {
-            content: '\f0c9';
-            font-family: "Font Awesome 5 Free";
-            font-weight: normal;
-            font-style: normal;
-            margin:0px 0px 0px 10px;
-            text-decoration:none;
-        }
         &:hover {
             color: green;
         }
@@ -27,6 +19,8 @@
 
 nav#menu {
     //visibility: hidden;
+    position: fixed;
+    width: 100%;
     ul {
         text-align: center;
         list-style-type: none;

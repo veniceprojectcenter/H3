@@ -1,8 +1,9 @@
-@import 'font-awesome.min.css';
+@import 'libs/vars';
+@import 'libs/functions';
 
-body {
-    margin: 0;
-    padding: 0;
-}
+
+@import 'base/page';
+@import 'base/typography';
 
 @import 'layout/header';
+@import 'layout/footer';

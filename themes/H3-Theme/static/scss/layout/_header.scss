@@ -1,0 +1,26 @@
+#header {
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a;
+    height: 50px;
+
+    img {
+        height: 30px;
+        margin: 10px;
+    }
+
+    #menuBtn {
+        float: right;
+        margin-right: 10px;
+    }
+}
+
+nav#menu {
+    visibility: hidden;
+    position: fixed;
+    width: 100%;
+    ul {
+        text-align: center;
+        list-style-type: none;
+    }
+}

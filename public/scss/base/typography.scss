@@ -1,0 +1,10 @@
+body, p, a {
+    color: white;
+    text-decoration: none;
+    font-size: 18pt;
+    font-family: "Playfair Display";
+}
+
+*:hover {
+    color: desaturate(darken(white, 15), 5);
+}
