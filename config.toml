@@ -73,7 +73,7 @@ disqusShortname = ""
     # Button Style 2
     [[params.navigation.button1]]
       name = "Login"
-      url = "#"
+      url = "login"
 
 
   # Banner section
