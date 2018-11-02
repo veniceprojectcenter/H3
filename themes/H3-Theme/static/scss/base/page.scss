@@ -5,7 +5,8 @@ body {
 }
 
 div.content {
-    padding: 50;
+    padding-top: 50;
+    padding-bottom: 50;
 }
 
 #page-title {
@@ -33,4 +34,9 @@ input[type=text] {
     &:focus {
         background-color: #1a1a1a;
     }
+}
+
+#carousel {
+    width: 100%;
+    height: auto;
 }

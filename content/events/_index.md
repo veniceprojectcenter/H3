@@ -1,7 +1,7 @@
 ---
 title: "Events"
 ---
-<form>
+<form id="eventForm">
     <h2>Event Title</h2>
     <input type="text" name="eventTitle">
 

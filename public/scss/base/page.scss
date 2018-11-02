@@ -5,7 +5,8 @@ body {
 }
 
 div.content {
-    padding: 50;
+    padding-top: 50;
+    padding-bottom: 50;
 }
 
 #page-title {
@@ -20,4 +21,22 @@ div.content {
 }
 .column {
     flex: 50%;
+}
+
+input[type=text] {
+    border: 2px solid gray;
+    border-radius: 4px;
+    background-color: transparent;
+    color: white;
+    padding: 5px 5px;
+    margin: 5px 5px;
+    box-sizing: border-box;
+    &:focus {
+        background-color: #1a1a1a;
+    }
+}
+
+#carousel {
+    width: 100%;
+    height: auto;
 }
