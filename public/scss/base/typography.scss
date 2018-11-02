@@ -1,8 +1,20 @@
-body, p, a {
+body, p, a, h1, h2 {
     color: white;
     text-decoration: none;
-    font-size: 18pt;
-    font-family: "Playfair Display";
+    font-size: 14pt;
+    font-weight: 500;
+    font-family: ('Source Sans Pro', Helvetica, sans-serif);
+    //font-family: "Playfair Display";
+}
+h1 {
+    font-size: 20pt;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+}
+h2 {
+    font-size: 14pt;
+    text-transform: uppercase;
+    letter-spacing: 0.10em;
 }
 
 *:hover, a:hover{

@@ -70,10 +70,14 @@ disqusShortname = ""
     #    name = "NameOfLink"
     #    url = "UrlOfLink"
 
-    # Button Style 2
+    # Button Style 1
     [[params.navigation.button1]]
       name = "Login"
       url = "login"
+
+    [[params.navigation.button1]]
+      name = "Portal"
+      url = "portal"
 
 
   # Banner section
