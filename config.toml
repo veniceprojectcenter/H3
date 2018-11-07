@@ -56,12 +56,12 @@ disqusShortname = ""
       url = "companies"
 
     [[params.navigation.links]]
-      name = "Events"
-      url = "events"
+      name = "Spaces"
+      url = "spaces"
 
-    [[params.navigation.links]]
-      name = "Exhibits"
-      url = "exhibits"
+    [[params.navigation.button1]]
+      name = "Book Room"
+      url = "bookEvent"
 
     # Add custom links here by uncommenting code below. To remove links just delete
     # the [[params.navigation.links]] map associated with that link. Copy and paste

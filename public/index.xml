@@ -11,12 +11,12 @@
     
     
     <item>
-      <title>Hive</title>
-      <link>https://h3-sdpt.firebaseapp.com/companies/hive/</link>
+      <title>Book Event</title>
+      <link>https://h3-sdpt.firebaseapp.com/spaces/bookevent/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://h3-sdpt.firebaseapp.com/companies/hive/</guid>
-      <description>We are the Hive company at H3</description>
+      <guid>https://h3-sdpt.firebaseapp.com/spaces/bookevent/</guid>
+      <description>Here is our event booking.</description>
     </item>
     
   </channel>
