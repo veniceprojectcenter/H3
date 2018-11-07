@@ -11,12 +11,48 @@
     
     
     <item>
-      <title>Book Event</title>
-      <link>https://h3-sdpt.firebaseapp.com/spaces/bookevent/</link>
+      <title>Accounting</title>
+      <link>https://h3-sdpt.firebaseapp.com/portal/accounting/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://h3-sdpt.firebaseapp.com/spaces/bookevent/</guid>
-      <description>Here is our event booking.</description>
+      <guid>https://h3-sdpt.firebaseapp.com/portal/accounting/</guid>
+      <description>Here is accounting information</description>
+    </item>
+    
+    <item>
+      <title>Book Event</title>
+      <link>https://h3-sdpt.firebaseapp.com/spaces/book-event/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://h3-sdpt.firebaseapp.com/spaces/book-event/</guid>
+      <description>Here is the form to book an event</description>
+    </item>
+    
+    <item>
+      <title>Documents</title>
+      <link>https://h3-sdpt.firebaseapp.com/portal/documents/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://h3-sdpt.firebaseapp.com/portal/documents/</guid>
+      <description>Here are the documents</description>
+    </item>
+    
+    <item>
+      <title>Manuals</title>
+      <link>https://h3-sdpt.firebaseapp.com/portal/manuals/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://h3-sdpt.firebaseapp.com/portal/manuals/</guid>
+      <description>Here are the manuals</description>
+    </item>
+    
+    <item>
+      <title>Service Request</title>
+      <link>https://h3-sdpt.firebaseapp.com/portal/service-request/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://h3-sdpt.firebaseapp.com/portal/service-request/</guid>
+      <description>Here you can request a service</description>
     </item>
     
   </channel>

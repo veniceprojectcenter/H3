@@ -12,11 +12,11 @@
     
     <item>
       <title>Book Event</title>
-      <link>https://h3-sdpt.firebaseapp.com/spaces/bookevent/</link>
+      <link>https://h3-sdpt.firebaseapp.com/spaces/book-event/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://h3-sdpt.firebaseapp.com/spaces/bookevent/</guid>
-      <description>Here is our event booking.</description>
+      <guid>https://h3-sdpt.firebaseapp.com/spaces/book-event/</guid>
+      <description>Here is the form to book an event</description>
     </item>
     
   </channel>

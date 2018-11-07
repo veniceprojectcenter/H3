@@ -19,3 +19,22 @@
     background-color: white;
     color: black;
 }
+#eventForm figure {
+    display: table;
+    width: 1px; /* This can be any width, so long as it's narrower than any image */
+}
+#eventForm img, figcaption {
+    display: table-row;
+    text-align: center;
+}
+
+
+.floorplan {
+    height: 500px;
+    width: auto;
+}
+
+.clock {
+    height: 200px;
+    width: auto;
+}

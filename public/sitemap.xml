@@ -3,15 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://h3-sdpt.firebaseapp.com/spaces/bookevent/</loc>
+    <loc>https://h3-sdpt.firebaseapp.com/portal/accounting/</loc>
   </url>
   
   <url>
-    <loc>https://h3-sdpt.firebaseapp.com/spaces/bookevent/</loc>
-  </url>
-  
-  <url>
-    <loc>https://h3-sdpt.firebaseapp.com/bookroom/</loc>
+    <loc>https://h3-sdpt.firebaseapp.com/spaces/book-event/</loc>
   </url>
   
   <url>
@@ -21,6 +17,10 @@
   
   <url>
     <loc>https://h3-sdpt.firebaseapp.com/companies/</loc>
+  </url>
+  
+  <url>
+    <loc>https://h3-sdpt.firebaseapp.com/portal/documents/</loc>
   </url>
   
   <url>
@@ -37,11 +37,15 @@
   </url>
   
   <url>
+    <loc>https://h3-sdpt.firebaseapp.com/portal/manuals/</loc>
+  </url>
+  
+  <url>
     <loc>https://h3-sdpt.firebaseapp.com/portal/</loc>
   </url>
   
   <url>
-    <loc>https://h3-sdpt.firebaseapp.com/servicerequest/</loc>
+    <loc>https://h3-sdpt.firebaseapp.com/portal/service-request/</loc>
   </url>
   
   <url>

@@ -34,8 +34,6 @@
     </ul>
     <ul class="actions vertical">
         
-            <li><a href="https://h3-sdpt.firebaseapp.com/bookEvent" class="button special fit">Book Room</a></li>
-        
             <li><a href="https://h3-sdpt.firebaseapp.com/login" class="button special fit">Login</a></li>
         
             <li><a href="https://h3-sdpt.firebaseapp.com/portal" class="button special fit">Portal</a></li>
@@ -48,8 +46,98 @@
             
     <h1 id="page-title">Spaces</h1>
     <form id="eventForm">
+
     <div>
-        <a href="./bookEvent">bookEvent(test)</a>
+        <h2>Contact</h2>
+        Group: <input type="text"> (company or organizaiton name if applicable)<br>
+        Name of Contact: <input type="text"><br>
+        Contact Email: <input type="text"><br>
+        Contact Cell: <input type="text"><br>
+    </div>
+
+    <div>
+        <h2>Event</h2>
+        Title: <input type="text"><br>
+        Type:
+        <select>
+            <option>Seminar</option>
+            <option>Workshop</option>
+            <option>Lecture</option>
+            <option>Concert</option>
+            <option>Exhibit</option>
+            <option>Dj Set</option>
+            <option>Cocktail</option>
+            <option>Meeting</option>
+            <option>Empty Space</option>
+            <option>Other</option>
+        </select>
+        <br>
+        Expected # of people: <input type="text"><br>
+        Description: <input type="text"><br>
+    </div>
+
+    <div>
+        <h2>Space</h2>
+        Select space(s):
+        <div class="row">
+            <figure>
+                <img class="floorplan" src="../../../img/floorplan.png" alt="">
+                <figcaption>Ground Floor</figcaption>
+            </figure>
+            <figure>
+                <img class="floorplan" src="../../../img/floorplan.png" alt="">
+                <figcaption>Second Floor</figcaption>
+            </figure>
+            <figure>
+                <img class="floorplan" src="../../../img/floorplan.png" alt="">
+                <figcaption>Third Floor</figcaption>
+            </figure>
+        </div>
+    </div>
+
+    <div>
+        <h2>Date and Time</h2>
+        Select dates for the event:<br>
+        <div class="row">
+            <iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;height=300&amp;wkst=1&amp;bgcolor=%23ffffff&amp;src=24bfeets83nltlu90frr67m6c8%40group.calendar.google.com&amp;color=%23B1365F&amp;ctz=Europe%2FRome" style="border-width:0" width="400" height="300" frameborder="0" scrolling="no"></iframe>
+
+            <figure>
+                <figcaption>Start Time</figcaption>
+                <img class="clock" src="../../../img/clock.png" alt="">
+            </figure>
+            <figure>
+                <figcaption>End Time</figcaption>
+                <img class="clock" src="../../../img/clock.png" alt="">
+            </figure>
+        </div>
+    </div>
+
+    <div>
+        <h2>Requirements</h2>
+        <ul>
+            <li>Usher:<input type="checkbox"></li>
+            <li>Room Attendant:<input type="checkbox"></li>
+            <li>Mic:<input type="checkbox"></li>
+            <li>Speakers:<input type="checkbox"></li>
+            <li>Chairs:<input type="text"></li>
+        </ul>
+
+    </div>
+
+    <div>
+        <h2>Final Cost:</h2>
+        € XXX.XX
+        <input type="submit">
+    </div>
+
+
+
+
+
+    <hr>
+
+
+    <div>
         <h2>Type of Event</h2>
         <ul>
             <li>Seminar</li>

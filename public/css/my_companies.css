@@ -1,0 +1,9 @@
+#company-pane {
+    margin: 70px;
+}
+
+.company-logo {
+    height: 300;
+    width: 300;
+    margin: 30px;
+}
