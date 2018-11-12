@@ -1,20 +1,21 @@
-var menu = document.getElementById("menu");
-var menuBtn = document.getElementById("menuBtn");
-var menuClose = document.getElementById("menuClose");
-var header = document.getElementById("header");
-var homeContent = document.getElementById("home-content");
-var baseContent = document.getElementById("base-content");
 
-menuBtn.onclick = function() {
-    menu.style.visibility = 'visible';
-    $(header).addClass('blur');
-    $(homeContent).addClass('blur');
-    $(baseContent).addClass('blur');
-}
+/*var companyCards = document.getElementsByClassName('company-logo')
 
-menuClose.onclick = function() {
-    menu.style.visibility = 'hidden';
-    $(header).removeClass('blur');
-    $(homeContent).removeClass('blur');
-    $(baseContent).removeClass('blur');
-}
+for (let companyCard of companyCards) {
+    companyCard.hover(
+        function() { // mouseenter
+            var cardOverlay = getElementsByClassName('card-img-overlay')[0];
+            cardOverlay.style.visibility = 'visible';
+        },
+        function() { // mouseexit
+            var cardOverlay = getElementsByClassName('card-img-overlay')[0];
+            cardOverlay.style.visibility = 'hidden';
+        }
+    )
+}*/
+
+$(document).ready(function(){
+    $("#flip").hover(function(){
+        $("#panel").slideToggle(300);
+    });
+});

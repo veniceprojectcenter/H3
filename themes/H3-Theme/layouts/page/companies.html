@@ -1,0 +1,49 @@
+{{ define "main" }}
+    <h1 id="page-title">{{ .Title }}</h1>
+
+
+
+    <div class="row company-pane">
+
+        {{ range .Site.Params.companies }}
+            <div class="col-sm">
+                <div class="card bg-dark text-white company-logo">
+                    <img class="card-img" src="{{ .logo }}" alt="Card image">
+                    <div class="card-img-overlay">
+                        <h3 class="card-title">{{ .name }}</h3>
+                        <p class="card-text">{{ .description }}</p>
+                    </div>
+                </div>
+            </div>
+        {{ end }}
+
+    </div>
+
+    <div class="row company-pane">
+
+        <div class="col-sm">
+            <div id="flip" class="card bg-dark text-white company-logo">
+                <img class="card-img" src="../../../img/company-logos/Articity.png" alt="Card image">
+                <div id="panel" class="card-img-overlay">
+                    <h3 class="card-title">Test</h3>
+                    <p class="card-text">Test Description</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="company-pane">
+        <img class="company-logo" src="../../../img/company-logos/Articity.png">
+        <img class="company-logo" src="../../../img/company-logos/Bankogiro.png">
+        <img class="company-logo" src="../../../img/company-logos/Casa Peota.png">
+        <br>
+        <img class="company-logo" src="../../../img/company-logos/daAaB.png">
+        <img class="company-logo" src="../../../img/company-logos/fairbnb.png">
+        <img class="company-logo" src="../../../img/company-logos/JVF.png">
+        <br>
+        <img class="company-logo" src="../../../img/company-logos/Marketzquare.png">
+        <img class="company-logo" src="../../../img/company-logos/OpenStreetLamp.png">
+        <img class="company-logo" src="../../../img/company-logos/Swarmoola.png">
+    </div>
+{{end}}

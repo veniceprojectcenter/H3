@@ -16,10 +16,6 @@
   </url>
   
   <url>
-    <loc>https://h3-sdpt.firebaseapp.com/companies/</loc>
-  </url>
-  
-  <url>
     <loc>https://h3-sdpt.firebaseapp.com/portal/documents/</loc>
   </url>
   
@@ -53,8 +49,16 @@
   </url>
   
   <url>
+    <loc>https://h3-sdpt.firebaseapp.com/companies/</loc>
+  </url>
+  
+  <url>
     <loc>https://h3-sdpt.firebaseapp.com/tags/</loc>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://h3-sdpt.firebaseapp.com/test/</loc>
   </url>
   
 </urlset>

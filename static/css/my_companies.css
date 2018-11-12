@@ -7,3 +7,23 @@
     width: 300;
     margin: 30px;
 }
+
+.card-img-overlay {
+    height: 300;
+    width: 300;
+    background-color: rgba(255, 0, 0, 0.5);
+}
+
+#panel {
+    position:absolute;
+    bottom:0;
+    display:none;
+    padding:0;
+    margin:0;
+}
+
+#flap {
+    position:relative;
+    width:300px;
+    height:100px;
+}

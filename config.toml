@@ -11,69 +11,113 @@ googleAnalytics = ""
 disqusShortname = ""
 
 [params]
-  # You can use Markdown syntax for urls [text](//url.to/source)
-  # To create multi-line text in strings use the """example Text""" format
-  #
-  # All icons using Fontawesome's icon font. Look at fontawesome.io/icons
-  # for more icons. The icons are represented by their corresponding
-  # CSS class.
+    # You can use Markdown syntax for urls [text](//url.to/source)
+    # To create multi-line text in strings use the """example Text""" format
+    #
+    # All icons using Fontawesome's icon font. Look at fontawesome.io/icons
+    # for more icons. The icons are represented by their corresponding
+    # CSS class.
 
-  # Provide your metadata here.
-  name = "Peter Maida"
-  description = "SerenDPT supported"
+    # Provide your metadata here.
+    name = "Peter Maida"
+    description = "H3 Website"
 
-  # Link custom assets relative to /static
-  custom_css = []
-  custom_js  = []
-  favicon    = "favicon.ico"
+    # Link custom assets relative to /static
+    custom_css = []
+    custom_js  = []
+    favicon    = "favicon.ico"
 
-  # Just a custom image variable, please define it in .md files for content.
-  image = ""
+    # Just a custom image variable, please define it in .md files for content.
+    image = ""
 
-  # 404 error customization
-  [params.error404]
-    heading = "Page couldn't be found"
-    text = "Please visit [this page](/)"
+    # 404 error customization
+    [params.error404]
+        heading = "Page couldn't be found"
+        text = "Please visit [this page](/)"
 
-  # Navigation Section
-  [params.navigation]
-    title = "H3"
-    subtitle = "Welcome to H3"
-    menu = "Menu"
-    # Optional logo as brand stored in img/
-    logo = "H3 Logo.png"
+    # Navigation Section
+    [params.navigation]
+        title = "H3"
+        subtitle = "Welcome to H3"
+        menu = "Menu"
+        # Optional logo as brand stored in img/
+        logo = "H3 Logo.png"
+        home = "#"
 
-    [[params.navigation.links]]
-      name = "Home"
-      url = "#"
+        [[params.navigation.links]]
+            name = "History"
+            url = "history"
 
-    [[params.navigation.links]]
-      name = "History"
-      url = "history"
+        [[params.navigation.links]]
+            name = "Start-ups"
+            url = "companies"
 
-    [[params.navigation.links]]
-      name = "Companies"
-      url = "companies"
+        [[params.navigation.links]]
+            name = "Spaces"
+            url = "spaces"
 
-    [[params.navigation.links]]
-      name = "Spaces"
-      url = "spaces"
+        # Add custom links here by uncommenting code below. To remove links just delete
+        # the [[params.navigation.links]] map associated with that link. Copy and paste
+        # code below if you need more links. Buttons work in the same way.
+        # [[params.navigation.links]]
+        #    name = "NameOfLink"
+        #    url = "UrlOfLink"
 
-    # Add custom links here by uncommenting code below. To remove links just delete
-    # the [[params.navigation.links]] map associated with that link. Copy and paste
-    # code below if you need more links. Buttons work in the same way.
-    # [[params.navigation.links]]
-    #    name = "NameOfLink"
-    #    url = "UrlOfLink"
+        # Button Style 1
+        [[params.navigation.button1]]
+            name = "Login"
+            url = "login"
 
-    # Button Style 1
-    [[params.navigation.button1]]
-      name = "Login"
-      url = "login"
+        [[params.navigation.button2]]
+            name = "Portal"
+            url = "portal"
 
-    [[params.navigation.button1]]
-      name = "Portal"
-      url = "portal"
+
+    [[params.companies]]
+        name = "Articity"
+        logo = "../../../img/company-logos/Articity.png"
+        description = "Here is a brief desccription"
+
+    [[params.companies]]
+        name = "Bankogiro"
+        logo = "../../../img/company-logos/Bankogiro.png"
+        description = "Here is a brief desccription"
+
+    [[params.companies]]
+        name = "Casa Peota"
+        logo = "../../../img/company-logos/Casa Peota.png"
+        description = "Here is a brief desccription"
+
+    [[params.companies]]
+        name = "daAaB"
+        logo = "../../../img/company-logos/daAaB.png"
+        description = "Here is a brief desccription"
+
+    [[params.companies]]
+        name = "fairbnb"
+        logo = "../../../img/company-logos/fairbnb.png"
+        description = "Here is a brief desccription"
+
+    [[params.companies]]
+        name = "JVF"
+        logo = "../../../img/company-logos/JVF.png"
+        description = "Here is a brief desccription"
+
+    [[params.companies]]
+        name = "Marketzquare"
+        logo = "../../../img/company-logos/Marketzquare.png"
+        description = "Here is a brief desccription"
+
+    [[params.companies]]
+        name = "OpenStreetLamp"
+        logo = "../../../img/company-logos/OpenStreetLamp.png"
+        description = "Here is a brief desccription"
+
+    [[params.companies]]
+        name = "Swarmoola"
+        logo = "../../../img/company-logos/Swarmoola.png"
+        description = "Here is a brief desccription"
+
 
 
   # Banner section

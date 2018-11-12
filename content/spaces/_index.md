@@ -1,5 +1,6 @@
 ---
 title: "Spaces"
+layout: "../spaces"
 ---
 <form id="eventForm">
 

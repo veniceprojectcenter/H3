@@ -1,19 +1,57 @@
-<header id="header" class="alt">
+<!--<header id="header" class="alt">
     <span>
         <a href="{{ .Site.BaseURL }}" class="logo"> <img src="{{ .Site.Params.baseURL }}/img/H3 Logo.png" alt="" /></a>
-        <a id="menuBtn">Menu <i class="fas fa-bars"></i></a>
+            <div id="main-nav-div">
+                {{ range .Site.Params.Navigation.links }}
+                    <a class="main-nav" href="{{ .url | absURL}}">{{ .name }}</a>
+                {{ end }}
+                {{ range .Site.Params.Navigation.button1 }}
+                    <a id="loginBtn" class="btn" href="{{ .url | absURL }}">Login</a>
+                {{ end }}
+            </div>
+        <a id="menuBtn"><i class="fas fa-bars"></i></a>
     </span>
-</header>
+</header>-->
+
+<nav class="navbar fixed-top navbar-expand-lg">
+
+  <a href="{{ .Site.BaseURL }}" class="logo"> <img src="{{ .Site.Params.baseURL }}/img/H3 Logo.png" alt="" /></a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+
+    <div class="navbar-nav ml-auto">
+      <a class="nav-item nav-link active" href="{{ .Site.BaseURL }}">Home <span class="sr-only">(current)</span></a>
+      {{ range .Site.Params.Navigation.links }}
+          <a class="nav-item nav-link" href="{{ .url | absURL}}">{{ .name }}</a>
+      {{ end }}
+      {{ range .Site.Params.Navigation.button1 }}
+          <a id="loginBtn" class="btn btn-outline-light my-2 my-sm-0" href="{{ .url | absURL }}" role="button">Login</a>
+      {{ end }}
+    </div>
+
+  </div>
+
+</nav>
+
+
 
 <nav id="menu">
     <i id="menuClose" class="fas fa-times"></i>
     <ul class="links">
+        <li><a href="{{ .Site.Params.Navigation.Home | absURL }}">Home</a></li>
         {{ range .Site.Params.Navigation.links }}
             <li><a href="{{ .url | absURL}}">{{ .name }}</a></li>
         {{ end }}
     </ul>
     <ul class="actions vertical">
         {{ range .Site.Params.Navigation.button1 }}
+            <li><a href="{{ .url | absURL}}" class="button special fit">{{ .name }}</a></li>
+        {{ end }}
+        {{ range .Site.Params.Navigation.button2 }}
             <li><a href="{{ .url | absURL}}" class="button special fit">{{ .name }}</a></li>
         {{ end }}
     </ul>

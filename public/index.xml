@@ -38,6 +38,24 @@
     </item>
     
     <item>
+      <title>History</title>
+      <link>https://h3-sdpt.firebaseapp.com/history/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://h3-sdpt.firebaseapp.com/history/</guid>
+      <description>History Content</description>
+    </item>
+    
+    <item>
+      <title>Login</title>
+      <link>https://h3-sdpt.firebaseapp.com/login/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://h3-sdpt.firebaseapp.com/login/</guid>
+      <description>Login Content</description>
+    </item>
+    
+    <item>
       <title>Manuals</title>
       <link>https://h3-sdpt.firebaseapp.com/portal/manuals/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -53,6 +71,24 @@
       
       <guid>https://h3-sdpt.firebaseapp.com/portal/service-request/</guid>
       <description>Here you can request a service</description>
+    </item>
+    
+    <item>
+      <title>Start-ups</title>
+      <link>https://h3-sdpt.firebaseapp.com/companies/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://h3-sdpt.firebaseapp.com/companies/</guid>
+      <description>Companies Content</description>
+    </item>
+    
+    <item>
+      <title>Test</title>
+      <link>https://h3-sdpt.firebaseapp.com/test/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://h3-sdpt.firebaseapp.com/test/</guid>
+      <description>Test Content!</description>
     </item>
     
   </channel>
