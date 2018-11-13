@@ -1,5 +1,6 @@
 #company-pane {
     margin: 70px;
+    width: 400;
 }
 
 .company-logo {
@@ -21,8 +22,11 @@
     margin:0;
 }
 
-#flap {
+#flip {
     position:relative;
-    width:300px;
-    height:100px;
+    margin: 0;
+}
+
+.company-col {
+   margin: 30 !important;
 }
