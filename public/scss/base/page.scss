@@ -33,19 +33,6 @@ body {
     flex: 50%;
 }
 
-input[type=text] {
-    border: 2px solid gray;
-    border-radius: 4px;
-    background-color: transparent;
-    color: white;
-    padding: 5px 5px;
-    margin: 5px 5px;
-    box-sizing: border-box;
-    &:focus {
-        background-color: #1a1a1a;
-    }
-}
-
 ul {
     list-style-type: none;
 }

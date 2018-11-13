@@ -72,11 +72,12 @@ layout: "spaces"
     <div>
         <h2>Requirements</h2>
         <ul>
-            <li>Usher:<input type="checkbox"></li>
-            <li>Room Attendant:<input type="checkbox"></li>
-            <li>Mic:<input type="checkbox"></li>
-            <li>Speakers:<input type="checkbox"></li>
-            <li>Chairs:<input type="text"></li>
+            <li><input type="checkbox"> Usher</li>
+            <li><input type="checkbox"> Room Attendant</li>
+            <li><input type="checkbox"> Mic</li>
+            <li><input type="checkbox"> Speakers</li>
+            <li><input type="text"> Chairs</li>
+            <li><input type="text"> Tables</li>
         </ul>
 
     </div>
@@ -89,7 +90,7 @@ layout: "spaces"
 
 
 
-
+<!--
 
     <hr>
 
@@ -243,4 +244,5 @@ layout: "spaces"
     </div>
 
     <input type="submit">
+    -->
 </form>

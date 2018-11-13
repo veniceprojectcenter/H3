@@ -5,7 +5,6 @@ body, p, a, h1, h2 {
     font-size: 14pt;
     font-weight: 500;
     line-height: 1.2;
-    //font-family: "Playfair Display";
 }
 h1 {
     font-size: 20pt;
@@ -13,8 +12,11 @@ h1 {
     letter-spacing: 0.15em;
 }
 h2 {
-    font-size: 14pt;
+    font-size: 18pt;
     letter-spacing: 0.10em;
+    padding-top: 40;
+    padding-bottom: 20;
+    font-weight: 400;
 }
 
 *:hover, a:hover{

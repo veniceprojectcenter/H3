@@ -1,20 +1,26 @@
 #history {
     margin: 30px;
 
-    color: green;
+
     p {
-        font-size: 20;
+        font-size: 14pt;
         line-height: 1.4;
     }
     h2 {
-        padding-top: 40;
-        padding-bottom: 20;
+        font-size: 18pt;
+    }
+    h3 {
+        font-size: 16pt;
     }
     img {
-        padding: 50px;
-        margin: 50px;
+        padding: 20px;
     }
-    #links a {
-        font-size: 20pt;
+    #links {
+        text-align: center;
+        a {
+            font-size: 14pt;
+            line-height: 1.5;
+        }
     }
+
 }
