@@ -21,4 +21,5 @@ h2 {
 *:hover, a:hover{
     color: desaturate(darken(white, 25), 5);
     cursor: pointer;
+    text-decoration: none;
 }

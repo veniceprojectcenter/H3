@@ -76,47 +76,47 @@ disqusShortname = ""
     [[params.companies]]
         name = "Articity"
         logo = "../../../img/company-logos/Articity.png"
-        description = "Here is a brief desccription"
+        description = "Here is a brief description"
 
     [[params.companies]]
         name = "Bankogiro"
         logo = "../../../img/company-logos/Bankogiro.png"
-        description = "Here is a brief desccription"
+        description = "Here is a brief description"
 
     [[params.companies]]
         name = "Casa Peota"
         logo = "../../../img/company-logos/Casa Peota.png"
-        description = "Here is a brief desccription"
+        description = "Here is a brief description"
 
     [[params.companies]]
         name = "daAaB"
         logo = "../../../img/company-logos/daAaB.png"
-        description = "Here is a brief desccription"
+        description = "Here is a brief description"
 
     [[params.companies]]
         name = "fairbnb"
         logo = "../../../img/company-logos/fairbnb.png"
-        description = "Here is a brief desccription"
+        description = "Here is a brief description"
 
     [[params.companies]]
         name = "JVF"
         logo = "../../../img/company-logos/JVF.png"
-        description = "Here is a brief desccription"
+        description = "Here is a brief description"
 
     [[params.companies]]
         name = "Marketzquare"
         logo = "../../../img/company-logos/Marketzquare.png"
-        description = "Here is a brief desccription"
+        description = "Here is a brief description"
 
     [[params.companies]]
         name = "OpenStreetLamp"
         logo = "../../../img/company-logos/OpenStreetLamp.png"
-        description = "Here is a brief desccription"
+        description = "Here is a brief description"
 
     [[params.companies]]
         name = "Swarmoola"
         logo = "../../../img/company-logos/Swarmoola.png"
-        description = "Here is a brief desccription"
+        description = "Here is a brief description"
 
 
 

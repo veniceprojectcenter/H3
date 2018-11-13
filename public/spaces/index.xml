@@ -11,12 +11,14 @@
     
     
     <item>
-      <title>Book Event</title>
-      <link>https://h3-sdpt.firebaseapp.com/spaces/book-event/</link>
+      <title>Event Form</title>
+      <link>https://h3-sdpt.firebaseapp.com/spaces/event-form/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://h3-sdpt.firebaseapp.com/spaces/book-event/</guid>
-      <description>Here is the form to book an event</description>
+      <guid>https://h3-sdpt.firebaseapp.com/spaces/event-form/</guid>
+      <description>Contact Group: (company or organizaiton name if applicable)
+Name of Contact: Contact Email: Contact Cell:   Event Title: Type:  Seminar Workshop Lecture Concert Exhibit Dj Set Cocktail Meeting Empty Space Other  Expected # of people: Description:   Space Select space(s):  Ground Floor   Second Floor   Third Floor     Date and Time Select dates for the event:
+  Start Time   End Time     Requirements  Usher: Room Attendant: Mic: Speakers: Chairs:    Final Cost: € XXX.</description>
     </item>
     
   </channel>

@@ -7,7 +7,7 @@
   </url>
   
   <url>
-    <loc>https://h3-sdpt.firebaseapp.com/spaces/book-event/</loc>
+    <loc>https://h3-sdpt.firebaseapp.com/art/</loc>
   </url>
   
   <url>
@@ -16,7 +16,15 @@
   </url>
   
   <url>
+    <loc>https://h3-sdpt.firebaseapp.com/documentary/</loc>
+  </url>
+  
+  <url>
     <loc>https://h3-sdpt.firebaseapp.com/portal/documents/</loc>
+  </url>
+  
+  <url>
+    <loc>https://h3-sdpt.firebaseapp.com/spaces/event-form/</loc>
   </url>
   
   <url>
@@ -38,6 +46,10 @@
   
   <url>
     <loc>https://h3-sdpt.firebaseapp.com/portal/</loc>
+  </url>
+  
+  <url>
+    <loc>https://h3-sdpt.firebaseapp.com/presentation/</loc>
   </url>
   
   <url>

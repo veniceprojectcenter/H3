@@ -20,12 +20,21 @@
     </item>
     
     <item>
-      <title>Book Event</title>
-      <link>https://h3-sdpt.firebaseapp.com/spaces/book-event/</link>
+      <title>Art</title>
+      <link>https://h3-sdpt.firebaseapp.com/art/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://h3-sdpt.firebaseapp.com/spaces/book-event/</guid>
-      <description>Here is the form to book an event</description>
+      <guid>https://h3-sdpt.firebaseapp.com/art/</guid>
+      <description>Insert Art</description>
+    </item>
+    
+    <item>
+      <title>Documentary</title>
+      <link>https://h3-sdpt.firebaseapp.com/documentary/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://h3-sdpt.firebaseapp.com/documentary/</guid>
+      <description>Insert Documentary</description>
     </item>
     
     <item>
@@ -35,6 +44,17 @@
       
       <guid>https://h3-sdpt.firebaseapp.com/portal/documents/</guid>
       <description>Here are the documents</description>
+    </item>
+    
+    <item>
+      <title>Event Form</title>
+      <link>https://h3-sdpt.firebaseapp.com/spaces/event-form/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://h3-sdpt.firebaseapp.com/spaces/event-form/</guid>
+      <description>Contact Group: (company or organizaiton name if applicable)
+Name of Contact: Contact Email: Contact Cell:   Event Title: Type:  Seminar Workshop Lecture Concert Exhibit Dj Set Cocktail Meeting Empty Space Other  Expected # of people: Description:   Space Select space(s):  Ground Floor   Second Floor   Third Floor     Date and Time Select dates for the event:
+  Start Time   End Time     Requirements  Usher: Room Attendant: Mic: Speakers: Chairs:    Final Cost: € XXX.</description>
     </item>
     
     <item>
@@ -62,6 +82,15 @@
       
       <guid>https://h3-sdpt.firebaseapp.com/portal/manuals/</guid>
       <description>Here are the manuals</description>
+    </item>
+    
+    <item>
+      <title>Presentation</title>
+      <link>https://h3-sdpt.firebaseapp.com/presentation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://h3-sdpt.firebaseapp.com/presentation/</guid>
+      <description> </description>
     </item>
     
     <item>
