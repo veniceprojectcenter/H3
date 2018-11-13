@@ -1,5 +1,4 @@
 ---
-title: "Art"
-layout: "presentation"
+title: "Art Gallery"
+layout: "gallery"
 ---
-*Insert Art*

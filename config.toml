@@ -119,6 +119,9 @@ disqusShortname = ""
         description = "Here is a brief description"
 
 
+    [params.art]
+        folder = ""
+
 
   # Banner section
   [params.banner]
