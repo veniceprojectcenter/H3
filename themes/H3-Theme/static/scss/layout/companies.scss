@@ -1,17 +1,17 @@
 #company-pane {
     margin: 70px;
+    width: 400;
 }
 
 .company-logo {
     height: 300;
     width: 300;
-    margin: 30px;
 }
 
 .card-img-overlay {
     height: 300;
     width: 300;
-    background-color: rgba(255, 0, 0, 0.5);
+    background-color: rgba(26, 26, 26, 0.5);
 }
 
 #panel {
@@ -22,8 +22,11 @@
     margin:0;
 }
 
-#flap {
+#flip {
     position:relative;
-    width:300px;
-    height:100px;
+    margin: 0;
+}
+
+.company-col {
+   margin: 30 !important;
 }

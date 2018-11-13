@@ -14,8 +14,9 @@ for (let companyCard of companyCards) {
     )
 }*/
 
-$(document).ready(function(){
-    $("#flip").hover(function(){
+// https://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_slide_toggle
+$(document).ready(function() {
+    $("#flip").hover(function() {
         $("#panel").slideToggle(300);
     });
 });
