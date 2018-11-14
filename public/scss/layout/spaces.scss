@@ -8,7 +8,7 @@
 
 #eventForm {
     * {
-        
+
     }
     p {
         font-weight: 300;
@@ -23,6 +23,14 @@
     figure {
         display: table;
         width: 1px; /* This can be any width, so long as it's narrower than any image */
+    }
+
+    #cost {
+        background-color: rgba(0, 0, 0, 0.8);
+        position: fixed;
+        bottom: 20;
+        right: 20;
+        padding: 20px;
     }
 }
 #eventForm img, figcaption {

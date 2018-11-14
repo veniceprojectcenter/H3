@@ -82,10 +82,11 @@ layout: "spaces"
 
     </div>
 
-    <div>
-        <h2>Final Cost:</h2>
-        € XXX.XX
-        <input type="submit">
+
+    <input type="submit">
+    
+    <div id="cost">
+        Final Cost: € XXX.XX
     </div>
 
 

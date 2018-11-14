@@ -40,7 +40,6 @@ disqusShortname = ""
         title = "H3"
         subtitle = "Welcome to H3"
         menu = "Menu"
-        # Optional logo as brand stored in img/
         logo = "H3 Logo.png"
         home = "#"
 
@@ -55,13 +54,6 @@ disqusShortname = ""
         [[params.navigation.links]]
             name = "Spaces"
             url = "spaces"
-
-        # Add custom links here by uncommenting code below. To remove links just delete
-        # the [[params.navigation.links]] map associated with that link. Copy and paste
-        # code below if you need more links. Buttons work in the same way.
-        # [[params.navigation.links]]
-        #    name = "NameOfLink"
-        #    url = "UrlOfLink"
 
         # Button Style 1
         [[params.navigation.button1]]
@@ -120,7 +112,43 @@ disqusShortname = ""
 
 
     [params.art]
-        folder = ""
+        folder = "/img/art/"
+
+        [[params.art.picture]]
+            name = "Christ Throws out the Merchants"
+            filename = "Christ throws out the merchants.jpg"
+            description = "He is throwing out the merchants!!"
+
+        [[params.art.picture]]
+            name = "Crucificion"
+            filename = "Crucificion.jpg"
+            description = "Sorry Jesus"
+
+        [[params.art.picture]]
+            name = "Image (10)"
+            filename = "Image (10).jpg"
+            description = "No name, just number"
+
+        [[params.art.picture]]
+            name = "Madonna in Trono con il Bambino"
+            filename = "Madonna in Trono con il Bambino.jpg"
+            description = "Madonna is not only a signer"
+
+        [[params.art.picture]]
+            name = "Solomon speaks to the people"
+            filename = "Solomon speaks to the people.jpg"
+            description = "Keep talking"
+
+        [[params.art.picture]]
+            name = "Transport of the Ark"
+            filename = "Transport of the Ark.jpg"
+            description = "Wow, it is being transported."
+
+        [[params.art.picture]]
+            name = "Water from the Rock"
+            filename = "Water from the Rock.jpg"
+            description = "There is water on this rock"
+
 
 
   # Banner section
