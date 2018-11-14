@@ -52,17 +52,47 @@ disqusShortname = ""
             url = "companies"
 
         [[params.navigation.links]]
+            name = "Events"
+            url = "events"
+
+        [[params.navigation.links]]
             name = "Spaces"
             url = "spaces"
 
-        # Button Style 1
-        [[params.navigation.button1]]
+        [params.navigation.login]
             name = "Login"
             url = "login"
 
-        [[params.navigation.button2]]
-            name = "Portal"
-            url = "portal"
+
+    [params.home]
+        folder = "/img/"
+
+        [[params.home.carousel]]
+            image = "H3 Office.png"
+            title = "Welcome to H3"
+            description = "Check out our new facility"
+            buttontext = ""
+
+        [[params.home.carousel]]
+            image = "H3 Office.png"
+            title = "Event X"
+            description = "Register for this event"
+            buttontext = "Register Here"
+            buttonurl = "events"
+
+        [[params.home.carousel]]
+            image = "H3 Office.png"
+            title = "Our History"
+            description = "Check out more"
+            buttontext = "More Details"
+            buttonurl = "history"
+
+        [[params.home.carousel]]
+            image = "H3 Office.png"
+            title = "Spaces"
+            description = "This is a space we have"
+            buttontext = "Book an Event"
+            buttonurl = "events"
 
 
     [[params.companies]]

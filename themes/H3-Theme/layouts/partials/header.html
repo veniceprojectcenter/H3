@@ -10,12 +10,12 @@
 
     <div class="navbar-nav ml-auto">
       <a class="nav-item nav-link active" href="{{ .Site.BaseURL }}">Home <span class="sr-only">(current)</span></a>
+
       {{ range .Site.Params.Navigation.links }}
           <a class="nav-item nav-link" href="{{ .url | absURL}}">{{ .name }}</a>
       {{ end }}
-      {{ range .Site.Params.Navigation.button1 }}
-          <a id="loginBtn" class="btn btn-outline-light my-2 my-sm-0" href="{{ .url | absURL }}" role="button">Login</a>
-      {{ end }}
+
+      <a id="loginBtn" class="btn btn-light my-2 my-sm-0" href="{{ .Site.Params.Navigation.login.url | absURL }}" role="button">Login</a>
     </div>
 
   </div>

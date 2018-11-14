@@ -28,6 +28,10 @@
   </url>
   
   <url>
+    <loc>https://h3-sdpt.firebaseapp.com/events/</loc>
+  </url>
+  
+  <url>
     <loc>https://h3-sdpt.firebaseapp.com/</loc>
     <priority>0</priority>
   </url>

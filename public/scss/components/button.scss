@@ -1,0 +1,15 @@
+.btn-light{
+    border-color: white;
+    background-color: white;
+    color: black;
+    font-size: 18;
+    padding-top: 1px;
+    padding-bottom: 0px;
+    height: 33px;
+    position: relative;
+    top: 3px;
+    &:hover{
+        background-color: transparent;
+        color: white;
+    }
+}
