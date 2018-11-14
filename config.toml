@@ -83,8 +83,8 @@ disqusShortname = ""
         [[params.home.carousel]]
             image = "Full Textile Factory.jpeg"
             title = "Our History"
-            description = "Check out more"
-            buttontext = "More Details"
+            description = "This facility began as a church, was a textile factory, and is now a factory for startup companies"
+            buttontext = "Learn More"
             buttonurl = "history"
 
         [[params.home.carousel]]

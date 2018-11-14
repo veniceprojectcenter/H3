@@ -1,4 +1,10 @@
 {{ define "main" }}
-    <h1 id="page-title">{{ .Title }}</h1>
-    <p>Upcoming Events</p>
+    <div id="page-banner">
+        <img id="page-image" src="../../../img/history/banner.jpeg" alt="">
+        <h1 id="page-title">{{ .Title }}</h1>
+    </div>
+    <div class="content">
+        <p>Upcoming Events</p>
+        <p>Past Events</p>
+    </div>
 {{end}}

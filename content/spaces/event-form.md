@@ -2,7 +2,7 @@
 title: "Event Form"
 layout: "spaces"
 ---
-<form id="eventForm">
+<form id="eventForm" class="content">
 
     <div>
         <h2>Contact</h2>
@@ -84,7 +84,7 @@ layout: "spaces"
 
 
     <input type="submit">
-    
+
     <div id="cost">
         Final Cost: € XXX.XX
     </div>

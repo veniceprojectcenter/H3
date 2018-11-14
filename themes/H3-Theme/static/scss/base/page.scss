@@ -6,21 +6,27 @@ body {
 
 .wrapper {
     background-color: #242943;
-    padding-top: 50;
+    //padding-top: 50;
 }
+.pad-top {
+    padding-top: 50;
+    .title {
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+}
+
 .background-color {
     background-color: #242943;
 }
 
 .content {
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 20px;
+    padding: 20px;
 }
 
 #page-title {
     text-align: center;
-    margin-top: 30px;
 }
 
 .blur {
@@ -52,4 +58,30 @@ ul {
 
 .no-space {
     padding: 0px;
+}
+
+
+#page-banner {
+    height: 40%;
+    overflow: hidden;
+
+    #page-title {
+        position: absolute;
+        width: 30%;
+        height: 60%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        text-align: center;
+        font-size: 36pt;
+        color: white;
+        text-transform: capitalize;
+        font-weight: 500;
+    }
+    #page-image {
+        width: 100%;
+        height: auto;
+        filter: brightness(50%);
+    }
 }
