@@ -1,5 +1,5 @@
 ---
 title: "Events"
-layout: "companies"
+layout: "events"
 ---
 Events Content

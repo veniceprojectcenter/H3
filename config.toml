@@ -74,21 +74,21 @@ disqusShortname = ""
             buttontext = ""
 
         [[params.home.carousel]]
-            image = "H3 Office.png"
+            image = "algorave.jpg" #https://www.flickr.com/photos/botosynthetic/28547836316/in/photostream/
             title = "Event X"
-            description = "Register for this event"
+            description = "Learn what an algorave is"
             buttontext = "Register Here"
-            buttonurl = "events"
+            buttonurl = "https://player.vimeo.com/video/187702511"
 
         [[params.home.carousel]]
-            image = "H3 Office.png"
+            image = "Full Textile Factory.jpeg"
             title = "Our History"
             description = "Check out more"
             buttontext = "More Details"
             buttonurl = "history"
 
         [[params.home.carousel]]
-            image = "H3 Office.png"
+            image = "Main Hall.png"
             title = "Spaces"
             description = "This is a space we have"
             buttontext = "Book an Event"
