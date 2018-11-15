@@ -1,12 +1,12 @@
 {{ define "main" }}
     <div id="page-banner">
-        <img id="page-image" src="../../../img/history/banner.jpeg" alt="">
+        <img id="page-image" src="{{ .Params.banner }}" alt="">
         <h1 id="page-title">{{ .Title }}</h1>
     </div>
 
     <div class="row company-pane content">
 
-        {{ range .Site.Params.companies }}
+        {{ range .Params.companies }}
             <div class="col-sm company-col">
                 <div id="flip" class="card bg-dark text-white company-logo">
                     <img class="company-logo card-img" src="{{ .logo }}" alt="Card image">
@@ -17,6 +17,18 @@
                 </div>
             </div>
         {{ end }}
+
+        <!--{{ range .Site.Params.companies }}
+            <div class="col-sm company-col">
+                <div id="flip" class="card bg-dark text-white company-logo">
+                    <img class="company-logo card-img" src="{{ .logo }}" alt="Card image">
+                    <div id="panel" class="card-img-overlay">
+                        <h3 class="card-title">{{ .name }}</h3>
+                        <p class="card-text">{{ .description }}</p>
+                    </div>
+                </div>
+            </div>
+        {{ end }}-->
 
     </div>
 
