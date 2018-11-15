@@ -78,7 +78,7 @@ disqusShortname = ""
             title = "Event X"
             description = "Learn what an algorave is"
             buttontext = "Register Here"
-            buttonurl = "https://player.vimeo.com/video/187702511"
+            buttonurl = "http://kindohm.github.io/live-coding-presentation/#/"
 
         [[params.home.carousel]]
             image = "Full Textile Factory.jpeg"

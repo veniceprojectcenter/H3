@@ -8,22 +8,25 @@ body {
     background-color: #242943;
     //padding-top: 50;
 }
+.pad-top {
+    padding-top: 50;
+    .title {
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+}
+
 .background-color {
     background-color: #242943;
 }
 
 .content {
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 20px;
+    padding: 20px;
 }
 
 #page-title {
     text-align: center;
-    font-size: 36pt;
-    color: white;
-    text-transform: capitalize;
-    font-weight: 500;
 }
 
 .blur {
@@ -69,6 +72,12 @@ ul {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+
+        text-align: center;
+        font-size: 36pt;
+        color: white;
+        text-transform: capitalize;
+        font-weight: 500;
     }
     #page-image {
         width: 100%;
