@@ -64,35 +64,33 @@ disqusShortname = ""
             url = "login"
 
 
-    [params.home]
-        folder = "/img/"
 
-        [[params.home.carousel]]
-            image = "H3 Office.png"
-            title = "Welcome to H3"
-            description = "Check out our new facility"
-            buttontext = ""
+    [[params.carousel]]
+        image = "H3 Office.png"
+        title = "Welcome to H3"
+        description = "Check out our new facility"
+        buttontext = ""
 
-        [[params.home.carousel]]
-            image = "algorave.jpg" #https://www.flickr.com/photos/botosynthetic/28547836316/in/photostream/
-            title = "Event X"
-            description = "Learn what an algorave is"
-            buttontext = "Register Here"
-            buttonurl = "http://kindohm.github.io/live-coding-presentation/#/"
+    [[params.carousel]]
+        image = "algorave.jpg" #https://www.flickr.com/photos/botosynthetic/28547836316/in/photostream/
+        title = "Event X"
+        description = "Learn what an algorave is"
+        buttontext = "Register Here"
+        buttonurl = "http://kindohm.github.io/live-coding-presentation/#/"
 
-        [[params.home.carousel]]
-            image = "Full Textile Factory.jpeg"
-            title = "Our History"
-            description = "This facility began as a church, was a textile factory, and is now a factory for startup companies"
-            buttontext = "Learn More"
-            buttonurl = "history"
+    [[params.carousel]]
+        image = "Full Textile Factory.jpeg"
+        title = "Our History"
+        description = "This facility began as a church, was a textile factory, and is now a factory for startup companies"
+        buttontext = "Learn More"
+        buttonurl = "history"
 
-        [[params.home.carousel]]
-            image = "Main Hall.png"
-            title = "Spaces"
-            description = "This is a space we have"
-            buttontext = "Book an Event"
-            buttonurl = "events"
+    [[params.carousel]]
+        image = "Main Hall.png"
+        title = "Spaces"
+        description = "This is a space we have"
+        buttontext = "Book an Event"
+        buttonurl = "events"
 
 
 
