@@ -7,7 +7,7 @@
             <div id="carousel" class="carousel slide" data-ride="carousel">
 
                 <ol class="carousel-indicators">
-                    {{ range $index, $element := .Site.Params.Art.Picture }}
+                    {{ range $index, $element := .Params.pictures }}
                         {{ if eq $index 0 }}
                             <li data-target="#carousel" data-slide-to="{{ $index }}" class="active"></li>
                         {{ else }}
@@ -17,7 +17,7 @@
                 </ol>
 
                 <div class="carousel-inner">
-                    {{ range $index, $element := .Site.Params.Art.Picture }}
+                    {{ range $index, $element := .Params.pictures }}
                         {{ if eq $index 0 }}
                             <div class="carousel-item active">
                                 <img class="d-block w-100" src="/img/art/{{ .filename }}"  alt="">

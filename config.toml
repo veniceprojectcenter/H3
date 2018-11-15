@@ -95,55 +95,6 @@ disqusShortname = ""
             buttonurl = "events"
 
 
-    [params.art]
-        folder = "/img/art/"
-
-        [[params.art.picture]]
-            name = "Christ Throws out the Merchants"
-            filename = "Christ throws out the merchants.jpg"
-            description = "He is throwing out the merchants!!"
-
-        [[params.art.picture]]
-            name = "Crucificion"
-            filename = "Crucificion.jpg"
-            description = "Sorry Jesus"
-
-        [[params.art.picture]]
-            name = "Image (10)"
-            filename = "Image (10).jpg"
-            description = "No name, just number"
-
-        [[params.art.picture]]
-            name = "Madonna in Trono con il Bambino"
-            filename = "Madonna in Trono con il Bambino.jpg"
-            description = "Madonna is not only a signer"
-
-        [[params.art.picture]]
-            name = "Solomon speaks to the people"
-            filename = "Solomon speaks to the people.jpg"
-            description = "Keep talking"
-
-        [[params.art.picture]]
-            name = "Transport of the Ark"
-            filename = "Transport of the Ark.jpg"
-            description = "Wow, it is being transported."
-
-        [[params.art.picture]]
-            name = "Water from the Rock"
-            filename = "Water from the Rock.jpg"
-            description = "There is water on this rock"
-
-
-
-  # Banner section
-  [params.banner]
-    # To change the background image on the homepage banner, replace 'banner.jpg' in
-    # the 'static/img' folder.
-    title = "Welcome to H3"
-    subtitle = "A RESPONSIVE SITE TEMPLATE DESIGNED BY HTML5 UP\nAND RELEASED UNDER THE CREATIVE COMMONS."
-    buttonText = "Get Started"
-
-
 
 
   # Contact section
