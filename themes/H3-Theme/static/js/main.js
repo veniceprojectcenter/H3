@@ -45,3 +45,24 @@ $('.pin-at-top').each(function(){
     .setPin(this)
     .addTo(controller);
 });
+
+
+var parallaxTl = new TimelineMax();
+parallaxTl
+    .from('.parallax-text', 0.2, {autoAlpha: 0, ease:Power0.easeNone}, 0.2)
+    .from('.parallax-image', 1, {y: '-30%', ease:Power0.easeNone}, 0)
+    ;
+
+var slideParalllaxScene = new ScrollMagic.Scene({
+    triggerElement: '.parallax',
+    triggerHook: 1,
+    duration: '120%'
+})
+.setTween(parallaxTl)
+.addTo(controller);
+
+
+/*$('.card-image').each(function(){
+    var cw = $(this).width();
+    $(this).css({'height':cw+'px'});
+});*/
