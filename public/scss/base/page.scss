@@ -5,8 +5,7 @@ body {
 }
 
 .wrapper {
-    background-color: #242943;
-    //padding-top: 50;
+    background-color: _palette(bg);
 }
 .pad-top {
     padding-top: 50;
@@ -18,7 +17,7 @@ body {
 }
 
 .background-color {
-    background-color: #242943;
+    background-color: _palette(bg);
 }
 
 .content {

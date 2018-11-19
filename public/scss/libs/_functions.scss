@@ -2,5 +2,5 @@
 /// @param {string} $keys Key(s).
 /// @return {string} Value.
 @function _palette($keys...) {
-	@return val($palette, $keys...);
+	@return map-get($palette, $keys...);
 }

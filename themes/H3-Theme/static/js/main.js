@@ -24,9 +24,31 @@ $(document).ready(function() {
 
 
 
+function rotateText() {
+    setTimeout(fo, 5000);
+    setTimeout(fi, 5000);
+}
+function fo() {
+    $('.rotating-text').each(function(){
+        $(this).fadeOut(100, function() {});
+    });
+}
+function fi() {
+    $('.rotating-text').each(function(){
+        $(this).fadeIn(100, function() {});
+    });
+}
+//rotateText();
+
+
+
+
+
+
 // SCROLL MAGIC
 
 var controller = new ScrollMagic.Controller({addIndicators: true});
+
 
 $('.fade-container').each(function(){
     var scene = new ScrollMagic.Scene({
@@ -37,6 +59,7 @@ $('.fade-container').each(function(){
     .addTo(controller);
 });
 
+
 $('.pin-at-top').each(function(){
     var pinIntroScene = new ScrollMagic.Scene({
         triggerElement: this,
@@ -45,6 +68,7 @@ $('.pin-at-top').each(function(){
     .setPin(this)
     .addTo(controller);
 });
+
 
 
 var parallaxTl = new TimelineMax();

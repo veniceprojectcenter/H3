@@ -1,5 +1,5 @@
 body, p, a, h1, h2 {
-    color: white;
+    color: _palette(fg);
     text-decoration: none;
     font-family: ('Source Sans Pro', Helvetica, sans-serif);
     font-size: 14pt;
@@ -7,8 +7,7 @@ body, p, a, h1, h2 {
     line-height: 1.2;
 }
 h1 {
-    font-size: 20pt;
-    text-transform: uppercase;
+    font-size: 36pt;
     letter-spacing: 0.15em;
 }
 h2 {
@@ -20,7 +19,27 @@ h2 {
 }
 
 *:hover, a:hover{
-    color: desaturate(darken(white, 25), 5);
+    color: desaturate(darken( _palette(fg), 25), 5);
     cursor: pointer;
     text-decoration: none;
+}
+
+.navbar .nav-link {
+    color: white;
+    &:hover {
+        color: desaturate(darken(white, 25), 5);
+    }
+}
+
+#footer, #footer p {
+    color: white;
+}
+
+#home-content {
+    #carousel .carousel-text, #carousel p {
+        color: white;
+    }
+    h2 {
+        font-size: 22pt;
+    }
 }

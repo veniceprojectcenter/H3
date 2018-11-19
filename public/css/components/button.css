@@ -1,1 +1,1 @@
-.btn-light{border-color:white;background-color:white;color:black;font-size:18;padding-top:1px;padding-bottom:0px;height:33px;position:relative;top:3px}.btn-light:hover{background-color:transparent;color:white}
+.btn-light{border-color:_palette(accent1);border-radius:20px;background-color:_palette(accent1);color:black;font-size:18;padding-top:1px;padding-bottom:0px;height:33px;position:relative;top:3px}.btn-light:hover{border-color:_palette(accent1);background-color:transparent;color:_palette(accent1)}

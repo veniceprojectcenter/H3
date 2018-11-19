@@ -37,15 +37,15 @@
   </url>
   
   <url>
-    <loc>https://h3-sdpt.firebaseapp.com/history/</loc>
-  </url>
-  
-  <url>
     <loc>https://h3-sdpt.firebaseapp.com/login/</loc>
   </url>
   
   <url>
     <loc>https://h3-sdpt.firebaseapp.com/portal/manuals/</loc>
+  </url>
+  
+  <url>
+    <loc>https://h3-sdpt.firebaseapp.com/history/</loc>
   </url>
   
   <url>

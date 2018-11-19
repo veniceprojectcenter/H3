@@ -1,6 +1,7 @@
 .btn-light{
-    border-color: white;
-    background-color: white;
+    border-color: _palette(accent1);
+    border-radius: 20px;
+    background-color: _palette(accent1);
     color: black;
     font-size: 18;
     padding-top: 1px;
@@ -11,7 +12,8 @@
     //box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.7);
 
     &:hover{
+        border-color: _palette(accent1);
         background-color: transparent;
-        color: white;
+        color: _palette(accent1);
     }
 }

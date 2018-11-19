@@ -23,13 +23,69 @@ $(document).ready(function() {
 });
 
 
-var controller = new ScrollMagic.Controller();
 
-var scene = new ScrollMagic.Scene({
-  triggerElement: '#pinned-trigger1', // starting scene, when reaching this element
-  duration: 400 // pin the element for a total of 400px
+function rotateText() {
+        setTimeout(fo, 5000);
+        setTimeout(fi, 5000);
+}
+function fo() {
+    $('.rotating-text').each(function(){
+        $(this).fadeOut(100, function() {})
+    }
+}
+function fi() {
+    $('.rotating-text').each(function(){
+        $(this).fadeIn(100, function() {})
+    }
+}
+rotateText();
+
+
+
+
+
+// SCROLL MAGIC
+
+var controller = new ScrollMagic.Controller({addIndicators: true});
+
+
+$('.fade-container').each(function(){
+    var scene = new ScrollMagic.Scene({
+        triggerElement: this,
+        triggerHook: 0.8
+    })// trigger a velocity opaticy animation
+    .setClassToggle(this, 'fade-in')
+    .addTo(controller);
+});
+
+
+$('.pin-at-top').each(function(){
+    var pinIntroScene = new ScrollMagic.Scene({
+        triggerElement: this,
+        triggerHook: 0
+    })// trigger a velocity opaticy animation
+    .setPin(this)
+    .addTo(controller);
+});
+
+
+
+var parallaxTl = new TimelineMax();
+parallaxTl
+    .from('.parallax-text', 0.2, {autoAlpha: 0, ease:Power0.easeNone}, 0.2)
+    .from('.parallax-image', 1, {y: '-30%', ease:Power0.easeNone}, 0)
+    ;
+
+var slideParalllaxScene = new ScrollMagic.Scene({
+    triggerElement: '.parallax',
+    triggerHook: 1,
+    duration: '120%'
 })
-.setPin('#pinned-element1'); // the element we want to pin
+.setTween(parallaxTl)
+.addTo(controller);
 
-// Add Scene to ScrollMagic Controller
-controller.addScene(scene);
+
+/*$('.card-image').each(function(){
+    var cw = $(this).width();
+    $(this).css({'height':cw+'px'});
+});*/
