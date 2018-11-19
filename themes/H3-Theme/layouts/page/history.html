@@ -5,31 +5,34 @@
     </div>
 
 
-    <div id="history" class="content">
+    <div id="history" >
 
-        <div id="links" class="row">
-            {{ range .Params.links }}
-                <div class="col">
-                    <img class="image-preview" src="{{ .image }}" alt="">
-                    <a class="btn btn-outline-light my-2 my-sm-0" href="{{ .url }}">{{ .title }}</a>
+        {{ range .Params.slides }}
+            <div class="history-grid slide pin-at-top">
+                <div class="title-cell">
+                    {{ .title }}
                 </div>
-            {{ end }}
-        </div>
-
-
-        {{ range .Params.sections }}
-                <div class="d-flex flex-row">
-                    <div class="p-2">
-                        <img src="{{ .image }}" alt="" align="right">
-                    </div>
-                    <div class="p-2">
-                        <h2>{{ .header }}</h2>
-
-                        {{ range .paragraphs }}
-                            <p>{{ . }}</p>
-                        {{ end }}
-                    </div>
+                <div class="text-cell">
+                    {{ range .paragraphs }}
+                    <p>{{ . }}</p>
+                    {{ end }}
+                    {{ range .buttons }}
+                        <a class="btn btn-outline-light my-2 my-sm-0" href="{{ .url }}">{{ .text }}</a>
+                    {{ end }}
                 </div>
+                <div class="pic1-cell square-cell">
+                    <img class="square-image" src="{{ index .images 0 }}" alt="">
+                </div>
+                <div class="pic2-cell square-cell">
+                    <img class="square-image" src="{{ index .images 1 }}" alt="">
+                </div>
+                <div class="pic3-cell square-cell">
+                    <img class="square-image" src="{{ index .images 2 }}" alt="">
+                </div>
+                <div class="pic4-cell square-cell">
+                    <img class="square-image" src="{{ index .images 3 }}" alt="">
+                </div>
+            </div>
         {{ end }}
 
 

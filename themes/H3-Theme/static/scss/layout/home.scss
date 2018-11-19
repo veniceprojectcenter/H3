@@ -2,8 +2,39 @@
     text-align: center;
 
     #carousel {
-        height: 90%;
+        height: 100%;
         overflow: hidden;
+    }
+}
+
+.carousel-inner {
+    height: 100%;
+    width: auto;
+}
+.carousel-item {
+    height: 100%;
+    width: auto;
+}
+.tester3 {
+    height: 100%;
+    width: auto;
+    filter: brightness(50%);
+}
+
+.carousel-text {
+    position: absolute;
+    height: 60%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 30px;
+    h3 {
+        font-size: 36pt;
+        font-weight: 500;
+    }
+    p {
+        font-size: 28pt;
+        font-weight: 300;
     }
 }
 
@@ -22,4 +53,57 @@
 
 .no-pointer {
     pointer-events: none;
+}
+
+
+// SCROLL MAGIC
+
+.fade-container {
+    padding: 50px;
+    background-color: #FAFAFA;
+}
+
+.fade-card {
+    width: 25%;
+    margin: 3%;
+    background-color: #aaaaaa;
+    border: 1px solid black;
+    font-family: Helvetica;
+}
+.fade-image {
+    width: 25%;
+    margin: 3%;
+}
+
+.fade-container {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 2s ease-out;
+    &.fade-in {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.rel {
+    position: relative;
+}
+.z0 {
+    z-index: 0;
+}
+.z1 {
+    z-index: 0;
+}
+.z2 {
+    z-index: 2;
+}
+
+.section {
+    z-index: 10;
+    background-color: white;
+    height: 100%;
+    color: black;
+}
+
+.pane {
+    background-color: _palette(bg);
 }

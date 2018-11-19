@@ -23,26 +23,25 @@ $(document).ready(function() {
 });
 
 
-/*var controller = new ScrollMagic.Controller();
 
-var scene = new ScrollMagic.Scene({
-  triggerElement: '#carousel', // starting scene, when reaching this element
-  duration: 400 // pin the element for a total of 400px
-})
-.setPin('#carousel'); // the element we want to pin
+// SCROLL MAGIC
 
-// Add Scene to ScrollMagic Controller
-controller.addScene(scene);*/
+var controller = new ScrollMagic.Controller({addIndicators: true});
 
-$(function() {
-    var controller = new ScrollMagic.Controller();
-
-    var containerScene = new ScrollMagic.Scene({
-        triggerElement: '#container',
-        duration: 500
-    })
-    .setPin('#block')
-    .addIndicators()
+$('.fade-container').each(function(){
+    var scene = new ScrollMagic.Scene({
+        triggerElement: this,
+        triggerHook: 0.8
+    })// trigger a velocity opaticy animation
+    .setClassToggle(this, 'fade-in')
     .addTo(controller);
+});
 
+$('.pin-at-top').each(function(){
+    var pinIntroScene = new ScrollMagic.Scene({
+        triggerElement: this,
+        triggerHook: 0
+    })// trigger a velocity opaticy animation
+    .setPin(this)
+    .addTo(controller);
 });
