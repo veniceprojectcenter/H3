@@ -25,20 +25,21 @@ $(document).ready(function() {
 
 
 function rotateText() {
-        setTimeout(fo, 5000);
-        setTimeout(fi, 5000);
+    setTimeout(fo, 5000);
+    setTimeout(fi, 5000);
 }
 function fo() {
     $('.rotating-text').each(function(){
-        $(this).fadeOut(100, function() {})
-    }
+        $(this).fadeOut(100, function() {});
+    });
 }
 function fi() {
     $('.rotating-text').each(function(){
-        $(this).fadeIn(100, function() {})
-    }
+        $(this).fadeIn(100, function() {});
+    });
 }
-rotateText();
+//rotateText();
+
 
 
 

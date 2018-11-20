@@ -66,7 +66,6 @@
     width: 25%;
     margin: 3%;
     padding: 0;
-    background-color: _palette(bg-alt);
     font-family: Helvetica;
 }
 .fade-image {
@@ -100,6 +99,7 @@
 
 .section {
     margin: 50px;
+    min-height: 100vh;
 }
 
 .pane {
@@ -178,4 +178,106 @@
 }
 .move-to-below {
 
+}
+
+.icon {
+    width: full;
+    height: auto;
+    padding: 20px;
+}
+#company-card {
+    background-color: #7cd89b;
+}
+#job-card {
+    background-color: #76cddd;
+}
+#year-card {
+    background-color: #f74747;
+}
+
+.fade-card {
+    h4 {
+        padding: 20px;
+        padding-bottom: 0;
+    }
+    h6 {
+        color: gray;
+        float: right;
+        padding: 20px;
+        padding-top: 0;
+    }
+    p {
+        padding: 30px;
+        font-size: 16pt;
+    }
+    .card-description {
+        position: relative;
+    }
+}
+
+#goal-container {
+    h3 {
+        color: black;
+        font-size: 26pt;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+    }
+}
+
+
+
+
+
+/*
+FLIP CARD
+*/
+
+/* entire container, keeps perspective */
+.flip-container {
+	perspective: 1000px;
+}
+/* flip the pane when hovered */
+.flip-container:hover .flipper, .flip-container.hover .flipper {
+	transform: rotateY(180deg);
+}
+
+.front, .back {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+/* flip speed goes here */
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+    background-color: _palette(bg-alt);
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+    background-color: _palette(fg);
+	transform: rotateY(180deg);
+    p {
+        color: _palette(bg);
+    }
 }
