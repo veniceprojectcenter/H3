@@ -68,6 +68,14 @@ $('.pin-at-top').each(function(){
     .setPin(this)
     .addTo(controller);
 });
+$('.pin-page').each(function(){
+    var pinIntroScene = new ScrollMagic.Scene({
+        triggerElement: this,
+        triggerHook: 0
+    })// trigger a velocity opaticy animation
+    .setPin(this)
+    .addTo(controller);
+});
 
 
 
