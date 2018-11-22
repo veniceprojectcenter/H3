@@ -1,0 +1,21 @@
+{{ define "main" }}
+    <div class="pad-top">
+        <h1 class="title">Register</h1>
+        <div id="register-pane" class="content">
+            First Name:
+            <input id="register-first" type="text" placeholder="First Name">
+            <br>
+            Last Name:
+            <input id="register-last" type="text" placeholder="Last Name">
+            <br>
+            Email:
+            <input id="register-email" type="email" placeholder="Email">
+            <br>
+            Password:
+            <input id="register-password" type="password" placeholder="Password">
+            <br>
+            <input class="btn btn-light my-2 my-sm-0" type="submit" role="button" onclick="register()">
+            <br>
+        </div>
+    </div>
+{{end}}

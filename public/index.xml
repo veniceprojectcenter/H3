@@ -103,6 +103,15 @@ Name of Contact: Contact Email: Contact Cell:   Event Title: Type:  Seminar Work
     </item>
     
     <item>
+      <title>Register</title>
+      <link>https://h3-sdpt.firebaseapp.com/register/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://h3-sdpt.firebaseapp.com/register/</guid>
+      <description>Register Content</description>
+    </item>
+    
+    <item>
       <title>Service Request</title>
       <link>https://h3-sdpt.firebaseapp.com/portal/service-request/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

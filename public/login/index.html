@@ -44,7 +44,7 @@
       
           <a class="nav-item nav-link" href="https://h3-sdpt.firebaseapp.com/history">History</a>
       
-          <a class="nav-item nav-link" href="https://h3-sdpt.firebaseapp.com/companies">Start-ups</a>
+          <a class="nav-item nav-link" href="https://new.serendpt.net/startup/">Start-ups</a>
       
           <a class="nav-item nav-link" href="https://h3-sdpt.firebaseapp.com/events">Events</a>
       
@@ -64,13 +64,14 @@
     <div class="pad-top">
         <h1 class="title">Login</h1>
         <div id="login-pane" class="content">
-            Username:
-            <input type="text">
+            Email:
+            <input id="login-email" type="email" placeholder="Email">
             <br>
             Password:
-            <input type="text">
+            <input id="login-password" type="password" placeholder="Password">
             <br>
-            <input class="btn btn-outline-light my-2 my-sm-0" type="submit" role="button">
+            <input class="btn btn-light my-2 my-sm-0" type="submit" role="button" onclick="login()">
+            
         </div>
     </div>
 
@@ -112,7 +113,10 @@
     <script src="../js/jquery.min.js" type="text/javascript"></script>
 <script src="../js/jquery-ui.min.js" type="text/javascript"></script>
 
+<script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
 
+
+<script src="../js/login.js" type="text/javascript"></script>
 <script src="../js/main.js" type="text/javascript"></script>
 
 

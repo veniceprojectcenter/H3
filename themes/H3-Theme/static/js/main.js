@@ -47,7 +47,7 @@ function fi() {
 
 // SCROLL MAGIC
 
-var controller = new ScrollMagic.Controller({addIndicators: true});
+var controller = new ScrollMagic.Controller();
 
 
 $('.fade-container').each(function(){

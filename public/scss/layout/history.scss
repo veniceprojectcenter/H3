@@ -1,6 +1,4 @@
 #history {
-    margin: 30px;
-
 
     p {
         font-size: 14pt;
@@ -35,36 +33,31 @@
 }
 .slide {
     min-height: 100vh;
-    background-color: orange;
+    background-color: _palette(bg);
+    padding-top: 50px;
 }
 
 .title-cell {
     grid-area: title;
-    background-color: green;
     text-align: center;
     font-size: 22pt;
 }
 .text-cell {
     grid-area: text;
-    background-color: blue;
     padding: 20px;
     font-size: 18pt;
 }
 .pic1-cell {
     grid-area: pic1;
-    background-color: yellow;
 }
 .pic2-cell {
     grid-area: pic2;
-    background-color: red;
 }
 .pic3-cell {
     grid-area: pic3;
-    background-color: yellow;
 }
 .pic4-cell {
     grid-area: pic4;
-    background-color: red;
 }
 
 .history-grid {

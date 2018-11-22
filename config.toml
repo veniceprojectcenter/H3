@@ -49,7 +49,7 @@ disqusShortname = ""
 
         [[params.navigation.links]]
             name = "Start-ups"
-            url = "companies"
+            url = "https://new.serendpt.net/startup/"
 
         [[params.navigation.links]]
             name = "Events"

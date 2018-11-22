@@ -38,16 +38,16 @@ body {
     flex: 50%;
 }
 
-input[type=text] {
+input[type=text], input[type=email], input[type=password] {
     border: 2px solid gray;
     border-radius: 4px;
     background-color: transparent;
-    color: white;
+    color: _palette(fg);
     padding: 5px 5px;
     margin: 5px 5px;
     box-sizing: border-box;
     &:focus {
-        background-color: #1a1a1a;
+        background-color: #eaeaea;
     }
 }
 

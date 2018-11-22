@@ -47,7 +47,7 @@ function fi() {
 
 // SCROLL MAGIC
 
-var controller = new ScrollMagic.Controller({addIndicators: true});
+var controller = new ScrollMagic.Controller();
 
 
 $('.fade-container').each(function(){
@@ -61,6 +61,14 @@ $('.fade-container').each(function(){
 
 
 $('.pin-at-top').each(function(){
+    var pinIntroScene = new ScrollMagic.Scene({
+        triggerElement: this,
+        triggerHook: 0
+    })// trigger a velocity opaticy animation
+    .setPin(this)
+    .addTo(controller);
+});
+$('.pin-page').each(function(){
     var pinIntroScene = new ScrollMagic.Scene({
         triggerElement: this,
         triggerHook: 0
