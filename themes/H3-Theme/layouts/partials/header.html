@@ -14,7 +14,13 @@
           <a class="nav-item nav-link" href="{{ .url | absURL}}">{{ .name }}</a>
       {{ end }}
 
-      <a class="btn btn-light my-2 my-sm-0" href="{{ .Site.Params.Navigation.login.url | absURL }}" role="button">Login</a>
+      <!-- TEST -->
+      <a class="nav-item nav-link" href="../test">Test</a>
+
+      <a id="documents-tab" class="nav-item nav-link" href="../documents">Documents</a>
+      <a id="username" class="nav-item nav-link"></a>
+      <a id="login-btn" class="btn btn-light my-2 my-sm-0" href="{{ .Site.Params.Navigation.login.url | absURL }}" role="button">Login</a>
+      <a id="logout-btn" class="btn btn-light my-2 my-sm-0" onclick="logout()" role="button">Logout</a>
     </div>
 
   </div>

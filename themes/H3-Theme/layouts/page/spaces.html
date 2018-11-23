@@ -2,7 +2,26 @@
     <div class="pad-top">
         <h1 class="title">{{ .Title }}</h1>
         <div class="content">
-            {{ .Content }}
+            <div class="section">
+
+                <div class="fade-container row">
+                    {{ range .Params.spaces }}
+                        <div class="fade-card col flip-container" ontouchstart="this.classList.toggle('hover');">
+                            <div class="flipper">
+                                <div class="front">
+                                    <img class="card-image" src="{{ .image }}" alt="">
+                                    <h4>{{ .name }}</h4>
+                                </div>
+                                <div class="back">
+                                    <p>{{ .description }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    {{ end }}
+
+                </div>
+            </div>
+            <a id="loginBtn" class="btn btn-light my-2 my-sm-0" href="../event-form" role="button">Apply Here</a>
         </div>
     </div>
 {{end}}

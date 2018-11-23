@@ -11,10 +11,25 @@ firebase.initializeApp(config);
 
 
 firebase.auth().onAuthStateChanged(function(user) {
+    var username = document.getElementById("username");
+    var loginBtn = document.getElementById("login-btn");
+    var logoutBtn = document.getElementById("logout-btn");
+    var documentsTab = document.getElementById("documents-tab");
+
     if (user) {
-
+        // user is logged in
+        username.textContent = user.displayName;
+        $("#login-btn").hide();
+        $("#logout-btn").show();
+        $("#username").show();
+        $("#documents-tab").show();
     } else {
-
+        // user is logged out
+        username.textContent = "";
+        $("#documents-tab").hide();
+        $("#username").hide();
+        $("#logout-btn").hide();
+        $("#login-btn").show();
     }
 });
 
@@ -26,44 +41,23 @@ function register() {
     var email = document.getElementById("register-email").value;
     var password = document.getElementById("register-password").value;
 
-    firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
+    firebase.auth().createUserWithEmailAndPassword(email, password)
+    .then(function() {
+            var user = firebase.auth().currentUser;
+            if (user) {
+                user.updateProfile({
+                    displayName: firstName + " " + lastName,
+                    photoURL: ""
+                });
+            }
+        }
+    )
+    .catch(function(error) {
       // Handle Errors here.
       var errorCode = error.code;
       var errorMessage = error.message;
       window.alert("Error: " + errorMessage);
     });
-
-
-
-    var user = firebase.auth().currentUser;
-
-    user.updateProfile({
-      displayName: "displayname",
-      photoURL: "photoURL"
-    }).then(function() {
-      // Update successful.
-    }).catch(function(error) {
-      // An error happened.
-      var errorCode = error.code;
-      var errorMessage = error.message;
-      window.alert("Error: " + errorMessage);
-    });
-
-
-    var name, email, uid, emailVerified;
-
-    if (user != null) {
-      name = user.displayName;
-      email = user.email;
-      emailVerified = user.emailVerified;
-      uid = user.uid;  // The user's ID, unique to the Firebase project. Do NOT use
-                       // this value to authenticate with your backend server, if
-                       // you have one. Use User.getToken() instead.
-
-      window.alert(name + email + emailVerified + uid);
-  } else {
-      window.alert("user null");
-  }
 
 }
 
@@ -71,7 +65,8 @@ function login() {
     var userEmail = document.getElementById("login-email").value;
     var userPassword = document.getElementById("login-password").value;
 
-    firebase.auth().signInWithEmailAndPassword(userEmail, userPassword).catch(function(error) {
+    firebase.auth().signInWithEmailAndPassword(userEmail, userPassword)
+    .catch(function(error) {
         var errorCode = error.code;
         var errorMessage = error.message;
         window.alert("Error: " + errorMessage);

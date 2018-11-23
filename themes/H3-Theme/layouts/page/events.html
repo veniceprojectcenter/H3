@@ -5,42 +5,20 @@
     </div>
     <div class="content section">
         <div class="fade-container row">
-            <div class="fade-card col flip-container" ontouchstart="this.classList.toggle('hover');">
-                <div class="flipper">
-                    <div class="front">
-                        <img class="card-image" src="../img/dummy/wpi-iqp.jpg" alt="">
-                        <h4>WPI Project Presentations</h4>
-                        <h6>Dec 7</h6>
-                    </div>
-                    <div class="back">
-                        <p>After a long wait, Apple has agreed to implement the features of the DaAaB app into Apple Maps. With the support of the Venice transportation system and the Venetian governement, the integration into Apple Maps will be available in the next two weeks.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="fade-card col flip-container" ontouchstart="this.classList.toggle('hover');">
-                <div class="flipper">
-                    <div class="front">
-                        <img class="card-image" src="../img/dummy/dj-party.jpg" alt="">
-                        <h4>DJ Dance Party</h4>
-                        <h6>Dec 15</h6>
-                    </div>
-                    <div class="back">
-                        <p>After a long wait, Apple has agreed to implement the features of the DaAaB app into Apple Maps. With the support of the Venice transportation system and the Venetian governement, the integration into Apple Maps will be available in the next two weeks.</p>
+            {{ range .Params.events }}
+                <div class="fade-card col flip-container" ontouchstart="this.classList.toggle('hover');">
+                    <div class="flipper">
+                        <div class="front">
+                            <img class="card-image" src="{{ .image }}" alt="">
+                            <h4>{{ .name }}</h4>
+                            <h6>{{ .date }}</h6>
+                        </div>
+                        <div class="back">
+                            <p>{{ .description }}</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="fade-card col flip-container" ontouchstart="this.classList.toggle('hover');">
-                <div class="flipper">
-                    <div class="front">
-                        <img class="card-image" src="../img/dummy/farmbot.jpg" alt="">
-                        <h4>Farm-bot Hackathon</h4>
-                        <h6>Jan 7</h6>
-                    </div>
-                    <div class="back">
-                        <p>After a long wait, Apple has agreed to implement the features of the DaAaB app into Apple Maps. With the support of the Venice transportation system and the Venetian governement, the integration into Apple Maps will be available in the next two weeks.</p>
-                    </div>
-                </div>
-            </div>
+            {{ end }}
         </div>
     </div>
 {{end}}

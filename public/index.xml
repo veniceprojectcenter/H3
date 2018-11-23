@@ -11,15 +11,6 @@
     
     
     <item>
-      <title>Accounting</title>
-      <link>https://h3-sdpt.firebaseapp.com/portal/accounting/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://h3-sdpt.firebaseapp.com/portal/accounting/</guid>
-      <description>Here is accounting information</description>
-    </item>
-    
-    <item>
       <title>Art Gallery</title>
       <link>https://h3-sdpt.firebaseapp.com/art/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -39,19 +30,19 @@
     
     <item>
       <title>Documents</title>
-      <link>https://h3-sdpt.firebaseapp.com/portal/documents/</link>
+      <link>https://h3-sdpt.firebaseapp.com/documents/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://h3-sdpt.firebaseapp.com/portal/documents/</guid>
+      <guid>https://h3-sdpt.firebaseapp.com/documents/</guid>
       <description>Here are the documents</description>
     </item>
     
     <item>
       <title>Event Form</title>
-      <link>https://h3-sdpt.firebaseapp.com/spaces/event-form/</link>
+      <link>https://h3-sdpt.firebaseapp.com/event-form/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://h3-sdpt.firebaseapp.com/spaces/event-form/</guid>
+      <guid>https://h3-sdpt.firebaseapp.com/event-form/</guid>
       <description>Contact Group: (company or organizaiton name if applicable)
 Name of Contact: Contact Email: Contact Cell:   Event Title: Type:  Seminar Workshop Lecture Concert Exhibit Dj Set Cocktail Meeting Empty Space Other  Expected # of people: Description:   Space Select space(s):  Ground Floor   Second Floor   Third Floor     Date and Time Select dates for the event:
   Start Time   End Time     Requirements  Usher Room Attendant Mic Speakers Chairs Tables   Final Cost: € XXX.</description>
@@ -73,15 +64,6 @@ Name of Contact: Contact Email: Contact Cell:   Event Title: Type:  Seminar Work
       
       <guid>https://h3-sdpt.firebaseapp.com/login/</guid>
       <description>Login Content</description>
-    </item>
-    
-    <item>
-      <title>Manuals</title>
-      <link>https://h3-sdpt.firebaseapp.com/portal/manuals/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://h3-sdpt.firebaseapp.com/portal/manuals/</guid>
-      <description>Here are the manuals</description>
     </item>
     
     <item>
@@ -112,12 +94,12 @@ Name of Contact: Contact Email: Contact Cell:   Event Title: Type:  Seminar Work
     </item>
     
     <item>
-      <title>Service Request</title>
-      <link>https://h3-sdpt.firebaseapp.com/portal/service-request/</link>
+      <title>Spaces</title>
+      <link>https://h3-sdpt.firebaseapp.com/spaces/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://h3-sdpt.firebaseapp.com/portal/service-request/</guid>
-      <description>Here you can request a service</description>
+      <guid>https://h3-sdpt.firebaseapp.com/spaces/</guid>
+      <description>--  Main Area  500 square feet 12 tables 60 chairs Weekdays: $ Weekends and Nights: $$   -- </description>
     </item>
     
     <item>

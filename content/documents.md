@@ -1,5 +1,5 @@
 ---
 title: "Documents"
-slug: "documents"
+layout: "documents"
 ---
 Here are the documents

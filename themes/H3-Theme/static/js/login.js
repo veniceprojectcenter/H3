@@ -11,10 +11,25 @@ firebase.initializeApp(config);
 
 
 firebase.auth().onAuthStateChanged(function(user) {
+    var username = document.getElementById("username");
+    var loginBtn = document.getElementById("login-btn");
+    var logoutBtn = document.getElementById("logout-btn");
+    var documentsTab = document.getElementById("documents-tab");
+
     if (user) {
         // user is logged in
+        username.textContent = user.displayName;
+        $("#login-btn").hide();
+        $("#logout-btn").show();
+        $("#username").show();
+        $("#documents-tab").show();
     } else {
         // user is logged out
+        username.textContent = "";
+        $("#documents-tab").hide();
+        $("#username").hide();
+        $("#logout-btn").hide();
+        $("#login-btn").show();
     }
 });
 
