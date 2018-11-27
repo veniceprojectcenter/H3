@@ -15,5 +15,8 @@
     "jquery-ui-dist": "^1.12.1",
     "node-sass": "^4.9.4",
     "scrollmagic": "^2.0.6"
+  },
+  "devDependencies": {
+    "barba.js": "^1.0.0"
   }
 }

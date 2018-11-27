@@ -6,15 +6,18 @@
 
     <body>
 
-        {{ partial "header.html" . }}
-        <div id="base-content" class="wrapper">
+        <div id="barba-wrapper">
+            {{ partial "header.html" . }}
+            <div id="base-content" class="wrapper barba-container" data-namespace="page">
 
-            {{ block "main" . }}
+                {{ block "main" . }}
 
-            {{end}}
+                {{end}}
 
+
+            {{ partial "footer.html" . }}
+            </div>
         </div>
-        {{ partial "footer.html" . }}
 
     </body>
 

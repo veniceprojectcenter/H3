@@ -24,6 +24,12 @@ $(document).ready(function() {
 
 
 
+$(document).ready(function() {
+    Barba.Pjax.start();
+});
+
+
+
 function rotateText() {
     setTimeout(fo, 5000);
     setTimeout(fi, 5000);
