@@ -120,3 +120,26 @@ function addParallax() {
     var cw = $(this).width();
     $(this).css({'height':cw+'px'});
 });*/
+
+var prevScrollpos = window.pageYOffset;
+
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+
+  if (prevScrollpos > currentScrollPos) {
+  	$("nav").css("top", "0");
+  } else {
+    $("nav").css("top", "-60px");
+  }
+
+  prevScrollpos = currentScrollPos;
+
+  // Hide Header on on scroll down
+  var scroll = $(window).scrollTop();
+  if (scroll > 15) {
+    $("nav").addClass("scrolled");
+  } else {
+  	$("nav").removeClass("scrolled");
+  }
+
+};

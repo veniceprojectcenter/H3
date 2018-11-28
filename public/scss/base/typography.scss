@@ -7,13 +7,13 @@ body, p, a, h1, h2 {
     line-height: 1.2;
 }
 h1 {
-    font-size: 36pt;
+    font-size: 48pt;
     letter-spacing: 0.15em;
 }
 h2 {
     font-size: 18pt;
     letter-spacing: 0.10em;
-    padding-top: 40;
+    padding-top: 0;
     padding-bottom: 20;
     font-weight: 400;
 }
@@ -28,18 +28,5 @@ h2 {
     color: white;
     &:hover {
         color: desaturate(darken(white, 25), 5);
-    }
-}
-
-#footer, #footer p {
-    color: white;
-}
-
-#home-content {
-    #carousel .carousel-text, #carousel p {
-        color: white;
-    }
-    h2 {
-        font-size: 22pt;
     }
 }

@@ -1,11 +1,15 @@
 .navbar {
-    height: 50px;
+    height: 60px;
     width: 100%;
     background-color: rgba(26, 26, 26, 0.9); // 26 = #1a
-    letter-spacing: 0.1em;
+    transition: 0.4s ease-in-out; // allows for smooth scrolling fade transitions
+
     img {
         height: 30px;
         margin: 10px;
+    }
+    .navbar-nav a {
+        letter-spacing: 0.1em;
     }
     #login-btn, #logout-btn, #username, #documents-tab {
         display: none;
@@ -21,4 +25,9 @@
     #logout-btn {
         color: black;
     }
+}
+
+// Scrolling up and down
+.scrolled {
+    opacity: 1;
 }

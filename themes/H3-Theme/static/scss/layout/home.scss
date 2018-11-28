@@ -177,7 +177,6 @@
 .move-from-above {
 }
 .move-to-below {
-
 }
 
 .icon {
@@ -221,5 +220,15 @@
         font-size: 26pt;
         font-weight: 600;
         letter-spacing: 0.1em;
+    }
+}
+
+
+#home-content {
+    #carousel .carousel-text, #carousel p {
+        color: white;
+    }
+    h2 {
+        font-size: 22pt;
     }
 }

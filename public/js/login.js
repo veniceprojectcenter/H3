@@ -16,6 +16,7 @@ firebase.auth().onAuthStateChanged(function(user) {
     var logoutBtn = document.getElementById("logout-btn");
     var documentsTab = document.getElementById("documents-tab");
 
+
     if (user) {
         // user is logged in
         username.textContent = user.displayName;
