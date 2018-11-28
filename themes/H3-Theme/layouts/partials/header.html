@@ -1,15 +1,8 @@
 <nav class="navbar fixed-top navbar-expand-lg">
 
-  <a href="{{ .Site.BaseURL }}" class="logo"> <img src="{{ .Site.Params.baseURL }}/img/H3 Logo.png" alt="" /></a>
-
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <a href="{{ .Site.BaseURL }}" class="logo"> <img src="{{ .Site.Params.baseURL }}/img/H3 Logo.png" alt="" /></a>
 
     <div class="navbar-nav ml-auto">
-
       {{ range .Site.Params.Navigation.links }}
           <a class="nav-item nav-link" href="{{ .url | absURL}}">{{ .name }}</a>
       {{ end }}
@@ -19,7 +12,5 @@
       <a id="login-btn" class="btn btn-light my-2 my-sm-0" href="{{ .Site.Params.Navigation.login.url | absURL }}" role="button">Login</a>
       <a id="logout-btn" class="btn btn-light my-2 my-sm-0" onclick="logout()" role="button">Logout</a>
     </div>
-
-  </div>
 
 </nav>

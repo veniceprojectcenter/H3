@@ -1,92 +1,24 @@
 .navbar {
     height: 50px;
     width: 100%;
-    background-color: rgba(26, 26, 26, 0.8); // 26 = #1a
+    background-color: rgba(26, 26, 26, 0.9); // 26 = #1a
+    letter-spacing: 0.1em;
     img {
         height: 30px;
         margin: 10px;
     }
-}
-
-#header {
-    margin: 0;
-    padding: 0;
-    background-color: rgba(26, 26, 26, 0.8);
-    height: 50px;
-    position: fixed;
-    width: 100%;
-    font-family: ('Source Sans Pro', Helvetica, sans-serif);
-    text-transform: uppercase;
-    letter-spacing: 0.15em;
-
-    img {
-        height: 30px;
-        margin: 10px;
+    #login-btn, #logout-btn, #username, #documents-tab {
+        display: none;
     }
 
-    a {
-        margin-top: 15;
+    #username {
+        color: _palette(highlight);
     }
 
-}
-
-#main-nav-div {
-    display: inline-block;
-    position: fixed;
-    margin-top: 15px;
-    margin-left: 300px;
-}
-.main-nav {
-    margin-top: 0;
-    padding-top: 0;
-    padding-left: 20;
-    padding-right: 20;
-}
-
-#login-btn, #logout-btn, #username, #documents-tab {
-    display: none;
-}
-
-#username {
-    color: _palette(highlight);
-}
-
-#logout-btn:hover {
-    color: _palette(highlight);
-}
-#logout-btn {
-    color: black;
-}
-
-
-
-// OLD FULLSCREEN MENU ***
-#menuBtn{
-    float: right;
-    margin-right: 10px;
-}
-#menuClose {
-    float: right;
-    margin-right: 10px;
-    margin-top: 10px;
-    font-size: 20pt;
-}
-
-nav#menu {
-    visibility: hidden;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(26, 26, 26, 0.8);
-    ul {
-        margin-top: 100;
-        font-family: ('Source Sans Pro', Helvetica, sans-serif);
-		text-transform: uppercase;
-        letter-spacing: 0.15em;
-        text-align: center;
-        list-style-type: none;
+    #logout-btn:hover {
+        color: _palette(highlight);
     }
-    li {
-        margin: 50;
+    #logout-btn {
+        color: black;
     }
 }
