@@ -98,7 +98,7 @@ function addParallax() {
     $('.parallax').each(function(){
         var parallaxTl = new TimelineMax();
         parallaxTl
-            .from('.parallax-text', 0.2, {autoAlpha: 0, ease:Power0.easeNone}, 0.2)
+            .from('.parallax-text', 0.2, {autoAlpha: 0, ease:Power0.easeNone}, 0.1)
             .from('.parallax-image', 1, {y: '-30%', ease:Power0.easeNone}, 0)
             ;
 
