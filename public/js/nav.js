@@ -19,7 +19,6 @@ window.onscroll = function() {
 
 
 function updatePage(currPage) {
-
     resetHighlights();
     if (currPage == "History") {
         $("#history-tab").addClass("highlighted");
@@ -31,7 +30,5 @@ function updatePage(currPage) {
         $("#documents-tab").addClass("highlighted");
     }
 }
-
 function resetHighlights() {
-
 }

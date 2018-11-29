@@ -21,6 +21,7 @@ body {
 }
 
 .content {
+    margin: 50px;
     padding: 20px;
 }
 
@@ -83,5 +84,13 @@ ul {
         width: 100%;
         height: auto;
         filter: brightness(50%);
+    }
+}
+
+.section {
+    min-height: 100vh;
+    h2 {
+        font-size: 24pt;
+        text-align: center;
     }
 }

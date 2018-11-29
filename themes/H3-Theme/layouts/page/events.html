@@ -3,7 +3,7 @@
     <div id="carousel" class="carousel" data-ride="carousel">
 
         <ol class="carousel-indicators">
-            {{ range $index, $element := .Site.Params.carousel }}
+            {{ range $index, $element := .Params.events }}
                 {{ if eq $index 0 }}
                     <li data-target="#carousel" data-slide-to="{{ $index }}" class="active"></li>
                 {{ else }}
@@ -13,29 +13,26 @@
         </ol>
 
         <div class="carousel-inner">
-            {{ range $index, $element := .Site.Params.carousel }}
+            {{ range $index, $element := .Params.events }}
                 {{ if eq $index 0 }}
                     <div class="carousel-item active">
-                        <img class="d-block tester3" src="/img/{{ .image }}"  alt="">
-                        <div class="carousel-text">
-                            <h3>{{ .title }}</h3>
-                            <br>
-                            <p>{{ .description }}</p>
-                            {{ if not (eq .buttontext "")}}
-                                <a class="btn btn-light my-2 my-sm-0" href="{{ .buttonurl | absURL }}" role="button">{{ .buttontext }}</a>
-                            {{ end }}
+                        <img class="d-block tester3" src="/img/{{ .carousel }}"  alt="">
+                        <div class="carousel-title">
+                            <h3>{{ .name }}</h3>
+                        </div>
+                        <div class="carousel-description">
+                            <h3>{{ .description }}</h3>
                         </div>
                     </div>
                 {{ else }}
                     <div class="carousel-item">
-                        <img class="d-block tester3" src="/img/{{ .image }}"  alt="">
-                            <div class="carousel-text">
-                                <h3>{{ .title }}</h3>
-                                <p>{{ .description }}</p>
-                                {{ if not (eq .buttontext "")}}
-                                    <a class="btn btn-light my-2 my-sm-0" href="{{ .buttonurl | absURL }}" role="button">{{ .buttontext }}</a>
-                                {{ end }}
-                            </div>
+                        <img class="d-block tester3" src="/img/{{ .carousel }}"  alt="">
+                        <div class="carousel-title">
+                            <h3>{{ .name }}</h3>
+                        </div>
+                        <div class="carousel-description">
+                            <h3>{{ .description }}</h3>
+                        </div>
                     </div>
                 {{ end }}
             {{ end }}
@@ -53,49 +50,32 @@
     </div>
 
     <div class="scroll-container">
-        <i class="fas fa-chevron-down scroll"></i>
+        <i id="scroll-down" class="fas fa-chevron-down scroll"></i>
+    </div>
+
+    <div id="scroll-target">
+        <div class="content section">
+            <h2>Upcoming Events</h2>
+            {{ range .Params.events }}
+                <div class="block-grid shift-card">
+                    <div class="img-cell">
+                        <img class="card-image" src="{{ .image }}" alt="">
+                    </div>
+                    <div class="title-cell">
+                        <h4>{{ .name }}</h4>
+                    </div>
+                    <div class="date-cell">
+                        <h6>{{ .date }}</h6>
+                    </div>
+                    <div class="description-cell">
+                        <p>{{ .description }}</p>
+                    </div>
+                </div>
+            {{ end }}
+
+            <a class="btn btn-light my-2 my-sm-0" href="">Book Now</a>
+        </div>
     </div>
 
 
-    <div class="content section">
-        <h2>Upcoming Events</h2>
-        {{ range .Params.events }}
-            <div class="block-grid">
-                <div class="img-cell">
-                    <img class="card-image" src="{{ .image }}" alt="">
-                </div>
-                <div class="title-cell">
-                    <h4>{{ .name }}</h4>
-                </div>
-                <div class="date-cell">
-                    <h6>{{ .date }}</h6>
-                </div>
-                <div class="description-cell">
-                    <p>{{ .description }}</p>
-                </div>
-            </div>
-        {{ end }}
-    </div>
-
-    <a class="btn btn-light my-2 my-sm-0" href="">Book Now</a>
-
-    <div class="content section">
-        <h2>Past Events</h2>
-        {{ range .Params.events }}
-            <div class="block-grid">
-                <div class="img-cell">
-                    <img class="card-image" src="{{ .image }}" alt="">
-                </div>
-                <div class="title-cell">
-                    <h4>{{ .name }}</h4>
-                </div>
-                <div class="date-cell">
-                    <h6>{{ .date }}</h6>
-                </div>
-                <div class="description-cell">
-                    <p>{{ .description }}</p>
-                </div>
-            </div>
-        {{ end }}
-    </div>
 {{end}}
