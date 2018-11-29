@@ -1,55 +1,11 @@
 #home-content {
     text-align: center;
 
-    #carousel {
-        height: 100%;
-        overflow: hidden;
+    h2 {
+        font-size: 22pt;
     }
 }
 
-.carousel-inner {
-    height: 100%;
-    width: auto;
-}
-.carousel-item {
-    height: 100%;
-    width: auto;
-}
-.tester3 {
-    height: 100%;
-    width: auto;
-    filter: brightness(50%);
-}
-
-.carousel-text {
-    position: absolute;
-    height: 60%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 30px;
-    h3 {
-        font-size: 36pt;
-        font-weight: 500;
-    }
-    p {
-        font-size: 28pt;
-        font-weight: 300;
-    }
-}
-
-.carousel-card {
-    position: absolute;
-    width: 30%;
-    height: 60%;
-    top: 50%;
-    left: 30%;
-    transform: translate(-50%, -50%);
-    padding: 30px;
-    background-color: rgba(46, 46, 46, 0.9);
-    border-radius: 5px;
-    box-shadow: 3px 3px 1px rgba(0, 0, 0, 0.7);
-}
 
 .no-pointer {
     pointer-events: none;
@@ -194,25 +150,6 @@
     background-color: #f74747;
 }
 
-.fade-card {
-    h4 {
-        padding: 20px;
-        padding-bottom: 0;
-    }
-    h6 {
-        color: gray;
-        float: right;
-        padding: 20px;
-        padding-top: 0;
-    }
-    p {
-        padding: 30px;
-        font-size: 16pt;
-    }
-    .card-description {
-        position: relative;
-    }
-}
 
 #goal-container {
     h3 {
@@ -220,15 +157,5 @@
         font-size: 26pt;
         font-weight: 600;
         letter-spacing: 0.1em;
-    }
-}
-
-
-#home-content {
-    #carousel .carousel-text, #carousel p {
-        color: white;
-    }
-    h2 {
-        font-size: 22pt;
     }
 }

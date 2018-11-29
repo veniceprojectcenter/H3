@@ -61,24 +61,25 @@ ul {
 
 
 #page-banner {
-    height: 40%;
+    height: 50%;
     overflow: hidden;
 
     #page-title {
+        z-index: 2;
         position: absolute;
-        width: 30%;
         height: 60%;
-        top: 50%;
+        top: 52%;
         left: 50%;
         transform: translate(-50%, -50%);
 
         text-align: center;
-        font-size: 36pt;
+        font-size: 48pt;
         color: white;
         text-transform: capitalize;
         font-weight: 500;
     }
     #page-image {
+        z-index: 1;
         width: 100%;
         height: auto;
         filter: brightness(50%);

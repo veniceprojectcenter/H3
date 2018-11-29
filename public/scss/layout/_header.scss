@@ -2,6 +2,7 @@
     height: 60px;
     width: 100%;
     background-color: rgba(26, 26, 26, 0.9); // 26 = #1a
+    transition: 0.4s ease-in-out; // allows for smooth scrolling fade transitions
 
     img {
         height: 30px;
@@ -26,8 +27,11 @@
     }
 }
 
-.scrolled::before{
-    content:"";
-    opacity:1;
-    transition:0.3s ease-in-out;
+// Scrolling up and down
+.scrolled {
+    opacity: 1;
+}
+
+.highlighted {
+    text-decoration: underline;
 }

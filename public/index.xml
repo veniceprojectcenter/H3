@@ -58,21 +58,21 @@ Name of Contact: Contact Email: Contact Cell:   Event Title: Type:  Seminar Work
     </item>
     
     <item>
+      <title>History</title>
+      <link>https://h3-sdpt.firebaseapp.com/history/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://h3-sdpt.firebaseapp.com/history/</guid>
+      <description>History Content</description>
+    </item>
+    
+    <item>
       <title>Login</title>
       <link>https://h3-sdpt.firebaseapp.com/login/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://h3-sdpt.firebaseapp.com/login/</guid>
       <description>Login Content</description>
-    </item>
-    
-    <item>
-      <title>Our History</title>
-      <link>https://h3-sdpt.firebaseapp.com/history/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://h3-sdpt.firebaseapp.com/history/</guid>
-      <description>History Content</description>
     </item>
     
     <item>

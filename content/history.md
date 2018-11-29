@@ -1,5 +1,5 @@
 ---
-title: "Our History"
+title: "History"
 layout: "history"
 
 banner: "../../../img/history/banner.jpeg"

@@ -37,28 +37,7 @@
     padding-top: 50px;
 }
 
-.title-cell {
-    grid-area: title;
-    text-align: center;
-    font-size: 22pt;
-}
-.text-cell {
-    grid-area: text;
-    padding: 20px;
-    font-size: 18pt;
-}
-.pic1-cell {
-    grid-area: pic1;
-}
-.pic2-cell {
-    grid-area: pic2;
-}
-.pic3-cell {
-    grid-area: pic3;
-}
-.pic4-cell {
-    grid-area: pic4;
-}
+
 
 .history-grid {
     display: grid;
@@ -69,5 +48,27 @@
         "pic1 pic1 text text text pic2 pic2"
         "pic1 pic1 text text text pic2 pic2"
         "pic3 pic3 text text text pic4 pic4"
-        "pic3 pic3 text text text pic4 pic4"
+        "pic3 pic3 text text text pic4 pic4";
+    .title-cell {
+        grid-area: title;
+        text-align: center;
+        font-size: 22pt;
+    }
+    .text-cell {
+        grid-area: text;
+        padding: 20px;
+        font-size: 18pt;
+    }
+    .pic1-cell {
+        grid-area: pic1;
+    }
+    .pic2-cell {
+        grid-area: pic2;
+    }
+    .pic3-cell {
+        grid-area: pic3;
+    }
+    .pic4-cell {
+        grid-area: pic4;
+    }
 }
