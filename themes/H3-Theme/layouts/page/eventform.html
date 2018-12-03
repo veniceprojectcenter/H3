@@ -86,12 +86,12 @@
                     <div id="Amenities" class="tabcontent">
                         <h3>Amenities</h3>
                         <ul>
-                            <li><input type="checkbox"> Usher</li>
-                            <li><input type="checkbox"> Room Attendant</li>
-                            <li><input type="checkbox"> Mic</li>
-                            <li><input type="checkbox"> Speakers</li>
-                            <li><input type="text"> Chairs</li>
-                            <li><input type="text"> Tables</li>
+                            <li><input id="usherCbx" type="checkbox" onclick="updateReceiptCheckbox(this, 'Usher', '4')"> Usher</li>
+                            <li><input id="attendantCbx" type="checkbox"> Room Attendant</li>
+                            <li><input id="MicCbx" type="checkbox"> Mic</li>
+                            <li><input id="speakerCbx" type="checkbox"> Speakers</li>
+                            <li><input id="chairAmt" type="text" onblur="updateReceiptAmount(this, 'Chairs', '0.5')"> Chairs</li>
+                            <li><input id="tableAmt" type="text"> Tables</li>
                         </ul>
                     </div>
 

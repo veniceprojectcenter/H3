@@ -88,7 +88,7 @@
                         <a class="tablink" onclick="openTab(event, 'Details')">Event Details</a>
                         <a class="tablink" onclick="openTab(event, 'Amenities')">Amenities</a>
                         <a class="tablink" onclick="openTab(event, 'Contact')">Contact Info</a>
-                        <a class="tablink" onclick="openTab(event, 'Review')">Review & Submit</a>
+                        <a class="tablink" onclick="openTab(event, 'Review'); reviewApplication()">Review & Submit</a>
                     </div>
                 </div>
 
@@ -116,6 +116,7 @@
                         Title: <input type="text"><br>
                         Type:
                         <select>
+                            <option>-</option>
                             <option>Seminar</option>
                             <option>Workshop</option>
                             <option>Lecture</option>
@@ -136,12 +137,12 @@
                     <div id="Amenities" class="tabcontent">
                         <h3>Amenities</h3>
                         <ul>
-                            <li><input type="checkbox"> Usher</li>
-                            <li><input type="checkbox"> Room Attendant</li>
-                            <li><input type="checkbox"> Mic</li>
-                            <li><input type="checkbox"> Speakers</li>
-                            <li><input type="text"> Chairs</li>
-                            <li><input type="text"> Tables</li>
+                            <li><input id="usherCbx" type="checkbox" onclick="addToReceipt()"> Usher</li>
+                            <li><input id="attendantCbx" type="checkbox"> Room Attendant</li>
+                            <li><input id="MicCbx" type="checkbox"> Mic</li>
+                            <li><input id="speakerCbx" type="checkbox"> Speakers</li>
+                            <li><input id="chairAmt" type="text"> Chairs</li>
+                            <li><input id="tableAmt" type="text"> Tables</li>
                         </ul>
                     </div>
 
