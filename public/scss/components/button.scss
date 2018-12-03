@@ -1,4 +1,4 @@
-.btn-light{
+.btn-light {
     border-color: _palette(accent1);
     border-radius: 20px;
     background-color: _palette(accent1);
@@ -16,4 +16,12 @@
         background-color: transparent;
         color: _palette(accent1);
     }
+}
+
+.btn-large {
+    font-size: 24;
+    padding-top: 5px;
+    padding-bottom: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
 }

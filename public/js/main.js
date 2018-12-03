@@ -24,6 +24,7 @@ $(document).ready(function() {
     Barba.Pjax.start();
 });
 
+
 //var controller = new ScrollMagic.Controller({addIndicators: true});
 //addScrollMagic();
 

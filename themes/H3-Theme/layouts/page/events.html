@@ -1,6 +1,6 @@
 {{ define "main" }}
 
-    <div id="carousel" class="carousel" data-ride="carousel">
+    <div id="carousel" class="carousel" data-ride="carousel" data-interval="6000">
 
         <ol class="carousel-indicators">
             {{ range $index, $element := .Params.events }}
@@ -16,7 +16,7 @@
             {{ range $index, $element := .Params.events }}
                 {{ if eq $index 0 }}
                     <div class="carousel-item active">
-                        <img class="d-block tester3" src="/img/{{ .carousel }}"  alt="">
+                        <img class="d-block carousel-image" src="/img/{{ .carousel }}"  alt="">
                         <div class="carousel-title">
                             <h3>{{ .name }}</h3>
                         </div>
@@ -26,7 +26,7 @@
                     </div>
                 {{ else }}
                     <div class="carousel-item">
-                        <img class="d-block tester3" src="/img/{{ .carousel }}"  alt="">
+                        <img class="d-block carousel-image" src="/img/{{ .carousel }}"  alt="">
                         <div class="carousel-title">
                             <h3>{{ .name }}</h3>
                         </div>
@@ -50,7 +50,7 @@
     </div>
 
     <div class="scroll-container">
-        <i id="scroll-down" class="fas fa-chevron-down scroll"></i>
+        <i class="fas fa-chevron-down scroll" onclick="scrollDown()"></i>
     </div>
 
     <div id="scroll-target">
@@ -73,7 +73,9 @@
                 </div>
             {{ end }}
 
-            <a class="btn btn-light my-2 my-sm-0" href="">Book Now</a>
+            <div class="center">
+                <a class="btn btn-light btn-large my-2 my-sm-0" href="">Book Now</a>
+            </div>
         </div>
     </div>
 

@@ -16,7 +16,9 @@ firebase.auth().onAuthStateChanged(function(user) {
     var logoutBtn = document.getElementById("logout-btn");
     var documentsTab = document.getElementById("documents-tab");
 
-
+    $('.guest-access').each(function(){
+        $(this).show();
+    });
     if (user) {
         // user is logged in
         username.textContent = user.displayName;

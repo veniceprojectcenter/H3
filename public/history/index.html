@@ -8,6 +8,12 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="/resources/demos/style.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+
 <link rel="stylesheet" href="https://h3-sdpt.firebaseapp.com/css/style.css"/>
 <link href="https://h3-sdpt.firebaseapp.com/css/custom.css" rel="stylesheet">
 
@@ -32,22 +38,22 @@
         <div id="barba-wrapper">
             <nav class="navbar fixed-top navbar-expand-lg">
 
-    <a href="https://h3-sdpt.firebaseapp.com/" class="logo"> <img src="/img/H3 Logo.png" alt="" /></a>
+    <a href="https://h3-sdpt.firebaseapp.com/" class="logo"> <img src="/img/H3 Logo.png" alt="" onclick="resetHighlights()"/></a>
 
     <div class="navbar-nav ml-auto">
       
-          <a class="nav-item nav-link" href="https://h3-sdpt.firebaseapp.com/history">History</a>
+          <a id="history-tab" class="nav-item nav-link guest-access" href="https://h3-sdpt.firebaseapp.com/history" onclick="updatePage(/history/)">History</a>
       
-          <a class="nav-item nav-link" href="https://new.serendpt.net/startup/">Start-ups</a>
+          <a id="https://new.serendpt.net/startup/-tab" class="nav-item nav-link guest-access" href="https://new.serendpt.net/startup/" onclick="updatePage(/https:\/\/new\.serendpt\.net\/startup\//)">Start-ups</a>
       
-          <a class="nav-item nav-link" href="https://h3-sdpt.firebaseapp.com/events">Events</a>
+          <a id="events-tab" class="nav-item nav-link guest-access" href="https://h3-sdpt.firebaseapp.com/events" onclick="updatePage(/events/)">Events</a>
       
-          <a class="nav-item nav-link" href="https://h3-sdpt.firebaseapp.com/spaces">Spaces</a>
+          <a id="spaces-tab" class="nav-item nav-link guest-access" href="https://h3-sdpt.firebaseapp.com/spaces" onclick="updatePage(/spaces/)">Spaces</a>
       
 
-      <a id="documents-tab" class="nav-item nav-link" href="../documents">Documents</a>
+      <a id="documents-tab" class="nav-item nav-link" href="../documents" onclick="updatePage('/documents/')">Documents</a>
       <a id="username" class="nav-item nav-link"></a>
-      <a id="login-btn" class="btn btn-light my-2 my-sm-0" href="https://h3-sdpt.firebaseapp.com/login" role="button">Login</a>
+      <a id="login-btn" class="btn btn-light my-2 my-sm-0" href="https://h3-sdpt.firebaseapp.com/login" role="button" onclick="resetHighlights()">Login</a>
       <a id="logout-btn" class="btn btn-light my-2 my-sm-0" onclick="logout()" role="button">Logout</a>
     </div>
 
@@ -229,12 +235,12 @@
 
     </body>
 
-    <script src="../js/jquery.min.js" type="text/javascript"></script>
-<script src="../js/jquery-ui.min.js" type="text/javascript"></script>
-
+    
 <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
 
 <script src="../js/barba.min.js" type="text/javascript"></script>
+
+
 
 
 <script src="../js/main.js" type="text/javascript"></script>
@@ -242,6 +248,7 @@
 <script src="../js/load.js" type="text/javascript"></script>
 <script src="../js/login.js" type="text/javascript"></script>
 <script src="../js/nav.js" type="text/javascript"></script>
+<script src="../js/eventform.js" type="text/javascript"></script>
 
 
 </html>

@@ -53,10 +53,7 @@
     z-index: 2;
 }
 
-.section {
-    margin: 50px;
-    min-height: 100vh;
-}
+
 
 .pane {
     background-color: _palette(bg);
@@ -94,7 +91,7 @@
 }
 
 .parallax {
-    padding: 50px 0;
+    padding: 100px 0;
     text-align: center;
     position: relative;
     overflow: hidden;

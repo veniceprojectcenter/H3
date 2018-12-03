@@ -11,7 +11,7 @@
     .navbar-nav a {
         letter-spacing: 0.1em;
     }
-    #login-btn, #logout-btn, #username, #documents-tab {
+    #login-btn, #logout-btn, #username, #documents-tab, .guest-access {
         display: none;
     }
 
@@ -33,5 +33,6 @@
 }
 
 .highlighted {
-    text-decoration: underline;
+    font-weight: 600;
+    color: _palette(highlight) !important;
 }

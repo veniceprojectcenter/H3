@@ -1,15 +1,15 @@
 <nav class="navbar fixed-top navbar-expand-lg">
 
-    <a href="{{ .Site.BaseURL }}" class="logo"> <img src="{{ .Site.Params.baseURL }}/img/H3 Logo.png" alt="" /></a>
+    <a href="{{ .Site.BaseURL }}" class="logo"> <img src="{{ .Site.Params.baseURL }}/img/H3 Logo.png" alt="" onclick="resetHighlights()"/></a>
 
     <div class="navbar-nav ml-auto">
       {{ range .Site.Params.Navigation.links }}
-          <a class="nav-item nav-link" href="{{ .url | absURL}}">{{ .name }}</a>
+          <a id="{{ .url }}-tab" class="nav-item nav-link guest-access" href="{{ .url | absURL}}" onclick="updatePage(/{{ .url }}/)">{{ .name }}</a>
       {{ end }}
 
-      <a id="documents-tab" class="nav-item nav-link" href="../documents">Documents</a>
+      <a id="documents-tab" class="nav-item nav-link" href="../documents" onclick="updatePage('/documents/')">Documents</a>
       <a id="username" class="nav-item nav-link"></a>
-      <a id="login-btn" class="btn btn-light my-2 my-sm-0" href="{{ .Site.Params.Navigation.login.url | absURL }}" role="button">Login</a>
+      <a id="login-btn" class="btn btn-light my-2 my-sm-0" href="{{ .Site.Params.Navigation.login.url | absURL }}" role="button" onclick="resetHighlights()">Login</a>
       <a id="logout-btn" class="btn btn-light my-2 my-sm-0" onclick="logout()" role="button">Logout</a>
     </div>
 

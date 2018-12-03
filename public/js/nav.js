@@ -17,18 +17,23 @@ window.onscroll = function() {
     prevScrollpos = currentScrollPos;
 };
 
-
+$(document).ready(function() {
+    updatePage(window.location.pathname);
+});
 function updatePage(currPage) {
     resetHighlights();
-    if (currPage == "History") {
+    if (currPage == "/history/" || currPage == "/history") {
         $("#history-tab").addClass("highlighted");
-    } else if (currPage == "Events") {
+    } else if (currPage == "/events/" || currPage == "/events") {
         $("#events-tab").addClass("highlighted");
-    } else if (currPage == "Spaces") {
+    } else if (currPage == "/spaces/" || currPage == "/spaces") {
         $("#spaces-tab").addClass("highlighted");
-    } else if (currPage == "Documents") {
+    } else if (currPage == "/documents/" || currPage == "/documents") {
         $("#documents-tab").addClass("highlighted");
     }
 }
 function resetHighlights() {
+    $('.nav-link').each(function(){
+        $(this).removeClass("highlighted");
+    });
 }
