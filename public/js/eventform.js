@@ -12,12 +12,18 @@ function openTab(evt, tabName) {
     evt.currentTarget.className += " active";
 }
 
-function findEvents() {
-    var date = document.getElementById("event-date").value;
-    document.getElementById("date-chosen").innerHTML = date;
+function findEvents(dateText) {
+    //document.getElementById("date-chosen").innerHTML = dateText;
+
+    var firebaseRef = firebase.database().ref();
+    firebaseRef.on("value", function(snapshot) {
+        window.alert(snapshot);
+    })
+
+    //will build the avilable venues grid cell from the database
+    document.getElementById("available-venues").innerHTML = "";
 }
 
 
 $(document).ready(function() {
-    $("#datepicker").datepicker();
 });

@@ -1,13 +1,4 @@
-// Initialize Firebase
-var config = {
-  apiKey: "AIzaSyDPZLaOVEBhOvLNeUn7pmJVlkf0z9boiGM",
-  authDomain: "h3-sdpt.firebaseapp.com",
-  databaseURL: "https://h3-sdpt.firebaseio.com",
-  projectId: "h3-sdpt",
-  storageBucket: "h3-sdpt.appspot.com",
-  messagingSenderId: "609543007859"
-};
-firebase.initializeApp(config);
+
 
 
 firebase.auth().onAuthStateChanged(function(user) {

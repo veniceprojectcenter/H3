@@ -58,6 +58,9 @@
     .content-cell {
         grid-area: content;
         background-color: #e6ecff;
+        h3 {
+            text-align: center;
+        }
     }
     .receipt-cell {
         grid-area: receipt;
@@ -146,8 +149,6 @@
 .tabcontent {
     display: none;
     padding: 6px 12px;
-    border: 1px solid #ccc;
-    border-top: none;
     -webkit-animation: fadeIn 1s;
     animation: fadeIn 1s;
 }
@@ -165,7 +166,6 @@
     .title-cell {
         grid-area: title;
         background-color: #e6ffee;
-        text-align: center;
     }
     .calendar-cell {
         grid-area: calendar;
@@ -183,7 +183,7 @@
     margin-bottom: 10px;
     display: grid;
     grid-template-columns: 3fr 4fr;
-    grid-template-rows: 50px 100px 2fr;
+    grid-template-rows: 30px 100px 2fr;
     grid-template-areas:
         "img title"
         "img description"
@@ -204,4 +204,9 @@
         grid-area: time;
         background-color: #ffe6e6;
     }
+}
+
+
+.event-description {
+    list-style: circle;
 }

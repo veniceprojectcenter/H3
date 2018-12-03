@@ -53,6 +53,7 @@
     .progress-cell {
         grid-area: progress;
         background-color: #e6ffee;
+        padding: 10px;
     }
     .content-cell {
         grid-area: content;
@@ -69,6 +70,7 @@
     padding: 20px;
     border-radius: 20px;
     background-color: _palette(highlight);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     /*overflow-y: auto;*/
 
     #receipt-title, #receipt-total {
@@ -148,4 +150,63 @@
     border-top: none;
     -webkit-animation: fadeIn 1s;
     animation: fadeIn 1s;
+}
+
+
+
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: 2fr 5fr;
+    grid-template-rows: 50px auto;
+    grid-template-areas:
+        "title title"
+        "calendar venues";
+    .title-cell {
+        grid-area: title;
+        background-color: #e6ffee;
+        text-align: center;
+    }
+    .calendar-cell {
+        grid-area: calendar;
+        background-color: #e6ecff;
+    }
+    .venues-cell {
+        grid-area: venues;
+        background-color: #ffe6e6;
+        padding: 30px;
+    }
+}
+
+.venue-grid {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: grid;
+    grid-template-columns: 3fr 4fr;
+    grid-template-rows: 30px 100px 2fr;
+    grid-template-areas:
+        "img title"
+        "img description"
+        "time time";
+    .image-cell {
+        grid-area: img;
+        background-color: #e6ffee;
+    }
+    .title-cell {
+        grid-area: title;
+        background-color: #e6ecff;
+    }
+    .description-cell {
+        grid-area: description;
+        background-color: #ffe6e6;
+    }
+    .time-cell {
+        grid-area: time;
+        background-color: #ffe6e6;
+    }
+}
+
+
+.event-description {
+    list-style: circle;
 }

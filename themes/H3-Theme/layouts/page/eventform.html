@@ -11,7 +11,7 @@
                         <a class="tablink" onclick="openTab(event, 'Details')">Event Details</a>
                         <a class="tablink" onclick="openTab(event, 'Amenities')">Amenities</a>
                         <a class="tablink" onclick="openTab(event, 'Contact')">Contact Info</a>
-                        <a class="tablink" onclick="openTab(event, 'Review')">Review & Submit</a>
+                        <a class="tablink" onclick="openTab(event, 'Review'); reviewApplication()">Review & Submit</a>
                     </div>
                 </div>
 
@@ -27,42 +27,34 @@
                             <div class="calendar-cell">
                                 <div id="datepicker"></div>
                             </div>
-                            <div class="venues-cell">
-                                Dates for: <p id="date-chosen"></p>
-                                <div class="venue-grid my-card">
-                                    <div class="image-cell">
-                                        <img class="card-image" src="../img/dummy/Conference Room.jpeg" alt="">
+                            <div id="available-venues" class="venues-cell">
+                                <!--Dates for: <p id="date-chosen"></p>
+                                {{ range .Site.Data.events }}
+                                    <div class="venue-grid my-card">
+                                        <div class="image-cell">
+                                            <img class="card-image" src="{{ .image }}" alt="">
+                                        </div>
+                                        <div class="title-cell">
+                                            {{ .name }}
+                                        </div>
+                                        <div class="description-cell">
+                                            <ul class="event-description">
+                                            {{ range .description }}
+                                                <li>{{ . }}</li>
+                                            {{ end }}
+                                            </ul>
+                                        </div>
+                                        <div class="time-cell">
+                                            {{ range .events }}
+                                                {{ . }}
+                                            {{ end }}
+                                            Time1<br>
+                                            Time2<br>
+                                            Time3<br>
+                                            Time4<br>
+                                        </div>
                                     </div>
-                                    <div class="title-cell">
-                                        Title
-                                    </div>
-                                    <div class="description-cell">
-                                        Description
-                                    </div>
-                                    <div class="time-cell">
-                                        Time1<br>
-                                        Time2<br>
-                                        Time3<br>
-                                        Time4<br>
-                                    </div>
-                                </div>
-                                <div class="venue-grid my-card">
-                                    <div class="image-cell">
-                                        <img class="card-image" src="../img/dummy/Conference Room.jpeg" alt="">
-                                    </div>
-                                    <div class="title-cell">
-                                        Title
-                                    </div>
-                                    <div class="description-cell">
-                                        Description
-                                    </div>
-                                    <div class="time-cell">
-                                        Time1<br>
-                                        Time2<br>
-                                        Time3<br>
-                                        Time4<br>
-                                    </div>
-                                </div>
+                                {{ end }}-->
                             </div>
                         </div>
                     </div>
@@ -73,6 +65,7 @@
                         Title: <input type="text"><br>
                         Type:
                         <select>
+                            <option>-</option>
                             <option>Seminar</option>
                             <option>Workshop</option>
                             <option>Lecture</option>
