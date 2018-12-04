@@ -5,19 +5,19 @@
         "description": ["bullet1", "bullet2", "bullet3"],
         "events": {
             "IQP Presentations Day 1": {
-                "date": "12/07/18",
+                "date": "12/07/2018",
                 "times": [16, 17, 18]
             },
             "IQP Presentations Day 2": {
-                "date": "12/10/18",
+                "date": "12/10/2018",
                 "times": [16, 17, 18]
             },
             "Christmas": {
-                "date": "12/25/18",
+                "date": "12/25/2018",
                 "times": [6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23]
             },
             "Farmbot Hackathon": {
-                "date": "01/8/19",
+                "date": "01/08/2019",
                 "times": [9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
             }
         }

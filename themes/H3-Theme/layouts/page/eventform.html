@@ -1,7 +1,7 @@
 {{ define "main" }}
     <div class="pad-top">
         <h1 class="title">{{ .Title }}</h1>
-        <form id="eventForm" class="wide-content">
+        <form id="eventForm" class="wide-content"> <!--method="post" action="mailto:pmaida1357@gmail.com"-->
             <div class="eventform-grid">
 
                 <!-- The progress bar tabs walking the user through the form -->
@@ -62,8 +62,8 @@
                     <!-- Event details tab content -->
                     <div id="Details" class="tabcontent">
                         <h3>Event Details</h3>
-                        Title: <input type="text"><br>
-                        Type:
+                        <label>Title:</label><input type="text"><br>
+                        <label>Type:</label>
                         <select>
                             <option>-</option>
                             <option>Seminar</option>
@@ -78,36 +78,37 @@
                             <option>Other</option>
                         </select>
                         <br>
-                        Expected # of people: <input type="text"><br>
-                        Description: <input type="text"><br>
+                        <label>Expected # of people:</label><input type="text" onkeypress="validateNumber(event)"><br>
+                        <label>Description:</label><input type="text"><br>
                     </div>
 
                     <!-- Amenities selection tab content -->
                     <div id="Amenities" class="tabcontent">
                         <h3>Amenities</h3>
                         <ul>
-                            <li><input id="usherCbx" type="checkbox" onclick="updateReceiptCheckbox(this, 'Usher', '4')"> Usher</li>
-                            <li><input id="attendantCbx" type="checkbox"> Room Attendant</li>
-                            <li><input id="MicCbx" type="checkbox"> Mic</li>
-                            <li><input id="speakerCbx" type="checkbox"> Speakers</li>
-                            <li><input id="chairAmt" type="text" onblur="updateReceiptAmount(this, 'Chairs', '0.5')"> Chairs</li>
-                            <li><input id="tableAmt" type="text"> Tables</li>
+                            <li> <input id="usherCbx" type="checkbox" onclick="updateReceiptCheckbox(this, 'Usher', '4')"> <label>Usher</label> </li>
+                            <li> <input id="attendantCbx" type="checkbox"> <label>Room Attendant</label> </li>
+                            <li> <input id="MicCbx" type="checkbox"> <label>Mic</label> </li>
+                            <li> <input id="speakerCbx" type="checkbox"> <label>Speakers<label> </li>
+                            <li> <input id="chairAmt" type="text" onkeypress="validateNumber(event)" onblur="updateReceiptAmount(this, 'Chairs', '0.5')"> <label>Chairs</label> </li>
+                            <li> <input id="tableAmt" type="text" onkeypress="validateNumber(event)"> <label>Tables</label> </li>
                         </ul>
                     </div>
 
                     <!-- Contact info tab content -->
                     <div id="Contact" class="tabcontent">
                         <h3>Contact Info</h3>
-                        Company/Organizaiton: <input type="text"><br>
-                        Full Name: <input type="text"><br>
-                        Email: <input type="text"><br>
-                        Cell Phone: <input type="text"><br>
+                        <label>Company/Organizaiton:</label> <input type="text"><br>
+                        <label>Full Name:</label> <input type="text"><br>
+                        <label>Email:</label> <input type="text"><br>
+                        <label>Cell Phone:</label> <input type="text"><br>
                     </div>
 
                     <!-- Review and Submit Request tab content -->
                     <div id="Review" class="tabcontent">
                         <h3>Review</h3>
                         <p>Date, Space, All costs asociated, contact, agree to conditions, submit</p>
+                        <input type="submit" value="Submit Request">
                     </div>
                 </div>
 

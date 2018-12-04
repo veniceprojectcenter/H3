@@ -78,7 +78,7 @@
                 
     <div class="pad-top">
         <h1 class="title">Event Form</h1>
-        <form id="eventForm" class="wide-content">
+        <form id="eventForm" class="wide-content"> 
             <div class="eventform-grid">
 
                 
@@ -137,11 +137,11 @@
                     <div id="Amenities" class="tabcontent">
                         <h3>Amenities</h3>
                         <ul>
-                            <li><input id="usherCbx" type="checkbox" onclick="addToReceipt()"> Usher</li>
+                            <li><input id="usherCbx" type="checkbox" onclick="updateReceiptCheckbox(this, 'Usher', '4')"> Usher</li>
                             <li><input id="attendantCbx" type="checkbox"> Room Attendant</li>
                             <li><input id="MicCbx" type="checkbox"> Mic</li>
                             <li><input id="speakerCbx" type="checkbox"> Speakers</li>
-                            <li><input id="chairAmt" type="text"> Chairs</li>
+                            <li><input id="chairAmt" type="text" onblur="updateReceiptAmount(this, 'Chairs', '0.5')"> Chairs</li>
                             <li><input id="tableAmt" type="text"> Tables</li>
                         </ul>
                     </div>
@@ -159,6 +159,7 @@
                     <div id="Review" class="tabcontent">
                         <h3>Review</h3>
                         <p>Date, Space, All costs asociated, contact, agree to conditions, submit</p>
+                        <input type="submit" value="Submit Request">
                     </div>
                 </div>
 

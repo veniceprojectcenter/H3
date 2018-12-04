@@ -1,1 +1,1 @@
-#login-pane,#register-pane{text-align:center;padding:20px}
+#login-pane,#register-pane{text-align:center;padding:20px}#login-pane label,#register-pane label{text-align:left;width:100px}#login-pane input[type=submit],#register-pane input[type=submit]{margin:20px}

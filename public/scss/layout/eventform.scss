@@ -44,6 +44,7 @@
     * {
         /*overflow: hidden;*/
     }
+    background-color: _palette(bg-alt);
     display: grid;
     grid-template-columns: 3fr 1fr;
     grid-template-rows: 80px auto;
@@ -52,19 +53,16 @@
         "content receipt";
     .progress-cell {
         grid-area: progress;
-        background-color: #e6ffee;
         padding: 10px;
     }
     .content-cell {
         grid-area: content;
-        background-color: #e6ecff;
         h3 {
             text-align: center;
         }
     }
     .receipt-cell {
         grid-area: receipt;
-        background-color: #ffe6e6;
     }
 }
 
