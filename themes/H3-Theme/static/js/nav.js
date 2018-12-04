@@ -21,7 +21,9 @@ $(document).ready(function() {
     updatePage(window.location.pathname);
 });
 function updatePage(currPage) {
+    // reset all other nav highlights
     resetHighlights();
+    // highlight the current page
     if (currPage == "/history/" || currPage == "/history") {
         $("#history-tab").addClass("highlighted");
     } else if (currPage == "/events/" || currPage == "/events") {
@@ -36,4 +38,6 @@ function resetHighlights() {
     $('.nav-link').each(function(){
         $(this).removeClass("highlighted");
     });
+    // reset the scroll back to the top of the page
+    window.scrollTo(0, 0);
 }

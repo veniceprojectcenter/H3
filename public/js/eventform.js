@@ -3,42 +3,42 @@
  */
 function openTab(evt, tabName) {
     var i, tabcontent, tablinks;
+    // hide all tab content
     tabcontent = document.getElementsByClassName("tabcontent");
     for (i = 0; i < tabcontent.length; i++) {
         tabcontent[i].style.display = "none";
     }
+    // make all active tabs in navbar
     tablinks = document.getElementsByClassName("tablink");
     for (i = 0; i < tablinks.length; i++) {
         tablinks[i].className = tablinks[i].className.replace(" active", "");
     }
+    // show selected tab
     document.getElementById(tabName).style.display = "block";
     evt.currentTarget.className += " active";
-
-    // assure that the calendar has loaded in
-    if (tabName == 'Selection') {
-        $("#datepicker").datepicker({
-            onSelect: findEvents,
-            minDate: new Date()
-        });
-
-        // open up to todays date
-        var today = new Date();
-        var dd = today.getDate();
-        var mm = today.getMonth() + 1; //January is 0!
-
-        var yyyy = today.getFullYear();
-        if (dd < 10) {
-          dd = '0' + dd;
-        }
-        if (mm < 10) {
-          mm = '0' + mm;
-        }
-        var today = mm + '/' + dd + '/' + yyyy;
-        findEvents(today);
-    }
 }
 
+function loadVenueSelection() {
+    $("#datepicker").datepicker({
+        onSelect: findEvents,
+        minDate: new Date()
+    });
 
+    // open up to todays date
+    var today = new Date();
+    var dd = today.getDate();
+    var mm = today.getMonth() + 1; //January is 0!
+
+    var yyyy = today.getFullYear();
+    if (dd < 10) {
+      dd = '0' + dd;
+    }
+    if (mm < 10) {
+      mm = '0' + mm;
+    }
+    var today = mm + '/' + dd + '/' + yyyy;
+    findEvents(today);
+}
 
 
 /*
@@ -116,13 +116,15 @@ function updateReceiptAmount(input, item, cost, reference) {
         }
         if (i == receiptTable.rows.length - 1) {
             // if the item is not in the table, add it
-            addToReceipt(item + " (" + currCount + ")", currCount * cost, reference);
-            // add to the total
-            var totalCost = document.getElementById("receipt-total").innerHTML;
-            totalCost = parseFloat(totalCost.slice(8));
-            totalCost += currCount * cost;
-            document.getElementById("receipt-total").innerHTML = "Total: €" + Number(totalCost).toFixed(2);
-            break;
+            if (currCount != 0) {
+                addToReceipt(item + " (" + currCount + ")", currCount * cost, reference);
+                // add to the total
+                var totalCost = document.getElementById("receipt-total").innerHTML;
+                totalCost = parseFloat(totalCost.slice(8));
+                totalCost += currCount * cost;
+                document.getElementById("receipt-total").innerHTML = "Total: €" + Number(totalCost).toFixed(2);
+                break;
+            }
         }
     }
 }
@@ -204,7 +206,6 @@ function deleteFromReceipt(item) {
     for (var i = 1; i < receiptTable.rows.length; i++) {
         var row = receiptTable.rows[i];
         var value = row.cells[0].innerHTML;
-        console.log(value + ", " + item)
         if (value == item) {
             receiptTable.deleteRow(i);
             break;
@@ -212,6 +213,26 @@ function deleteFromReceipt(item) {
     }
 }
 
+
+/*
+ *  deleteClassFromReceipt() - will delete the entire row with the given refernce class from the receipt table
+ */
+function deleteClassFromReceipt(reference) {
+    var receiptTable = document.getElementById("receipt-table");
+    for (var i = receiptTable.rows.length - 1; i > 0; i--) {
+        var row = receiptTable.rows[i];
+        if (reference == row.className) {
+            // take the total cost off the receipt
+            var totalCost = document.getElementById("receipt-total").innerHTML;
+            totalCost = parseFloat(totalCost.slice(8));
+            var cost = parseFloat(row.cells[1].innerHTML.slice(1));
+            totalCost -= cost;
+            document.getElementById("receipt-total").innerHTML = "Total: €" + Number(totalCost).toFixed(2);
+            // delete the row from the table
+            receiptTable.deleteRow(i);
+        }
+    }
+}
 
 
 
@@ -256,6 +277,8 @@ var eventsRef = firebase.database().ref().child("Events");
  * findEvents() - will populate the available venues on date selection
  */
 function findEvents(dateText) {
+    // clear venues from the receipt
+    deleteClassFromReceipt("Selection");
     // clear the available venues and add the current searching date
     const dateChosen = document.createElement('h5');
     dateChosen.textContent = "Available spaces for " + dateText;

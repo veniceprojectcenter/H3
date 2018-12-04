@@ -16,14 +16,9 @@ function openTab(evt, tabName) {
     // show selected tab
     document.getElementById(tabName).style.display = "block";
     evt.currentTarget.className += " active";
-
-    // assure that the calendar has loaded in
-    if (tabName == 'Selection') {
-        loadSelection();
-    }
 }
 
-function loadSelection() {
+function loadVenueSelection() {
     $("#datepicker").datepicker({
         onSelect: findEvents,
         minDate: new Date()
