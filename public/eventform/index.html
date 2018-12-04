@@ -129,12 +129,12 @@
                     <div id="Amenities" class="tabcontent">
                         <h3>Amenities</h3>
                         <ul>
-                            <li> <input id="usherCbx" type="checkbox" onclick="updateReceiptCheckbox(this, 'Usher', '4', 'Amenities')"> <label>Usher</label> </li>
-                            <li> <input id="attendantCbx" type="checkbox"> <label>Room Attendant</label> </li>
-                            <li> <input id="MicCbx" type="checkbox"> <label>Mic</label> </li>
-                            <li> <input id="speakerCbx" type="checkbox"> <label>Speakers<label> </li>
-                            <li> <input id="chairAmt" type="text" onkeypress="validateNumber(event)" onblur="updateReceiptAmount(this, 'Chairs', '0.5', 'Amenities')"> <label>Chairs</label> </li>
-                            <li> <input id="tableAmt" type="text" onkeypress="validateNumber(event)"> <label>Tables</label> </li>
+                            <li> <input id="usherCbx" type="checkbox" onclick="updateReceiptCheckbox(this, 'Usher', '4', 'Amenities')"> <label for="usherCbx">Usher</label> </li>
+                            <li> <input id="attendantCbx" type="checkbox" onclick="updateReceiptCheckbox(this, 'Room Attendant', '2', 'Amenities')"> <label for="attendantCbx">Room Attendant</label> </li>
+                            <li> <input id="micCbx" type="checkbox" onclick="updateReceiptCheckbox(this, 'Mic', '1', 'Amenities')"> <label for="micCbx">Mic</label> </li>
+                            <li> <input id="speakerCbx" type="checkbox" onclick="updateReceiptCheckbox(this, 'Speakers', '2', 'Amenities')"> <label for="speakerCbx">Speakers<label> </li>
+                            <li> <input id="chairAmt" type="text" onkeypress="validateNumber(event)" onblur="updateReceiptAmount(this, 'Chairs', '0.5', 'Amenities')"> <label for="chairAmt">Chairs</label> </li>
+                            <li> <input id="tableAmt" type="text" onkeypress="validateNumber(event)" onblur="updateReceiptAmount(this, 'Tables', '1', 'Amenities')"> <label for="tableAmt">Tables</label> </li>
                         </ul>
                     </div>
 
@@ -164,8 +164,16 @@
                                 <th>Item</th>
                                 <th>Cost</th>
                             </tr>
+                            <tr>
+                                <td>Microphone</td>
+                                <td>€10.00</td>
+                            </tr>
+                            <tr>
+                                <td>Speakers (2)</td>
+                                <td>€36.00</td>
+                            </tr>
                         </table>
-                        <h5 id="receipt-total">Total: €0.00</h5>
+                        <h5 id="receipt-total">Total: €46.00</h5>
                     </div>
                 </div>
 
