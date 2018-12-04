@@ -69,12 +69,12 @@ function validateNumber(evt) {
 /*
  *  updateReceiptCheckbox() - adds or removes the item/cost to the receipt and updates the total
  */
-function updateReceiptCheckbox(checkbox, item, cost) {
+function updateReceiptCheckbox(checkbox, item, cost, reference) {
     var totalCost = document.getElementById("receipt-total").innerHTML;
     totalCost = parseFloat(totalCost.slice(8));
     cost = parseFloat(cost);
     if (checkbox.checked == true) {
-        addToReceipt(item, cost);
+        addToReceipt(item, cost, reference);
         totalCost += cost;
     } else {
         deleteFromReceipt(item);
@@ -87,7 +87,7 @@ function updateReceiptCheckbox(checkbox, item, cost) {
 /*
  *  updateReceiptAmount() - adds or removes the item/cost to the receipt and updates the total
  */
-function updateReceiptAmount(input, item, cost) {
+function updateReceiptAmount(input, item, cost, reference) {
     // see if already in table, get count if it is
     var receiptTable = document.getElementById("receipt-table");
     for (var i = 1; i < receiptTable.rows.length; i++) {
@@ -110,18 +110,19 @@ function updateReceiptAmount(input, item, cost) {
             } else {
                 // update the receipt entry by deleting it and readding it
                 deleteFromReceipt(item + " (" + pastCount + ")");
-                addToReceipt(item + " (" + currCount + ")", currCount * cost);
+                addToReceipt(item + " (" + currCount + ")", currCount * cost, reference);
             }
             break;
         }
         if (i == receiptTable.rows.length - 1) {
             // if the item is not in the table, add it
-            addToReceipt(item + " (" + currCount + ")", currCount * cost);
+            addToReceipt(item + " (" + currCount + ")", currCount * cost, reference);
             // add to the total
             var totalCost = document.getElementById("receipt-total").innerHTML;
             totalCost = parseFloat(totalCost.slice(8));
             totalCost += currCount * cost;
             document.getElementById("receipt-total").innerHTML = "Total: €" + Number(totalCost).toFixed(2);
+            break;
         }
     }
 }
@@ -130,21 +131,20 @@ function updateReceiptAmount(input, item, cost) {
 /*
  *  updateReceiptSpace() -
  */
-function updateReceiptSpace(checkbox, space, type, cost) {
+function updateReceiptSpace(checkbox, space, type, cost, reference) {
     var receiptTable = document.getElementById("receipt-table");
 
-    console.log("update recipt!");
     for (var i = 1; i < receiptTable.rows.length; i++) {
-        /*var row = receiptTable.rows[i];
+        var row = receiptTable.rows[i];
         var item = row.cells[0].innerHTML;
-        console.log(item + ", " + space);
-        if (item.includes(space)) {
+        var currCount;
+        if (item.includes(space + " " + type)) {
             // if the item is in the table
-            var pastCount = item.substring(item.indexOf('(') + 1, item.indexOf(')'));
+            var pastCount = parseFloat(item.substring(item.indexOf('(') + 1, item.indexOf(')')));
             // update the receipt total
             var totalCost = document.getElementById("receipt-total").innerHTML;
             totalCost = parseFloat(totalCost.slice(8));
-            var currCount;
+
             if (checkbox.checked == true) {
                 currCount = pastCount + 1;
             } else {
@@ -155,23 +155,24 @@ function updateReceiptSpace(checkbox, space, type, cost) {
 
             if (currCount == 0 || currCount == null) {
                 // remove from the receipt if there is a zero count
-                deleteFromReceipt(item + " " + type + " (" + pastCount + ")");
+                deleteFromReceipt(space + " " + type + " (" + pastCount + ")");
             } else {
                 // update the receipt entry by deleting it and readding it
-                deleteFromReceipt(item + " " + type + " (" + pastCount + ")");
-                addToReceipt(item + " " + type + " (" + currCount + ")", currCount * cost);
+                deleteFromReceipt(space + " " + type + " (" + pastCount + ")");
+                addToReceipt(space + " " + type + " (" + currCount + ")", currCount * cost, reference);
             }
             break;
-        }*/
-        /*if (i == receiptTable.rows.length - 1) {
+        }
+        if (i == receiptTable.rows.length - 1) {
             // if the item is not in the table, add it
-            addToReceipt(item + " (" + currCount + ")", currCount * cost);
+            addToReceipt(space + " " + type + " (1)", cost, reference);
             // add to the total
             var totalCost = document.getElementById("receipt-total").innerHTML;
             totalCost = parseFloat(totalCost.slice(8));
-            totalCost += currCount * cost;
+            totalCost += cost;
             document.getElementById("receipt-total").innerHTML = "Total: €" + Number(totalCost).toFixed(2);
-        }*/
+            break;
+        }
     }
 }
 
@@ -179,10 +180,13 @@ function updateReceiptSpace(checkbox, space, type, cost) {
 /*
  *  addToReceipt() - adds a row to the table with the given item and cost
  */
-function addToReceipt(item, cost) {
+function addToReceipt(item, cost, reference) {
     var receiptTable = document.getElementById("receipt-table");
     var rowCnt = receiptTable.rows.length;        // GET TABLE ROW COUNT.
     var tr = receiptTable.insertRow(rowCnt);      // TABLE ROW.
+    tr.className = reference;
+    tr.onclick = function() { openTab(event, reference) };
+
 
     var td0 = document.createElement('td');          // TABLE DEFINITION.
     td0 = tr.insertCell(0);
@@ -200,6 +204,7 @@ function deleteFromReceipt(item) {
     for (var i = 1; i < receiptTable.rows.length; i++) {
         var row = receiptTable.rows[i];
         var value = row.cells[0].innerHTML;
+        console.log(value + ", " + item)
         if (value == item) {
             receiptTable.deleteRow(i);
             break;
@@ -319,7 +324,7 @@ function findEvents(dateText) {
             var checkbox = document.createElement('input');
             checkbox.type = "checkbox";
             checkbox.id = eventName + " morn";
-            checkbox.onclick = function() { updateReceiptSpace(this, eventName, "Morning Half", 20); };
+            checkbox.onclick = function() { updateReceiptSpace(this, eventName, "Morning Half", 20, "Selection"); };
 
             var label = document.createElement('label')
             label.htmlFor = eventName + " morn";
@@ -337,7 +342,7 @@ function findEvents(dateText) {
             var checkbox = document.createElement('input');
             checkbox.type = "checkbox";
             checkbox.id = eventName + " even";
-            checkbox.onclick = function() { updateReceiptSpace(this, eventName, "Evening Half", 20); };
+            checkbox.onclick = function() { updateReceiptSpace(this, eventName, "Evening Half", 20, "Selection"); };
 
             var label = document.createElement('label')
             label.htmlFor = eventName + " even";
@@ -356,7 +361,7 @@ function findEvents(dateText) {
                 var checkbox = document.createElement('input');
                 checkbox.type = "checkbox";
                 checkbox.id = eventName + " full";
-                checkbox.onclick = function() { updateReceiptSpace(this, eventName, "Full day", 35); };
+                checkbox.onclick = function() { updateReceiptSpace(this, eventName, "Full day", 35, "Selection"); };
 
                 var label = document.createElement('label')
                 label.htmlFor = eventName + " full";
@@ -368,7 +373,7 @@ function findEvents(dateText) {
                 specialTimes.appendChild(bullet);
         }
         const specialTitle = document.createElement('h6');
-        specialTitle.textContent = "Special Times";
+        specialTitle.textContent = "Special Hours";
         specialCol.appendChild(specialTitle);
         specialCol.appendChild(specialTimes);
 
@@ -384,7 +389,7 @@ function findEvents(dateText) {
                 var checkbox = document.createElement('input');
                 checkbox.type = "checkbox";
                 checkbox.id = eventName + " " + t;
-                checkbox.onclick = function() { updateReceiptSpace(this, eventName, "Business Hours", 10); };
+                checkbox.onclick = function() { updateReceiptSpace(this, eventName, "Business Hours", 10, "Selection"); };
 
                 var label = document.createElement('label')
                 label.htmlFor = eventName + " " + t;
@@ -397,7 +402,7 @@ function findEvents(dateText) {
             }
         }
         const businessTitle = document.createElement('h6');
-        businessTitle.textContent = "Business Times";
+        businessTitle.textContent = "Business Hours";
         businessCol.appendChild(businessTitle);
         businessCol.appendChild(businessTimes);
 
@@ -413,7 +418,7 @@ function findEvents(dateText) {
                 var checkbox = document.createElement('input');
                 checkbox.type = "checkbox";
                 checkbox.id = eventName + " " + t;
-                checkbox.onclick = function() { updateReceiptSpace(this, eventName, "After Hours", 10); };
+                checkbox.onclick = function() { updateReceiptSpace(this, eventName, "After Hours", 10, "Selection"); };
 
                 var label = document.createElement('label')
                 label.htmlFor = eventName + " " + t;
@@ -426,7 +431,7 @@ function findEvents(dateText) {
             }
         }
         const nightlyTitle = document.createElement('h6');
-        nightlyTitle.textContent = "Nightly Times";
+        nightlyTitle.textContent = "Nightly Hours";
         nightlyCol.appendChild(nightlyTitle);
         nightlyCol.appendChild(nightlyTimes);
 

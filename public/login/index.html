@@ -36,14 +36,6 @@
 <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-<script>
-    $(function() {
-        $("#datepicker").datepicker({
-            onSelect: findEvents,
-            minDate: new Date()
-        });
-    });
-</script>
 
     </head>
 
@@ -79,12 +71,8 @@
     <div class="pad-top">
         <h1 class="title">Login</h1>
         <div id="login-pane" class="content">
-            Email:
-            <input id="login-email" type="email" placeholder="Email">
-            <br>
-            Password:
-            <input id="login-password" type="password" placeholder="Password">
-            <br>
+            <label>Email:</label> <input id="login-email" type="email" placeholder="Email"> <br>
+            <label>Password:</label> <input id="login-password" type="password" placeholder="Password"> <br>
             <input class="btn btn-light my-2 my-sm-0" type="submit" role="button" onclick="login()">
             
         </div>

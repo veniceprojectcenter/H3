@@ -164,15 +164,16 @@
         "calendar venues";
     .title-cell {
         grid-area: title;
-        background-color: #e6ffee;
+        h5 {
+            text-align: center;
+            font-weight: 600;
+        }
     }
     .calendar-cell {
         grid-area: calendar;
-        background-color: #e6ecff;
     }
     .venues-cell {
         grid-area: venues;
-        background-color: #ffe6e6;
         padding: 30px;
     }
 }
@@ -189,24 +190,25 @@
         "time time";
     .image-cell {
         grid-area: img;
-        background-color: #e6ffee;
+        overflow: hidden;
     }
     .title-cell {
         grid-area: title;
-        background-color: #e6ecff;
     }
     .description-cell {
         grid-area: description;
-        background-color: #ffe6e6;
     }
     .time-cell {
         grid-area: time;
-        background-color: #ffe6e6;
+        padding: 5px;
         ul {
             padding: 0px;
             li label {
                 display: inline;
             }
+        }
+        &.row {
+            margin: 0px;
         }
     }
 }
@@ -218,4 +220,44 @@
 
 label {
     width: 220px;
+}
+
+
+
+
+
+
+
+
+input[type=checkbox] + label {
+  display: block;
+  cursor: pointer;
+}
+
+input[type=checkbox] {
+  display: none;
+}
+
+input[type=checkbox] + label:before {
+  content: "\2714";
+  border: 0.1em solid #000;
+  border-radius: 0.2em;
+  display: inline-block;
+  width: 1.1em;
+  height: 1.1em;
+  margin: 1pt;
+  margin-right: 3pt;
+  vertical-align: bottom;
+  color: transparent;
+  transition: .2s;
+}
+
+input[type=checkbox] + label:active:before {
+  transform: scale(0);
+}
+
+input[type=checkbox]:checked + label:before {
+  background-color: MediumSeaGreen;
+  border-color: MediumSeaGreen;
+  color: #fff;
 }

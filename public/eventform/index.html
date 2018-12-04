@@ -36,14 +36,6 @@
 <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-<script>
-    $(function() {
-        $("#datepicker").datepicker({
-            onSelect: findEvents,
-            minDate: new Date()
-        });
-    });
-</script>
 
     </head>
 
@@ -113,8 +105,8 @@
                     
                     <div id="Details" class="tabcontent">
                         <h3>Event Details</h3>
-                        Title: <input type="text"><br>
-                        Type:
+                        <label>Title:</label><input type="text"><br>
+                        <label>Type:</label>
                         <select>
                             <option>-</option>
                             <option>Seminar</option>
@@ -129,30 +121,30 @@
                             <option>Other</option>
                         </select>
                         <br>
-                        Expected # of people: <input type="text"><br>
-                        Description: <input type="text"><br>
+                        <label>Expected # of people:</label><input type="text" onkeypress="validateNumber(event)"><br>
+                        <label>Description:</label><input type="text"><br>
                     </div>
 
                     
                     <div id="Amenities" class="tabcontent">
                         <h3>Amenities</h3>
                         <ul>
-                            <li><input id="usherCbx" type="checkbox" onclick="updateReceiptCheckbox(this, 'Usher', '4')"> Usher</li>
-                            <li><input id="attendantCbx" type="checkbox"> Room Attendant</li>
-                            <li><input id="MicCbx" type="checkbox"> Mic</li>
-                            <li><input id="speakerCbx" type="checkbox"> Speakers</li>
-                            <li><input id="chairAmt" type="text" onblur="updateReceiptAmount(this, 'Chairs', '0.5')"> Chairs</li>
-                            <li><input id="tableAmt" type="text"> Tables</li>
+                            <li> <input id="usherCbx" type="checkbox" onclick="updateReceiptCheckbox(this, 'Usher', '4', 'Amenities')"> <label>Usher</label> </li>
+                            <li> <input id="attendantCbx" type="checkbox"> <label>Room Attendant</label> </li>
+                            <li> <input id="MicCbx" type="checkbox"> <label>Mic</label> </li>
+                            <li> <input id="speakerCbx" type="checkbox"> <label>Speakers<label> </li>
+                            <li> <input id="chairAmt" type="text" onkeypress="validateNumber(event)" onblur="updateReceiptAmount(this, 'Chairs', '0.5', 'Amenities')"> <label>Chairs</label> </li>
+                            <li> <input id="tableAmt" type="text" onkeypress="validateNumber(event)"> <label>Tables</label> </li>
                         </ul>
                     </div>
 
                     
                     <div id="Contact" class="tabcontent">
                         <h3>Contact Info</h3>
-                        Company/Organizaiton: <input type="text"><br>
-                        Full Name: <input type="text"><br>
-                        Email: <input type="text"><br>
-                        Cell Phone: <input type="text"><br>
+                        <label>Company/Organizaiton:</label> <input type="text"><br>
+                        <label>Full Name:</label> <input type="text"><br>
+                        <label>Email:</label> <input type="text"><br>
+                        <label>Cell Phone:</label> <input type="text"><br>
                     </div>
 
                     
@@ -172,16 +164,8 @@
                                 <th>Item</th>
                                 <th>Cost</th>
                             </tr>
-                            <tr>
-                                <td>Microphone</td>
-                                <td>€10.00</td>
-                            </tr>
-                            <tr>
-                                <td>Speakers (2)</td>
-                                <td>€36.00</td>
-                            </tr>
                         </table>
-                        <h5 id="receipt-total">Total: €46.00</h5>
+                        <h5 id="receipt-total">Total: €0.00</h5>
                     </div>
                 </div>
 

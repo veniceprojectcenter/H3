@@ -1,4 +1,11 @@
 #login-pane, #register-pane {
     text-align: center;
     padding: 20px;
+    label {
+        text-align: left;
+        width: 100px;
+    }
+    input[type=submit] {
+        margin: 20px;
+    }
 }
