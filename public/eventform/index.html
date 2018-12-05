@@ -47,20 +47,28 @@
     <a href="https://h3-sdpt.firebaseapp.com/" class="logo"> <img src="/img/H3 Logo.png" alt="" onclick="resetHighlights()"/></a>
 
     <div class="navbar-nav ml-auto">
-      
-          <a id="history-tab" class="nav-item nav-link guest-access" href="https://h3-sdpt.firebaseapp.com/history" onclick="updatePage(/history/)">History</a>
-      
-          <a id="https://new.serendpt.net/startup/-tab" class="nav-item nav-link guest-access" href="https://new.serendpt.net/startup/" onclick="updatePage(/https:\/\/new\.serendpt\.net\/startup\//)">Start-ups</a>
-      
-          <a id="events-tab" class="nav-item nav-link guest-access" href="https://h3-sdpt.firebaseapp.com/events" onclick="updatePage(/events/)">Events</a>
-      
-          <a id="spaces-tab" class="nav-item nav-link guest-access" href="https://h3-sdpt.firebaseapp.com/spaces" onclick="updatePage(/spaces/)">Spaces</a>
-      
+        
+            
+                <a id="history-tab" class="nav-item nav-link guest-access" href="https://h3-sdpt.firebaseapp.com/history" onclick="updatePage(/history/)">History</a>
+            
+        
+            
+                <a id="https://new.serendpt.net/startup/-tab" class="nav-item nav-link guest-access" href="https://new.serendpt.net/startup/" target="_blank" onclick="updatePage(/https:\/\/new\.serendpt\.net\/startup\//)">Start-ups</a>
+            
+        
+            
+                <a id="events-tab" class="nav-item nav-link guest-access" href="https://h3-sdpt.firebaseapp.com/events" onclick="updatePage(/events/)">Events</a>
+            
+        
+            
+                <a id="spaces-tab" class="nav-item nav-link guest-access" href="https://h3-sdpt.firebaseapp.com/spaces" onclick="updatePage(/spaces/)">Spaces</a>
+            
+        
 
-      <a id="documents-tab" class="nav-item nav-link" href="../documents" onclick="updatePage('/documents/')">Documents</a>
-      <a id="username" class="nav-item nav-link"></a>
-      <a id="login-btn" class="btn btn-light my-2 my-sm-0" href="https://h3-sdpt.firebaseapp.com/login" role="button" onclick="resetHighlights()">Login</a>
-      <a id="logout-btn" class="btn btn-light my-2 my-sm-0" href="https://h3-sdpt.firebaseapp.com/" onclick="logout()" role="button">Logout</a>
+        <a id="documents-tab" class="nav-item nav-link" href="../documents" onclick="updatePage('/documents/')">Documents</a>
+        <a id="username" class="nav-item nav-link"></a>
+        <a id="login-btn" class="btn btn-light my-2 my-sm-0" href="https://h3-sdpt.firebaseapp.com/login" role="button" onclick="resetHighlights()">Login</a>
+        <a id="logout-btn" class="btn btn-light my-2 my-sm-0" href="https://h3-sdpt.firebaseapp.com/" onclick="logout();resetHighlights();" role="button">Logout</a>
     </div>
 
 </nav>
@@ -105,9 +113,9 @@
                     
                     <div id="Details" class="tabcontent">
                         <h3>Event Details</h3>
-                        <label>Title:</label><input type="text"><br>
-                        <label>Type:</label>
-                        <select>
+                        <label for="eventTitle">Title:</label><input id="eventTitle" type="text"><br>
+                        <label for="eventType">Type:</label>
+                        <select id="eventType">
                             <option>-</option>
                             <option>Seminar</option>
                             <option>Workshop</option>
@@ -121,8 +129,8 @@
                             <option>Other</option>
                         </select>
                         <br>
-                        <label>Expected # of people:</label><input type="text" onkeypress="validateNumber(event)"><br>
-                        <label>Description:</label><input type="text"><br>
+                        <label for="expPeople">Expected # of people:</label><input id="expPeople" type="text" onkeypress="validateNumber(event)"><br>
+                        <label for="eventDescription">Description:</label><input id="eventDescription" type="text"><br>
                     </div>
 
                     
@@ -141,39 +149,33 @@
                     
                     <div id="Contact" class="tabcontent">
                         <h3>Contact Info</h3>
-                        <label>Company/Organizaiton:</label> <input type="text"><br>
-                        <label>Full Name:</label> <input type="text"><br>
-                        <label>Email:</label> <input type="text"><br>
-                        <label>Cell Phone:</label> <input type="text"><br>
+                        <label for="contactCompany">Company/Organizaiton:</label> <input id="contactCompany" type="text"><br>
+                        <label for="contactName">Full Name:</label> <input id="contactName" type="text"><br>
+                        <label for="contactEmail">Email:</label> <input id="contactEmail" type="text"><br>
+                        <label for="contactPhone">Cell Phone:</label> <input id="contactPhone" type="text"><br>
                     </div>
 
                     
                     <div id="Review" class="tabcontent">
-                        <h3>Review</h3>
-                        <p>Date, Space, All costs asociated, contact, agree to conditions, submit</p>
-                        <input type="submit" value="Submit Request">
+                        
                     </div>
                 </div>
 
                 
                 <div class="receipt-cell">
                     <div id="receipt">
-                        <h5 id="receipt-title">Event Name</h5>
+                        <h5 id="receipt-title">Receipt</h5>
                         <table id="receipt-table" style="width:100%">
                             <tr>
                                 <th>Item</th>
                                 <th>Cost</th>
                             </tr>
                             <tr>
-                                <td>Microphone</td>
-                                <td>€10.00</td>
-                            </tr>
-                            <tr>
-                                <td>Speakers (2)</td>
-                                <td>€36.00</td>
+                                <td>Security Deposit</td>
+                                <td>€20.00</td>
                             </tr>
                         </table>
-                        <h5 id="receipt-total">Total: €46.00</h5>
+                        <h5 id="receipt-total">Total: €20.00</h5>
                     </div>
                 </div>
 
