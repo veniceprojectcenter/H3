@@ -40,6 +40,7 @@
 
 
 .history-grid {
+    margin: 20px;
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     grid-template-rows: auto; //repeat(5, 1fr)

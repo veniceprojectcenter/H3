@@ -3,14 +3,18 @@
     <a href="{{ .Site.BaseURL }}" class="logo"> <img src="{{ .Site.Params.baseURL }}/img/H3 Logo.png" alt="" onclick="resetHighlights()"/></a>
 
     <div class="navbar-nav ml-auto">
-      {{ range .Site.Params.Navigation.links }}
-          <a id="{{ .url }}-tab" class="nav-item nav-link guest-access" href="{{ .url | absURL}}" onclick="updatePage(/{{ .url }}/)">{{ .name }}</a>
-      {{ end }}
+        {{ range .Site.Params.Navigation.links }}
+            {{ if (isset . "target") }}
+                <a id="{{ .url }}-tab" class="nav-item nav-link guest-access" href="{{ .url | absURL}}" target="{{ .target }}" onclick="updatePage(/{{ .url }}/)">{{ .name }}</a>
+            {{ else }}
+                <a id="{{ .url }}-tab" class="nav-item nav-link guest-access" href="{{ .url | absURL}}" onclick="updatePage(/{{ .url }}/)">{{ .name }}</a>
+            {{ end }}
+        {{ end }}
 
-      <a id="documents-tab" class="nav-item nav-link" href="../documents" onclick="updatePage('/documents/')">Documents</a>
-      <a id="username" class="nav-item nav-link"></a>
-      <a id="login-btn" class="btn btn-light my-2 my-sm-0" href="{{ .Site.Params.Navigation.login.url | absURL }}" role="button" onclick="resetHighlights()">Login</a>
-      <a id="logout-btn" class="btn btn-light my-2 my-sm-0" onclick="logout()" role="button">Logout</a>
+        <a id="documents-tab" class="nav-item nav-link" href="../documents" onclick="updatePage('/documents/')">Documents</a>
+        <a id="username" class="nav-item nav-link"></a>
+        <a id="login-btn" class="btn btn-light my-2 my-sm-0" href="{{ .Site.Params.Navigation.login.url | absURL }}" role="button" onclick="resetHighlights()">Login</a>
+        <a id="logout-btn" class="btn btn-light my-2 my-sm-0" href="{{ .Site.BaseURL }}" onclick="logout();resetHighlights();" role="button">Logout</a>
     </div>
 
 </nav>

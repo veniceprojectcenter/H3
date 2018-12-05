@@ -237,20 +237,122 @@ function deleteClassFromReceipt(reference) {
 
 
 
+/*
+ *  createLabelDiv() - creates a div with an h5 "label" next to a p tag content
+ */
+function createLabelDiv(label, contentid) {
+    const labelDiv = document.createElement('div');
+    labelDiv.className = "label-div";
 
+    const labelTitle = document.createElement('h5');
+    labelTitle.textContent = label + ": ";
+    const labelTitleContent = document.createElement('p');
+    labelTitleContent.textContent = document.getElementById(contentid).value;
+
+    labelDiv.appendChild(labelTitle);
+    labelDiv.appendChild(labelTitleContent);
+    return labelDiv;
+}
+
+/*
+ *  createVenueDiv() -
+ */
+function createVenueDiv() {
+    const venueDiv = document.createElement('div');
+    venueDiv.className = "review-div";
+
+    const title = document.createElement('h4');
+    title.textContent = "Venue";
+
+    const space = document.createElement('h5');
+    space.textContent = "Space: ";
+
+    const date = document.createElement('h5');
+    date.textContent = "Date: ";
+
+    const time = document.createElement('h5');
+    time.textContent = "Time: ";
+
+    venueDiv.appendChild(title);
+    venueDiv.appendChild(space);
+    venueDiv.appendChild(date);
+    venueDiv.appendChild(time);
+    return venueDiv;
+}
+
+/*
+ *  createEventDiv() -
+ */
+function createEventDiv() {
+    const eventDiv = document.createElement('div');
+    eventDiv.className = "review-div";
+
+    const title = document.createElement('h4');
+    title.textContent = "Event";
+
+    eventDiv.appendChild(title);
+    eventDiv.appendChild(createLabelDiv("Title", "eventTitle"));
+    eventDiv.appendChild(createLabelDiv("Type", "eventType"));
+    eventDiv.appendChild(createLabelDiv("Expected # of People", "expPeople"));
+    eventDiv.appendChild(createLabelDiv("Description", "eventDescription"));
+    return eventDiv;
+}
+
+/*
+ *  createAmenityDiv() -
+ */
+function createAmenityDiv() {
+    const amentiyDiv = document.createElement('div');
+    amentiyDiv.className = "review-div";
+
+    const title = document.createElement('h4');
+    title.textContent = "Amenities";
+
+
+    amentiyDiv.appendChild(title);
+    return amentiyDiv;
+}
+
+/*
+ *  createContactDiv() -
+ */
+function createContactDiv() {
+    const contactDiv = document.createElement('div');
+    contactDiv.className = "review-div";
+
+    const title = document.createElement('h4');
+    title.textContent = "Contact";
+
+    contactDiv.appendChild(title);
+    contactDiv.appendChild(createLabelDiv("Company/Organizaiton", "contactCompany"));
+    contactDiv.appendChild(createLabelDiv("Full Name", "contactName"));
+    contactDiv.appendChild(createLabelDiv("Email", "contactEmail"));
+    contactDiv.appendChild(createLabelDiv("Cell Phone", "contactPhone"));
+    return contactDiv;
+}
 
 
 /*
  *  reviewApplication() -
  */
 function reviewApplication() {
-    /*const title = document.createElement('h3');
+    const title = document.createElement('h3');
     title.textContent = "Review and Submit Request";
 
     // insert more data (date, venue, all other id's)
 
+    var submit = document.createElement('input');
+    submit.type = "submit";
+    submit.onclick = function() { alert("submission WIP")};
+
+
     document.getElementById("Review").innerHTML = "";
-    document.getElementById("Review").appendChild(title);*/
+    document.getElementById("Review").appendChild(title);
+    document.getElementById("Review").appendChild(createVenueDiv());
+    document.getElementById("Review").appendChild(createEventDiv());
+    document.getElementById("Review").appendChild(createAmenityDiv());
+    document.getElementById("Review").appendChild(createContactDiv());
+    document.getElementById("Review").appendChild(submit);
 }
 
 

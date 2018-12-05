@@ -50,6 +50,7 @@ disqusShortname = ""
         [[params.navigation.links]]
             name = "Start-ups"
             url = "https://new.serendpt.net/startup/"
+            target = "_blank"
 
         [[params.navigation.links]]
             name = "Events"

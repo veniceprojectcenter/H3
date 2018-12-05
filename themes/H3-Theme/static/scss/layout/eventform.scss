@@ -230,6 +230,30 @@ label {
 
 
 
+#Review {
+    h4 {
+        text-align: center;
+        font-weight: 500;
+    }
+    h5, p {
+        display: inline;
+    }
+    .review-div {
+        margin: 40px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Green checkbox */
 
 input[type=checkbox] + label {
   display: block;
