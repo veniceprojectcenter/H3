@@ -16,21 +16,31 @@
                     {{ range .paragraphs }}
                     <p>{{ . }}</p>
                     {{ end }}
-                    {{ range .buttons }}
-                        <a class="btn btn-light my-2 my-sm-0" href="{{ .url }}">{{ .text }}</a>
-                    {{ end }}
+                    <div class="content-buttons">
+                        {{ range .buttons }}
+                            <a class="btn btn-light my-2 my-sm-0" href="{{ .url }}">{{ .text }}</a>
+                        {{ end }}
+                    </div>
                 </div>
                 <div class="pic1-cell square-cell">
-                    <img class="square-image" src="{{ index .images 0 }}" alt="">
+                    {{ if not (eq (index .images 0) "") }}
+                        <img class="square-image" src="{{ index .images 0 }}" alt="">
+                    {{ end }}
                 </div>
                 <div class="pic2-cell square-cell">
-                    <img class="square-image" src="{{ index .images 1 }}" alt="">
+                    {{ if not (eq (index .images 1) "") }}
+                        <img class="square-image" src="{{ index .images 1 }}" alt="">
+                    {{ end }}
                 </div>
                 <div class="pic3-cell square-cell">
-                    <img class="square-image" src="{{ index .images 2 }}" alt="">
+                    {{ if not (eq (index .images 2) "") }}
+                        <img class="square-image" src="{{ index .images 2 }}" alt="">
+                    {{ end }}
                 </div>
                 <div class="pic4-cell square-cell">
-                    <img class="square-image" src="{{ index .images 3 }}" alt="">
+                    {{ if not (eq (index .images 3) "") }}
+                        <img class="square-image" src="{{ index .images 3 }}" alt="">
+                    {{ end }}
                 </div>
             </div>
         {{ end }}

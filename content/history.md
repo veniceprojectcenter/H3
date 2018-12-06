@@ -10,13 +10,13 @@ slides:
     title: "Convent of Saints Cosmas and Damian"
     images:
       -
+        "../../../img/history/Marina Celsi.png"
+      -
+        "../../../img/history/Venice 1521.png"
+      -
+        ""
+      -
         "../../../img/history/Old H3.png"
-      -
-        ""
-      -
-        ""
-      -
-        ""
     paragraphs:
       -
         "The building that houses H3 was originally the Benedictine Convent of Saints Cosmas and Damian, founded in 1481 by six nuns for noble daughters. It was constructed in two phases over twenty-five years, first as a convent and then as a church, and became a center for art due to the wealth brought by the nuns. In 1806, Napoleon forced the closure of the Church and evicted the nuns and the convent became a warehouse, and then a barracks. Most of the artwork was either lost or destroyed in this period, with only a dozen paintings remaining today that are in museums like the Accademia. The church was abandoned and striped of fixed furnishings, stone materials and paintings, altars, sculptures, and anything else worth some value for scrap or material. Overall it was violated by looters and desecrated. In 1887, the convent temporarily became a hospice for cholera victims and afterwards converted into a textile factory in 1897, remaining as the Herion Garment Factory until the 1970s."
@@ -28,7 +28,7 @@ slides:
     title: "Herion Garment Factory"
     images:
       -
-        ""
+        "../../../img/history/Empty Factory.png"
       -
         "../../../img/history/Full Textile Factory.png"
       -
@@ -44,25 +44,25 @@ slides:
       -
         "../../../img/history/H3 exterior.png"
       -
-        ""
+        "../../../img/history/Herion Glass Large.png"
       -
         ""
       -
-        ""
+        "../../../img/history/Herion Glass Ground.png"
     paragraphs:
       -
         "When acquired by the Herion Accelerator in 2008, the former convent was refurbished to its current configuration for hosting startup companies recruited locally in the Veneto region, requiring almost 9 million euro to fully restore garnered from the European Union and Donations. During this period, the nave was filled with a glass cube three stories high, containing 12 large offices, meeting rooms and co-working spaces, while the apses were left to their full heights. This event space was decorated with the original repaired frescos. In addition to work on the church, the deposito was converted into a three-floor workspace containing 23 offices, some common spaces for meetings and a cafeteria on the ground floor with a kitchen area."
       -
         "Originally, 38 startups signed up to work from the accelerator and use resources provided by the organization, later declining to four companies in 2016 before the accelerator closed down.While not much information is provided about the fledgling startups, the Herion Accelerator faced several issues. Issues with heating, the elevator, and internet service led many tenants to leave. A lack of general building management caused these unwarranted problems that were a disservice to the startups and created a bad relationship with the factory. The idea of creating an accelerator had potential, but the poor management and infrastructure induced its failure and diaspora of startups. In essence, the owners of the Herion used the space as an area for startup companies to do work, failing not only to provide useful elements like internet, but also to do anything that would make their companies more likely to succeed."
   -
-    title: "H3 & SerenDPT"
+    title: "SerenDPT & H3"
     images:
       -
-        ""
+        "../img/SerenDPT logo.png"
       -
-        ""
+        "../img/H3 Office.png"
       -
-        ""
+        "../img/H3-Black-Logo.png"
       -
         ""
     paragraphs:
