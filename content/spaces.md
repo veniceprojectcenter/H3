@@ -6,15 +6,15 @@ spaces:
   -
     name: "Main Hall"
     image: "../img/dummy/Overhead Event.jpeg"
-    description: "After a long wait, Apple has agreed to implement the features of the DaAaB app into Apple Maps. With the support of the Venice transportation system and the Venetian governement, the integration into Apple Maps will be available in the next two weeks."
+    description: ""
   -
-    name: "Room"
+    name: "General Room"
     image: "../img/dummy/Conference Room.jpeg"
-    description: "After a long wait, Apple has agreed to implement the features of the DaAaB app into Apple Maps. With the support of the Venice transportation system and the Venetian governement, the integration into Apple Maps will be available in the next two weeks."
+    description: ""
   -
     name: "Courtyard"
     image: "../img/dummy/Courtyard.jpeg"
-    description: "After a long wait, Apple has agreed to implement the features of the DaAaB app into Apple Maps. With the support of the Venice transportation system and the Venetian governement, the integration into Apple Maps will be available in the next two weeks."
+    description: ""
 
 
 ---

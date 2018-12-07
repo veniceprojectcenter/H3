@@ -19,6 +19,9 @@
         "img . . .";
     .img-cell {
         grid-area: img;
+        img {
+            height: 100%;
+        }
     }
     .title-cell {
         grid-area: title;

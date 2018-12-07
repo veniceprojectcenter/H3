@@ -32,7 +32,7 @@
         padding: 20px;
         padding-top: 0;
     }
-    p {
+    p, ul {
         padding: 30px;
         font-size: 16pt;
     }
@@ -99,9 +99,10 @@
 
 /* back, initially hidden pane */
 .back {
+    width: 100%;
     background-color: _palette(fg);
 	transform: rotateY(180deg);
-    p {
+    h4, p, ul, li {
         color: _palette(bg);
     }
 }
