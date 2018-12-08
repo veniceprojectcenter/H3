@@ -287,3 +287,17 @@ input[type=checkbox]:checked + label:before {
   border-color: MediumSeaGreen;
   color: #fff;
 }
+
+input[type=checkbox]:disabled + label:before {
+  transform: scale(1);
+  border-color: #aaa;
+}
+
+input[type="checkbox"]:disabled + label {
+    color: #aaa;
+}
+input[type=checkbox]:checked:disabled + label:before {
+  transform: scale(1);
+  background-color: #bfb;
+  border-color: #bfb;
+}

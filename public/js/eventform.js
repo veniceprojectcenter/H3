@@ -1,3 +1,25 @@
+
+// only load the events database reference once
+var eventsRef = firebase.database().ref().child("Events");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*
  *  openTab() -
  */
@@ -269,7 +291,7 @@ function createLabelDiv(label, contentid) {
 /*
  *  createVenueDiv() -
  */
-function createVenueReviewDiv() {
+function createVenueReviewDiv(venue, date, times) {
     const venueDiv = document.createElement('div');
     venueDiv.className = "review-div";
 
@@ -279,46 +301,41 @@ function createVenueReviewDiv() {
     // get the date of the selected calender date
     const dateLabel = document.createElement('h5');
     dateLabel.textContent = "Date: ";
-    const date = document.createElement('p');
-    date.textContent = document.getElementById("date-chosen").innerHTML;
+    const dateText = document.createElement('p');
+    dateText.textContent = date;
 
     const spaceLabel = document.createElement('h5');
     spaceLabel.textContent = "Space: ";
     const space = document.createElement('p');
+    space.textContent = venue;
 
-    // add the checked times to a list
+    // add the times to a list
     const time = document.createElement('h5');
     time.textContent = "Time(s): ";
     const timeArray = document.createElement('ul');
-    $(".hour-checkbox").each(function() {
-        if ($(this).is(":checked")) {
-            const timeSlot = document.createElement('li');
-            const timeSlotText = document.createElement('p');
-            let idComponents = this.id.split(" ");
-            let hour = idComponents[idComponents.length-1];
+    for (var i = 0; i < times.length; i++) {
+        let hour = times[i];
+        const timeSlotBullet = document.createElement('li');
+        const timeSlotText = document.createElement('p');
 
-            // set the venue to the last space
-            space.textContent = (this.id).substring(0, (this.id).lastIndexOf(" "));
-
-            if (hour == "full") {
-                timeSlotText.textContent = "Full day";
-            } else if (hour == "morn" || hour == "even") {
-                timeSlotText.textContent = "Half day " + hour + "ing";
-            } else {
-                hour = parseFloat(hour);
-                timeSlotText.textContent = hour + ":00 - " + (hour+1) + ":00";
-            }
-            timeSlot.appendChild(timeSlotText);
-            timeArray.appendChild(timeSlot);
+        if (hour == "full") {
+            timeSlotText.textContent = "Full day";
+        } else if (hour == "morn" || hour == "even") {
+            timeSlotText.textContent = "Half day " + hour + "ing";
+        } else {
+            hour = parseFloat(hour);
+            timeSlotText.textContent = hour + ":00 - " + (hour+1) + ":00";
         }
-    });
+        timeSlotBullet.appendChild(timeSlotText);
+        timeArray.appendChild(timeSlotBullet);
+    }
 
     venueDiv.appendChild(title);
     venueDiv.appendChild(spaceLabel);
     venueDiv.appendChild(space);
     venueDiv.appendChild(document.createElement('br'));
     venueDiv.appendChild(dateLabel);
-    venueDiv.appendChild(date);
+    venueDiv.appendChild(dateText);
     venueDiv.appendChild(document.createElement('br'));
     venueDiv.appendChild(time);
     venueDiv.appendChild(timeArray);
@@ -384,16 +401,49 @@ function reviewApplication() {
     const title = document.createElement('h3');
     title.textContent = "Review and Submit Request";
 
-    // insert more data (date, venue, all other id's)
+    // get the date, venue, and times chosen
+    let date = document.getElementById("date-chosen").innerHTML;
+    let venue = "";
+    let times = [];
+    $(".hour-checkbox").each(function() {
+        if ($(this).is(":checked")) {
+            // set the venue to everything before the last space
+            let hour = this.id;
+            venue = (hour).substring(0, (hour).lastIndexOf(" "));
 
+            // set the time to the last word
+            let idComponents = hour.split(" ");
+            times.push(parseFloat(idComponents[idComponents.length-1]));
+        }
+    });
+
+
+    // submit button to push the event to the database
     var submit = document.createElement('input');
     submit.type = "submit";
-    submit.onclick = function() { alert("submission WIP")};
+    submit.onclick = function() {
+        // insert new data into the Events database
+        // create the new eventData child
+        let venueName = venue;
+        let eventName = "Test Event Title"
+        var eventData = {
+            date: date,
+            times: times,
+            public: false,
+            approved: false
+        };
+
+        // Write the new event's data
+        var updates = {};
+        updates['/Events/' + venueName + "/events/" + eventName] = eventData;
+
+        firebase.database().ref().update(updates);
+    };
 
 
     document.getElementById("Review").innerHTML = "";
     document.getElementById("Review").appendChild(title);
-    document.getElementById("Review").appendChild(createVenueReviewDiv());
+    document.getElementById("Review").appendChild(createVenueReviewDiv(venue, date, times));
     document.getElementById("Review").appendChild(createEventReviewDiv());
     document.getElementById("Review").appendChild(createAmenityReviewDiv());
     document.getElementById("Review").appendChild(createContactReviewDiv());
@@ -413,15 +463,52 @@ function reviewApplication() {
 
 
 
+/*
+ *  disableCheckboxes() - will disable all other checkboxes not a part of this event.
+        If it is unchecked, it will reenable other venue checkboxes
+ */
+function disableCheckboxes(checkbox) {
+    let prefix = (checkbox.id).substring(0, (checkbox.id).lastIndexOf(" "));
+    if (checkbox.checked) {
+        // disable all other checkboxes not with the id prefix
+        $(".hour-checkbox").each(function() {
+            if (!(this.id).includes(prefix)) {
+                $(this).attr("disabled", true);
+            }
+        });
+    } else {
+        // check other checkboxes with this id prefix, if no others are checked, enable all checkboxes
+        let anotherBox = false;
+        $(".hour-checkbox").each(function() {
+            if ((this.id).includes(prefix) && this.checked) {
+                anotherBox = true;
+            }
+        });
+        if (!anotherBox) {
+            $(".hour-checkbox").each(function() {
+                $(this).removeAttr("disabled");
+            });
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* DYNAMICALLY CREATE AND LOAD HTML ELEMENTS */
-
-
-// only load the events database reference once
-var eventsRef = firebase.database().ref().child("Events");
-
-
 
 
 
@@ -508,7 +595,10 @@ function findEvents(dateText) {
             checkbox.type = "checkbox";
             checkbox.id = eventName + " morn";
             checkbox.className = "hour-checkbox";
-            checkbox.onclick = function() { updateReceiptSpace(this, eventName, "Morning Half", 20, "Selection"); };
+            checkbox.onclick = function() {
+                updateReceiptSpace(this, eventName, "Morning Half", 20, "Selection");
+                disableCheckboxes(this);
+            };
 
             var label = document.createElement('label')
             label.htmlFor = eventName + " morn";
@@ -527,7 +617,10 @@ function findEvents(dateText) {
             checkbox.type = "checkbox";
             checkbox.id = eventName + " even";
             checkbox.className = "hour-checkbox";
-            checkbox.onclick = function() { updateReceiptSpace(this, eventName, "Evening Half", 20, "Selection"); };
+            checkbox.onclick = function() {
+                updateReceiptSpace(this, eventName, "Evening Half", 20, "Selection");
+                disableCheckboxes(this);
+            };
 
             var label = document.createElement('label')
             label.htmlFor = eventName + " even";
@@ -547,7 +640,10 @@ function findEvents(dateText) {
                 checkbox.type = "checkbox";
                 checkbox.id = eventName + " full";
                 checkbox.className = "hour-checkbox";
-                checkbox.onclick = function() { updateReceiptSpace(this, eventName, "Full day", 35, "Selection"); };
+                checkbox.onclick = function() {
+                    updateReceiptSpace(this, eventName, "Full day", 35, "Selection");
+                    disableCheckboxes(this);
+                };
 
                 var label = document.createElement('label')
                 label.htmlFor = eventName + " full";
@@ -576,7 +672,10 @@ function findEvents(dateText) {
                 checkbox.type = "checkbox";
                 checkbox.id = eventName + " " + t;
                 checkbox.className = "hour-checkbox";
-                checkbox.onclick = function() { updateReceiptSpace(this, eventName, "Business Hours", 10, "Selection"); };
+                checkbox.onclick = function() {
+                    updateReceiptSpace(this, eventName, "Business Hours", 10, "Selection");
+                    disableCheckboxes(this);
+                };
 
                 var label = document.createElement('label')
                 label.htmlFor = eventName + " " + t;
@@ -606,7 +705,10 @@ function findEvents(dateText) {
                 checkbox.type = "checkbox";
                 checkbox.id = eventName + " " + t;
                 checkbox.className = "hour-checkbox";
-                checkbox.onclick = function() { updateReceiptSpace(this, eventName, "After Hours", 10, "Selection"); };
+                checkbox.onclick = function() {
+                    updateReceiptSpace(this, eventName, "After Hours", 10, "Selection");
+                    disableCheckboxes(this);
+                };
 
                 var label = document.createElement('label')
                 label.htmlFor = eventName + " " + t;

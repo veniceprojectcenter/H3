@@ -406,14 +406,14 @@ function reviewApplication() {
     let venue = "";
     let times = [];
     $(".hour-checkbox").each(function() {
-        let hour = this;
-        if ($(hour).is(":checked")) {
+        if ($(this).is(":checked")) {
             // set the venue to everything before the last space
-            venue = (hour.id).substring(0, (hour.id).lastIndexOf(" "));
+            let hour = this.id;
+            venue = (hour).substring(0, (hour).lastIndexOf(" "));
 
             // set the time to the last word
-            let idComponents = hour.id.split(" ");
-            times.push(idComponents[idComponents.length-1]);
+            let idComponents = hour.split(" ");
+            times.push(parseFloat(idComponents[idComponents.length-1]));
         }
     });
 
@@ -449,6 +449,49 @@ function reviewApplication() {
     document.getElementById("Review").appendChild(createContactReviewDiv());
     document.getElementById("Review").appendChild(submit);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+ *  disableCheckboxes() - will disable all other checkboxes not a part of this event.
+        If it is unchecked, it will reenable other venue checkboxes
+ */
+function disableCheckboxes(checkbox) {
+    let prefix = (checkbox.id).substring(0, (checkbox.id).lastIndexOf(" "));
+    if (checkbox.checked) {
+        // disable all other checkboxes not with the id prefix
+        $(".hour-checkbox").each(function() {
+            if (!(this.id).includes(prefix)) {
+                $(this).attr("disabled", true);
+            }
+        });
+    } else {
+        // check other checkboxes with this id prefix, if no others are checked, enable all checkboxes
+        let anotherBox = false;
+        $(".hour-checkbox").each(function() {
+            if ((this.id).includes(prefix) && this.checked) {
+                anotherBox = true;
+            }
+        });
+        if (!anotherBox) {
+            $(".hour-checkbox").each(function() {
+                $(this).removeAttr("disabled");
+            });
+        }
+    }
+}
+
 
 
 
@@ -552,7 +595,10 @@ function findEvents(dateText) {
             checkbox.type = "checkbox";
             checkbox.id = eventName + " morn";
             checkbox.className = "hour-checkbox";
-            checkbox.onclick = function() { updateReceiptSpace(this, eventName, "Morning Half", 20, "Selection"); };
+            checkbox.onclick = function() {
+                updateReceiptSpace(this, eventName, "Morning Half", 20, "Selection");
+                disableCheckboxes(this);
+            };
 
             var label = document.createElement('label')
             label.htmlFor = eventName + " morn";
@@ -571,7 +617,10 @@ function findEvents(dateText) {
             checkbox.type = "checkbox";
             checkbox.id = eventName + " even";
             checkbox.className = "hour-checkbox";
-            checkbox.onclick = function() { updateReceiptSpace(this, eventName, "Evening Half", 20, "Selection"); };
+            checkbox.onclick = function() {
+                updateReceiptSpace(this, eventName, "Evening Half", 20, "Selection");
+                disableCheckboxes(this);
+            };
 
             var label = document.createElement('label')
             label.htmlFor = eventName + " even";
@@ -591,7 +640,10 @@ function findEvents(dateText) {
                 checkbox.type = "checkbox";
                 checkbox.id = eventName + " full";
                 checkbox.className = "hour-checkbox";
-                checkbox.onclick = function() { updateReceiptSpace(this, eventName, "Full day", 35, "Selection"); };
+                checkbox.onclick = function() {
+                    updateReceiptSpace(this, eventName, "Full day", 35, "Selection");
+                    disableCheckboxes(this);
+                };
 
                 var label = document.createElement('label')
                 label.htmlFor = eventName + " full";
@@ -620,7 +672,10 @@ function findEvents(dateText) {
                 checkbox.type = "checkbox";
                 checkbox.id = eventName + " " + t;
                 checkbox.className = "hour-checkbox";
-                checkbox.onclick = function() { updateReceiptSpace(this, eventName, "Business Hours", 10, "Selection"); };
+                checkbox.onclick = function() {
+                    updateReceiptSpace(this, eventName, "Business Hours", 10, "Selection");
+                    disableCheckboxes(this);
+                };
 
                 var label = document.createElement('label')
                 label.htmlFor = eventName + " " + t;
@@ -650,7 +705,10 @@ function findEvents(dateText) {
                 checkbox.type = "checkbox";
                 checkbox.id = eventName + " " + t;
                 checkbox.className = "hour-checkbox";
-                checkbox.onclick = function() { updateReceiptSpace(this, eventName, "After Hours", 10, "Selection"); };
+                checkbox.onclick = function() {
+                    updateReceiptSpace(this, eventName, "After Hours", 10, "Selection");
+                    disableCheckboxes(this);
+                };
 
                 var label = document.createElement('label')
                 label.htmlFor = eventName + " " + t;
