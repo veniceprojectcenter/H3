@@ -51,7 +51,6 @@ var loadPage = Barba.BaseView.extend({
         controller = controller.destroy(true);
         controller = new ScrollMagic.Controller({addIndicators: false});
         addScrollMagic();
-        console.log(window.location.pathname);
         if (window.location.pathname == "/eventform" || window.location.pathname == "/eventform/") {
             loadVenueSelection();
         }

@@ -37,7 +37,7 @@
         }
     },
     "Function Room 1": {
-        "name": "Function Room",
+        "name": "Function Room 1",
         "image": "../img/dummy/Conference Room.jpeg",
         "description": ["30 square meters", "25€ hourly rate", "180€ daily rate"],
         "events": {

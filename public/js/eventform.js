@@ -237,6 +237,18 @@ function deleteClassFromReceipt(reference) {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 /*
  *  createLabelDiv() - creates a div with an h5 "label" next to a p tag content
  */
@@ -257,33 +269,66 @@ function createLabelDiv(label, contentid) {
 /*
  *  createVenueDiv() -
  */
-function createVenueDiv() {
+function createVenueReviewDiv() {
     const venueDiv = document.createElement('div');
     venueDiv.className = "review-div";
 
     const title = document.createElement('h4');
     title.textContent = "Venue";
 
-    const space = document.createElement('h5');
-    space.textContent = "Space: ";
+    // get the date of the selected calender date
+    const dateLabel = document.createElement('h5');
+    dateLabel.textContent = "Date: ";
+    const date = document.createElement('p');
+    date.textContent = document.getElementById("date-chosen").innerHTML;
 
-    const date = document.createElement('h5');
-    date.textContent = "Date: ";
+    const spaceLabel = document.createElement('h5');
+    spaceLabel.textContent = "Space: ";
+    const space = document.createElement('p');
 
+    // add the checked times to a list
     const time = document.createElement('h5');
-    time.textContent = "Time: ";
+    time.textContent = "Time(s): ";
+    const timeArray = document.createElement('ul');
+    $(".hour-checkbox").each(function() {
+        if ($(this).is(":checked")) {
+            const timeSlot = document.createElement('li');
+            const timeSlotText = document.createElement('p');
+            let idComponents = this.id.split(" ");
+            let hour = idComponents[idComponents.length-1];
+
+            // set the venue to the last space
+            space.textContent = (this.id).substring(0, (this.id).lastIndexOf(" "));
+
+            if (hour == "full") {
+                timeSlotText.textContent = "Full day";
+            } else if (hour == "morn" || hour == "even") {
+                timeSlotText.textContent = "Half day " + hour + "ing";
+            } else {
+                hour = parseFloat(hour);
+                timeSlotText.textContent = hour + ":00 - " + (hour+1) + ":00";
+            }
+            timeSlot.appendChild(timeSlotText);
+            timeArray.appendChild(timeSlot);
+        }
+    });
 
     venueDiv.appendChild(title);
+    venueDiv.appendChild(spaceLabel);
     venueDiv.appendChild(space);
+    venueDiv.appendChild(document.createElement('br'));
+    venueDiv.appendChild(dateLabel);
     venueDiv.appendChild(date);
+    venueDiv.appendChild(document.createElement('br'));
     venueDiv.appendChild(time);
+    venueDiv.appendChild(timeArray);
     return venueDiv;
 }
 
 /*
  *  createEventDiv() -
  */
-function createEventDiv() {
+function createEventReviewDiv() {
     const eventDiv = document.createElement('div');
     eventDiv.className = "review-div";
 
@@ -301,7 +346,7 @@ function createEventDiv() {
 /*
  *  createAmenityDiv() -
  */
-function createAmenityDiv() {
+function createAmenityReviewDiv() {
     const amentiyDiv = document.createElement('div');
     amentiyDiv.className = "review-div";
 
@@ -316,7 +361,7 @@ function createAmenityDiv() {
 /*
  *  createContactDiv() -
  */
-function createContactDiv() {
+function createContactReviewDiv() {
     const contactDiv = document.createElement('div');
     contactDiv.className = "review-div";
 
@@ -348,12 +393,18 @@ function reviewApplication() {
 
     document.getElementById("Review").innerHTML = "";
     document.getElementById("Review").appendChild(title);
-    document.getElementById("Review").appendChild(createVenueDiv());
-    document.getElementById("Review").appendChild(createEventDiv());
-    document.getElementById("Review").appendChild(createAmenityDiv());
-    document.getElementById("Review").appendChild(createContactDiv());
+    document.getElementById("Review").appendChild(createVenueReviewDiv());
+    document.getElementById("Review").appendChild(createEventReviewDiv());
+    document.getElementById("Review").appendChild(createAmenityReviewDiv());
+    document.getElementById("Review").appendChild(createContactReviewDiv());
     document.getElementById("Review").appendChild(submit);
 }
+
+
+
+
+
+
 
 
 
@@ -381,15 +432,22 @@ var eventsRef = firebase.database().ref().child("Events");
 function findEvents(dateText) {
     // clear venues from the receipt
     deleteClassFromReceipt("Selection");
+
     // clear the available venues and add the current searching date
-    const dateChosen = document.createElement('h5');
-    dateChosen.textContent = "Available spaces for " + dateText;
+    const dateChosen = document.createElement('p');
+    dateChosen.id = "date-chosen";
+    dateChosen.textContent = dateText;
+    const dateChosenLabel = document.createElement('h5');
+    dateChosenLabel.textContent = "Available spaces for ";
+    dateChosen.htmlFor = "date-chosen";
 
     document.getElementById("available-venues").innerHTML = "";
+    document.getElementById("available-venues").appendChild(dateChosenLabel);
     document.getElementById("available-venues").appendChild(dateChosen);
 
     // add all venue spaces to the available venues
     eventsRef.on("child_added", snap => {
+
         // create the image cell
         const eventImage = document.createElement('img');
         eventImage.className = "card-image";
@@ -449,6 +507,7 @@ function findEvents(dateText) {
             var checkbox = document.createElement('input');
             checkbox.type = "checkbox";
             checkbox.id = eventName + " morn";
+            checkbox.className = "hour-checkbox";
             checkbox.onclick = function() { updateReceiptSpace(this, eventName, "Morning Half", 20, "Selection"); };
 
             var label = document.createElement('label')
@@ -467,6 +526,7 @@ function findEvents(dateText) {
             var checkbox = document.createElement('input');
             checkbox.type = "checkbox";
             checkbox.id = eventName + " even";
+            checkbox.className = "hour-checkbox";
             checkbox.onclick = function() { updateReceiptSpace(this, eventName, "Evening Half", 20, "Selection"); };
 
             var label = document.createElement('label')
@@ -486,6 +546,7 @@ function findEvents(dateText) {
                 var checkbox = document.createElement('input');
                 checkbox.type = "checkbox";
                 checkbox.id = eventName + " full";
+                checkbox.className = "hour-checkbox";
                 checkbox.onclick = function() { updateReceiptSpace(this, eventName, "Full day", 35, "Selection"); };
 
                 var label = document.createElement('label')
@@ -514,6 +575,7 @@ function findEvents(dateText) {
                 var checkbox = document.createElement('input');
                 checkbox.type = "checkbox";
                 checkbox.id = eventName + " " + t;
+                checkbox.className = "hour-checkbox";
                 checkbox.onclick = function() { updateReceiptSpace(this, eventName, "Business Hours", 10, "Selection"); };
 
                 var label = document.createElement('label')
@@ -543,6 +605,7 @@ function findEvents(dateText) {
                 var checkbox = document.createElement('input');
                 checkbox.type = "checkbox";
                 checkbox.id = eventName + " " + t;
+                checkbox.className = "hour-checkbox";
                 checkbox.onclick = function() { updateReceiptSpace(this, eventName, "After Hours", 10, "Selection"); };
 
                 var label = document.createElement('label')
