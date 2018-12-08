@@ -20,12 +20,21 @@
     </item>
     
     <item>
+      <title>Design Contest</title>
+      <link>https://h3-sdpt.firebaseapp.com/design/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://h3-sdpt.firebaseapp.com/design/</guid>
+      <description> </description>
+    </item>
+    
+    <item>
       <title>Documentary</title>
       <link>https://h3-sdpt.firebaseapp.com/documentary/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://h3-sdpt.firebaseapp.com/documentary/</guid>
-      <description>  </description>
+      <description> </description>
     </item>
     
     <item>
@@ -79,6 +88,15 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://h3-sdpt.firebaseapp.com/presentation/</guid>
+      <description> </description>
+    </item>
+    
+    <item>
+      <title>R-Lab</title>
+      <link>https://h3-sdpt.firebaseapp.com/rlab/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://h3-sdpt.firebaseapp.com/rlab/</guid>
       <description> </description>
     </item>
     

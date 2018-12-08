@@ -6,9 +6,9 @@
         {{ range .Site.Params.Navigation.links }}
             <!-- if the link has a target (startup in new tab) -->
             {{ if (isset . "target") }}
-                <a id="{{ .url }}-tab" class="nav-item nav-link guest-access" href="{{ .url | absURL}}" target="{{ .target }}" onclick="updatePage(/{{ .url }}/)">{{ .name }}</a>
+                <a id="{{ .url }}-tab" class="nav-item nav-link guest-access" href="{{ .url | absURL }}" target="{{ .target }}" onclick="updatePage(/{{ .url }}/)">{{ .name }}</a>
             {{ else }}
-                <a id="{{ .url }}-tab" class="nav-item nav-link guest-access" href="{{ .url | absURL}}" onclick="updatePage(/{{ .url }}/)">{{ .name }}</a>
+                <a id="{{ .url }}-tab" class="nav-item nav-link guest-access" href="{{ .url | absURL }}" onclick="updatePage(/{{ .url }}/)">{{ .name }}</a>
             {{ end }}
         {{ end }}
 
@@ -27,7 +27,9 @@
 
     <div id="admin-drawer">
         <ul id="admin-links">
-            <li><a id="documents-tab" class="nav-item nav-link" href="documents" onclick="updatePage(/documents/);closeAdmin();">Documents</a></li>
+            <li><a id="documents-tab" class="nav-item nav-link" href="{{ .Site.BaseURL }}documents" onclick="updatePage(/documents/);closeAdmin();">Documents</a></li>
+            <li><a id="design-tab" class="nav-item nav-link" href="{{ .Site.BaseURL }}design" onclick="updatePage(/design/);closeAdmin();">Design Contest</a></li>
+            <li><a id="rlab-tab" class="nav-item nav-link" href="{{ .Site.BaseURL }}rlab" onclick="updatePage(/rlab/);closeAdmin();">R-Lab</a></li>
         </ul>
 
         <a id="logout-btn" class="btn btn-light my-2 my-sm-0" href="{{ .Site.BaseURL }}" onclick="logout();resetHighlights();" role="button">Logout</a>
