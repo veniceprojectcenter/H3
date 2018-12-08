@@ -1,4 +1,4 @@
-#login-pane, #register-pane {
+#login-panex, #register-pane {
     text-align: center;
     padding: 20px;
     label {
@@ -7,5 +7,60 @@
     }
     input[type=submit] {
         margin: 20px;
+    }
+}
+
+
+#login-drawer, #admin-drawer {
+    display: none;
+    position: absolute;
+    top: 60;
+    right: 0;
+    background-color: rgba(26, 26, 26, 0.9);
+    color: _palette(bg);
+    padding: 20px;
+    padding-top: 0;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+#login-drawer {
+    input[type=email], input[type=password] {
+        color: _palette(bg);
+        margin: 0;
+        &:focus {
+            background-color: lighten(#111111, 20);
+        }
+    }
+    label {
+        width: auto;
+        margin-bottom: 0;
+        margin-top: 0.5em;
+    }
+    input[type=submit] {
+        margin-top: 15px!important;
+    }
+}
+
+#admin-drawer {
+    text-align: center;
+    letter-spacing: 0.1em;
+
+    #admin-links {
+        margin: 0;
+        padding: 0;
+
+        li {
+            padding: 5px;
+        }
+        a {
+            color: _palette(bg);
+        }
+        a:hover {
+            color: desaturate(darken(white, 25), 5);
+        }
+    }
+    #logout-btn {
+        margin: 5px;
     }
 }

@@ -1,10 +1,11 @@
 
-
+/*
+ *  FIREBASE AUTHENTICATION
+ */
 
 firebase.auth().onAuthStateChanged(function(user) {
-    var loginBtn = document.getElementById("login-btn");
-    var logoutBtn = document.getElementById("logout-btn");
-    var documentsTab = document.getElementById("documents-tab");
+    let loginBtn = document.getElementById("login-btn");
+    let adminBtn = document.getElementById("admin-btn");
 
     $('.guest-access').each(function(){
         // show all regular tabs
@@ -14,12 +15,10 @@ firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
         // user is logged in
         $("#login-btn").hide();
-        $("#logout-btn").show();
-        $("#documents-tab").show();
+        $("#admin-btn").show();
     } else {
         // user is logged out
-        $("#documents-tab").hide();
-        $("#logout-btn").hide();
+        $("#admin-btn").hide();
         $("#login-btn").show();
     }
 });
@@ -29,16 +28,16 @@ firebase.auth().onAuthStateChanged(function(user) {
  *      registration form and creates a new Firebase user, then logs them in
  */
 function register() {
-    var userRef = firebase.database().ref().child("Users");
+    let userRef = firebase.database().ref().child("Users");
 
-    var firstName = document.getElementById("register-first").value;
-    var lastName = document.getElementById("register-last").value;
-    var email = document.getElementById("register-email").value;
-    var password = document.getElementById("register-password").value;
+    let firstName = document.getElementById("register-first").value;
+    let lastName = document.getElementById("register-last").value;
+    let email = document.getElementById("register-email").value;
+    let password = document.getElementById("register-password").value;
 
     firebase.auth().createUserWithEmailAndPassword(email, password)
     .then(function() {
-            var user = firebase.auth().currentUser;
+            let user = firebase.auth().currentUser;
             if (user) {
                 user.updateProfile({
                     displayName: firstName + " " + lastName,
@@ -49,25 +48,69 @@ function register() {
     )
     .catch(function(error) {
       // Handle Errors here.
-      var errorCode = error.code;
-      var errorMessage = error.message;
+      let errorCode = error.code;
+      let errorMessage = error.message;
       window.alert("Error: " + errorMessage);
     });
 
 }
 
 function login() {
-    var userEmail = document.getElementById("login-email").value;
-    var userPassword = document.getElementById("login-password").value;
+    let userEmail = document.getElementById("login-email").value;
+    let userPassword = document.getElementById("login-password").value;
 
     firebase.auth().signInWithEmailAndPassword(userEmail, userPassword)
     .catch(function(error) {
-        var errorCode = error.code;
-        var errorMessage = error.message;
+        let errorCode = error.code;
+        let errorMessage = error.message;
         window.alert("Error: " + errorMessage);
     });
+    $("#login-drawer").hide();
 }
 
 function logout() {
+    $("#admin-drawer").hide();
     firebase.auth().signOut();
+}
+
+
+
+
+
+
+
+/*
+ *  LOGIN DRAWER
+ */
+
+
+var notHov = 1; // Hover flag
+
+$("#login-drawer").hover(function() {
+    notHov^=1;  // Toggle flag on hover
+});
+$("#admin-drawer").hover(function() {
+    notHov^=1;  // Toggle flag on hover
+});
+
+$(document).on('mouseup', function(){
+    if(notHov) {
+        $("#login-drawer").hide();//.fadeOut();
+        $("#admin-drawer").hide();
+    }
+});
+
+
+
+
+function openLogin() {
+    $("#login-drawer").show();
+}
+
+function openAdmin() {
+    $("#admin-drawer").show();
+}
+
+function closeAdmin() {
+    $("#admin-drawer").hide();
 }

@@ -20,7 +20,7 @@ events:
     date: "Jan 7"
     image: "../img/dummy/farmbot.jpg"
     carousel: "../img/dummy/farmbot carousel.jpg"
-    description: "An hackathon is an event where participants work on quick solutions to problems. This event will have hackers working on various farmbot prototypes for the hydroponics system in H3."
+    description: "A hackathon is an event where participants work on quick solutions to problems. This event will have hackers working on various farmbot prototypes for the hydroponics system in H3."
 
 ---
 Events Content

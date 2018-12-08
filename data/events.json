@@ -2,38 +2,55 @@
     "Main Hall": {
         "name": "Main Hall",
         "image": "../img/dummy/Overhead Event.jpeg",
-        "description": ["bullet1", "bullet2", "bullet3"],
+        "description": ["80 square meters", "50€ hourly rate", "360€ daily rate"],
         "events": {
             "IQP Presentations Day 1": {
                 "date": "12/07/2018",
                 "times": [16, 17, 18],
-                "approved": false
+                "public": true,
+                "approved": true
             },
             "IQP Presentations Day 2": {
                 "date": "12/10/2018",
                 "times": [16, 17, 18],
-                "approved": false
+                "public": true,
+                "approved": true
+            },
+            "Italis Event": {
+                "date": "12/13/2018",
+                "times": [10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22],
+                "public": true,
+                "approved": true
             },
             "Christmas": {
                 "date": "12/25/2018",
                 "times": [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23],
+                "public": false,
                 "approved": true
             },
             "Farmbot Hackathon": {
                 "date": "01/08/2019",
                 "times": [9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
+                "public": true,
                 "approved": false
             }
         }
     },
-    "Conference 1": {
-        "name": "Room 1",
+    "Function Room 1": {
+        "name": "Function Room",
         "image": "../img/dummy/Conference Room.jpeg",
-        "description": ["bullet1", "bullet2"],
+        "description": ["30 square meters", "25€ hourly rate", "180€ daily rate"],
         "events": {
+            "Final IQP day": {
+                "date": "12/14/2018",
+                "times": [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23],
+                "public": false,
+                "approved": false
+            },
             "Christmas": {
                 "date": "12/25/2018",
                 "times": [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23],
+                "public": false,
                 "approved": true
             }
         }
@@ -41,11 +58,12 @@
     "Courtyard": {
         "name": "Courtyard",
         "image": "../img/dummy/Courtyard.jpeg",
-        "description": ["bullet1", "bullet2"],
+        "description": ["220 square meters", "35€ hourly rate", "250€ daily rate"],
         "events": {
             "Christmas": {
                 "date": "12/25/2018",
                 "times": [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23],
+                "public": false,
                 "approved": true
             }
         }

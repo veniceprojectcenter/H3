@@ -49,27 +49,46 @@
     <div class="navbar-nav ml-auto">
         
             
+            
                 <a id="history-tab" class="nav-item nav-link guest-access" href="https://h3-sdpt.firebaseapp.com/history" onclick="updatePage(/history/)">History</a>
             
         
+            
             
                 <a id="https://new.serendpt.net/startup/-tab" class="nav-item nav-link guest-access" href="https://new.serendpt.net/startup/" target="_blank" onclick="updatePage(/https:\/\/new\.serendpt\.net\/startup\//)">Start-ups</a>
             
         
             
+            
                 <a id="events-tab" class="nav-item nav-link guest-access" href="https://h3-sdpt.firebaseapp.com/events" onclick="updatePage(/events/)">Events</a>
             
         
+            
             
                 <a id="spaces-tab" class="nav-item nav-link guest-access" href="https://h3-sdpt.firebaseapp.com/spaces" onclick="updatePage(/spaces/)">Spaces</a>
             
         
 
-        <a id="documents-tab" class="nav-item nav-link" href="../documents" onclick="updatePage('/documents/')">Documents</a>
-        <a id="login-btn" class="btn btn-light my-2 my-sm-0" href="https://h3-sdpt.firebaseapp.com/login" role="button" onclick="resetHighlights()">Login</a>
-        <a id="logout-btn" class="btn btn-light my-2 my-sm-0" href="https://h3-sdpt.firebaseapp.com/" onclick="logout();resetHighlights();" role="button">Logout</a>
+        <a id="login-btn" class="btn btn-light my-2 my-sm-0" role="button" onclick="openLogin()">Login</a>
+        <a id="admin-btn" class="btn btn-light my-2 my-sm-0" role="button" onclick="openAdmin();">H3 Admin</a>
+
     </div>
 
+    <div id="login-drawer">
+        <label for="login-email">Email:</label><br>
+        <input id="login-email" type="email" placeholder="Email"> <br>
+        <label for="login-password">Password:</label><br>
+        <input id="login-password" type="password" placeholder="Password"> <br>
+        <input class="btn btn-light my-2 my-sm-0" type="submit" role="button" onclick="login()">
+    </div>
+
+    <div id="admin-drawer">
+        <ul id="admin-links">
+            <li><a id="documents-tab" class="nav-item nav-link" href="documents" onclick="updatePage(/documents/);closeAdmin();">Documents</a></li>
+        </ul>
+
+        <a id="logout-btn" class="btn btn-light my-2 my-sm-0" href="https://h3-sdpt.firebaseapp.com/" onclick="logout();resetHighlights();" role="button">Logout</a>
+    </div>
 </nav>
 
             <div id="base-content" class="wrapper barba-container" data-namespace="page">

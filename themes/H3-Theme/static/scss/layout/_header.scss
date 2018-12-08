@@ -11,18 +11,14 @@
     .navbar-nav a {
         letter-spacing: 0.1em;
     }
-    #login-btn, #logout-btn, #username, #documents-tab, .guest-access {
+    #login-btn, #admin-btn, .guest-access {
         display: none;
     }
 
-    #username {
+    #login-btn:hover, #admin-btn:hover {
         color: _palette(highlight);
     }
-
-    #logout-btn:hover {
-        color: _palette(highlight);
-    }
-    #logout-btn {
+    #admin-btn {
         color: black;
     }
 }

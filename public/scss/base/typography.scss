@@ -24,7 +24,7 @@ h2 {
     text-decoration: none;
 }
 
-.navbar .nav-link {
+.nav-link {
     color: white;
     &:hover {
         color: desaturate(darken(white, 25), 5);

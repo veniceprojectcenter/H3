@@ -4,6 +4,7 @@
 
     <div class="navbar-nav ml-auto">
         {{ range .Site.Params.Navigation.links }}
+            <!-- if the link has a target (startup in new tab) -->
             {{ if (isset . "target") }}
                 <a id="{{ .url }}-tab" class="nav-item nav-link guest-access" href="{{ .url | absURL}}" target="{{ .target }}" onclick="updatePage(/{{ .url }}/)">{{ .name }}</a>
             {{ else }}
@@ -11,9 +12,24 @@
             {{ end }}
         {{ end }}
 
-        <a id="documents-tab" class="nav-item nav-link" href="../documents" onclick="updatePage('/documents/')">Documents</a>
-        <a id="login-btn" class="btn btn-light my-2 my-sm-0" href="{{ .Site.Params.Navigation.login.url | absURL }}" role="button" onclick="resetHighlights()">Login</a>
-        <a id="logout-btn" class="btn btn-light my-2 my-sm-0" href="{{ .Site.BaseURL }}" onclick="logout();resetHighlights();" role="button">Logout</a>
+        <a id="login-btn" class="btn btn-light my-2 my-sm-0" role="button" onclick="openLogin()">Login</a>
+        <a id="admin-btn" class="btn btn-light my-2 my-sm-0" role="button" onclick="openAdmin();">H3 Admin</a>
+
     </div>
 
+    <div id="login-drawer">
+        <label for="login-email">Email:</label><br>
+        <input id="login-email" type="email" placeholder="Email"> <br>
+        <label for="login-password">Password:</label><br>
+        <input id="login-password" type="password" placeholder="Password"> <br>
+        <input class="btn btn-light my-2 my-sm-0" type="submit" role="button" onclick="login()">
+    </div>
+
+    <div id="admin-drawer">
+        <ul id="admin-links">
+            <li><a id="documents-tab" class="nav-item nav-link" href="documents" onclick="updatePage(/documents/);closeAdmin();">Documents</a></li>
+        </ul>
+
+        <a id="logout-btn" class="btn btn-light my-2 my-sm-0" href="{{ .Site.BaseURL }}" onclick="logout();resetHighlights();" role="button">Logout</a>
+    </div>
 </nav>
