@@ -1,0 +1,48 @@
+#art-gallery {
+
+    .gallery-grid {
+        margin: 40px;
+        margin-top: 60px;
+        margin-bottom: 60px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto 1fr;
+        grid-column-gap: 20px;
+        grid-row-gap: 10px;
+        grid-template-areas:
+            "title title"
+            "art church";
+
+        .title-cell {
+            grid-area: title;
+            h3, h4, h5 {
+                text-align: center;
+            }
+            h3 {
+                font-weight: bold;
+                font-size: 32pt;
+            }
+            h4 {
+                font-style: italic;
+                font-size: 28pt;
+            }
+            h5 {
+                font-size: 16pt;
+            }
+        }
+        .art-cell {
+            grid-area: art;
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+        .church-cell {
+            grid-area: church;
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+}

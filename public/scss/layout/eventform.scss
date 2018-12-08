@@ -288,15 +288,16 @@ input[type=checkbox]:checked + label:before {
   color: #fff;
 }
 
-input[type=checkbox]:disabled + label:after {
+input[type=checkbox]:disabled + label:before {
   transform: scale(1);
-  color: #aaa;
   border-color: #aaa;
 }
 
-input[type=checkbox]:checked:disabled + label:after {
+input[type="checkbox"]:disabled + label {
+    color: #aaa;
+}
+input[type=checkbox]:checked:disabled + label:before {
   transform: scale(1);
-  color: #aaa;
   background-color: #bfb;
   border-color: #bfb;
 }
