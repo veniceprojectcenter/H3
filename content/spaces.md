@@ -8,12 +8,24 @@ spaces:
     image: "../img/dummy/Overhead Event.jpeg"
     description: ""
   -
-    name: "General Room"
+    name: "Function Room"
     image: "../img/dummy/Conference Room.jpeg"
     description: ""
   -
     name: "Courtyard"
     image: "../img/dummy/Courtyard.jpeg"
+    description: ""
+  -
+    name: "Cafeteria"
+    image: "../img/spaces/Cafeteria.jpg"
+    description: ""
+  -
+    name: "VPC"
+    image: "../img/spaces/VPC.jpg"
+    description: ""
+  -
+    name: "Workshop Room"
+    image: "../img/spaces/Empty Room.jpg"
     description: ""
 
 

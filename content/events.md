@@ -6,8 +6,8 @@ events:
   -
     name: "WPI Project Presentations"
     date: "Dec 7, Dec 10"
-    image: "../img/dummy/wpi-iqp.jpg"
-    carousel: "../img/dummy/wpi-iqp carousel.jpg"
+    image: "../img/WPI IQP Presentations.jpg"
+    carousel: "../img/WPI IQP Presentations carousel.jpg"
     description: "On Friday December 7th and Monday December 10th, the WPI Venice IQP teams will present their projects to advisors and invited guests in the apse of the church. It will take place over two days, with presentations starting at 16:00 on each day."
   -
     name: "Italis Event"
