@@ -109,7 +109,8 @@ function addFade() {
     $('.fade-container').each(function(){
         var scene = new ScrollMagic.Scene({
             triggerElement: this,
-            triggerHook: 0.8
+            triggerHook: 0.8,
+            reverse: false
         })// trigger a velocity opaticy animation
         .setClassToggle(this, 'fade-in')
         .addTo(controller);
@@ -138,10 +139,8 @@ function addPin() {
 function addParallax() {
     $('.parallax').each(function(){
         var parallaxTl = new TimelineMax();
-        parallaxTl
-            .from('.parallax-text', 0.2, {autoAlpha: 0, ease:Power0.easeNone}, 0.1)
-            .from('.parallax-image', 1, {y: '-30%', ease:Power0.easeNone}, 0)
-            ;
+        parallaxTl.from('.parallax-text', 0.2, {autoAlpha: 0, ease:Power0.easeNone}, 0.1)
+            .from('.parallax-image', 1, {y: '-30%', ease:Power0.easeNone}, 0);
 
         var slideParalllaxScene = new ScrollMagic.Scene({
             triggerElement: '.parallax',
