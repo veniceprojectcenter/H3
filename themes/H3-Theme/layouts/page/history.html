@@ -18,7 +18,7 @@
                     {{ end }}
                     <div class="content-buttons">
                         {{ range .buttons }}
-                            <a class="btn btn-light my-2 my-sm-0" href="{{ .url }}" onclick="{{ .onclick }}">{{ .text }}</a>
+                            <a class="btn btn-light my-2 my-sm-0" href="{{ .url }}" onclick="updatePage(/history/)">{{ .text }}</a>
                         {{ end }}
                     </div>
                 </div>

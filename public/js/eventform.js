@@ -596,7 +596,7 @@ function findEvents(dateText) {
             checkbox.id = eventName + " morn";
             checkbox.className = "hour-checkbox";
             checkbox.onclick = function() {
-                updateReceiptSpace(this, eventName, "Morning Half", 20, "Selection");
+                updateReceiptSpace(this, eventName, "Morning Half", 160, "Selection");
                 disableCheckboxes(this);
             };
 
@@ -618,7 +618,7 @@ function findEvents(dateText) {
             checkbox.id = eventName + " even";
             checkbox.className = "hour-checkbox";
             checkbox.onclick = function() {
-                updateReceiptSpace(this, eventName, "Evening Half", 20, "Selection");
+                updateReceiptSpace(this, eventName, "Evening Half", 160, "Selection");
                 disableCheckboxes(this);
             };
 
@@ -641,7 +641,7 @@ function findEvents(dateText) {
                 checkbox.id = eventName + " full";
                 checkbox.className = "hour-checkbox";
                 checkbox.onclick = function() {
-                    updateReceiptSpace(this, eventName, "Full day", 35, "Selection");
+                    updateReceiptSpace(this, eventName, "Full day", 250, "Selection");
                     disableCheckboxes(this);
                 };
 
@@ -673,7 +673,7 @@ function findEvents(dateText) {
                 checkbox.id = eventName + " " + t;
                 checkbox.className = "hour-checkbox";
                 checkbox.onclick = function() {
-                    updateReceiptSpace(this, eventName, "Business Hours", 10, "Selection");
+                    updateReceiptSpace(this, eventName, "Business Hours", 35, "Selection");
                     disableCheckboxes(this);
                 };
 
@@ -706,7 +706,7 @@ function findEvents(dateText) {
                 checkbox.id = eventName + " " + t;
                 checkbox.className = "hour-checkbox";
                 checkbox.onclick = function() {
-                    updateReceiptSpace(this, eventName, "After Hours", 10, "Selection");
+                    updateReceiptSpace(this, eventName, "After Hours", 45, "Selection");
                     disableCheckboxes(this);
                 };
 

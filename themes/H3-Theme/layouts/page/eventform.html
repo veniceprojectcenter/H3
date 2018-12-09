@@ -68,6 +68,7 @@
                             <option>-</option>
                             <option>Seminar</option>
                             <option>Workshop</option>
+                            <option>Presentation</option>
                             <option>Lecture</option>
                             <option>Concert</option>
                             <option>Exhibit</option>
@@ -86,12 +87,12 @@
                     <div id="Amenities" class="tabcontent">
                         <h3>Amenities</h3>
                         <ul>
-                            <li> <input id="usherCbx" type="checkbox" onclick="updateReceiptCheckbox(this, 'Usher', '4', 'Amenities')"> <label for="usherCbx">Usher</label> </li>
-                            <li> <input id="attendantCbx" type="checkbox" onclick="updateReceiptCheckbox(this, 'Room Attendant', '2', 'Amenities')"> <label for="attendantCbx">Room Attendant</label> </li>
-                            <li> <input id="micCbx" type="checkbox" onclick="updateReceiptCheckbox(this, 'Mic', '1', 'Amenities')"> <label for="micCbx">Mic</label> </li>
-                            <li> <input id="speakerCbx" type="checkbox" onclick="updateReceiptCheckbox(this, 'Speakers', '2', 'Amenities')"> <label for="speakerCbx">Speakers<label> </li>
+                            <li> <input id="usherCbx" type="checkbox" onclick="updateReceiptCheckbox(this, 'Usher', '30', 'Amenities')"> <label for="usherCbx">Usher</label> </li>
+                            <li> <input id="attendantCbx" type="checkbox" onclick="updateReceiptCheckbox(this, 'Room Attendant', '30', 'Amenities')"> <label for="attendantCbx">Room Attendant</label> </li>
+                            <li> <input id="micCbx" type="checkbox" onclick="updateReceiptCheckbox(this, 'Mic', '12', 'Amenities')"> <label for="micCbx">Mic</label> </li>
+                            <li> <input id="speakerCbx" type="checkbox" onclick="updateReceiptCheckbox(this, 'Speakers', '20', 'Amenities')"> <label for="speakerCbx">Speakers<label> </li>
                             <li> <input id="chairAmt" type="text" onkeypress="validateNumber(event)" onblur="updateReceiptAmount(this, 'Chairs', '0.5', 'Amenities')"> <label for="chairAmt">Chairs</label> </li>
-                            <li> <input id="tableAmt" type="text" onkeypress="validateNumber(event)" onblur="updateReceiptAmount(this, 'Tables', '1', 'Amenities')"> <label for="tableAmt">Tables</label> </li>
+                            <li> <input id="tableAmt" type="text" onkeypress="validateNumber(event)" onblur="updateReceiptAmount(this, 'Tables', '2', 'Amenities')"> <label for="tableAmt">Tables</label> </li>
                         </ul>
                     </div>
 

@@ -1,5 +1,5 @@
 ---
-title: "Event Form"
+title: "Event Application"
 layout: "eventform"
 ---
-Event Form Content!
+Event Form Content
