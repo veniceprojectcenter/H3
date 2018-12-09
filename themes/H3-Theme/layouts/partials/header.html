@@ -4,9 +4,9 @@
 
     <div class="navbar-nav ml-auto">
         {{ range .Site.Params.Navigation.links }}
-            <!-- if the link has a target (startup in new tab) -->
+            <!-- check if tab will open in new tab -->
             {{ if (isset . "target") }}
-                <a id="{{ .url }}-tab" class="nav-item nav-link guest-access" href="{{ .url | absURL }}" target="{{ .target }}" onclick="updatePage(/{{ .url }}/)">{{ .name }}</a>
+                <a id="{{ .url }}-tab" class="nav-item nav-link guest-access" href="{{ .url | absURL }}" target="{{ .target }}">{{ .name }}</a>
             {{ else }}
                 <a id="{{ .url }}-tab" class="nav-item nav-link guest-access" href="{{ .url | absURL }}" onclick="updatePage(/{{ .url }}/)">{{ .name }}</a>
             {{ end }}

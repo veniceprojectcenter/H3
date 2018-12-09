@@ -136,9 +136,12 @@
 }
 
 .icon {
-    width: full;
+    width: 80%;
     height: auto;
     padding: 20px;
+}
+#company-card, #job-card, #year-card {
+    border-radius: 20px;
 }
 #company-card {
     background-color: #7cd89b;
