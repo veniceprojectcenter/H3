@@ -4,7 +4,6 @@
 
     <div class="navbar-nav ml-auto">
         {{ range .Site.Params.Navigation.links }}
-            <!-- check if tab will open in new tab -->
             {{ if (isset . "target") }}
                 <a id="{{ .url }}-tab" class="nav-item nav-link guest-access" href="{{ .url | absURL }}" target="{{ .target }}">{{ .name }}</a>
             {{ else }}
@@ -35,3 +34,81 @@
         <a id="logout-btn" class="btn btn-light my-2 my-sm-0" href="{{ .Site.BaseURL }}" onclick="logout();resetHighlights();" role="button">Logout</a>
     </div>
 </nav>
+
+
+
+
+<!--<nav class="navbar fixed-top navbar-expand-lg">
+
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">WebSiteName</a>
+        </div>
+        <div class="navbar-nav ml-auto">
+            {{ range .Site.Params.Navigation.links }}
+                {{ if (isset . "target") }}
+                    <a id="{{ .url }}-tab" class="nav-item nav-link guest-access" href="{{ .url | absURL }}" target="{{ .target }}">{{ .name }}</a>
+                {{ else }}
+                    <a id="{{ .url }}-tab" class="nav-item nav-link guest-access" href="{{ .url | absURL }}" onclick="updatePage(/{{ .url }}/)">{{ .name }}</a>
+                {{ end }}
+            {{ end }}
+
+            <a id="login-btn" class="btn btn-light my-2 my-sm-0" role="button" onclick="openLogin()">Login</a>
+            <a id="admin-btn" class="btn btn-light my-2 my-sm-0" role="button" onclick="openAdmin();">H3 Admin</a>
+        </div>
+    </div>
+
+    <a href="{{ .Site.BaseURL }}" class="logo"> <img src="{{ .Site.Params.baseURL }}/img/H3 Logo.png" alt="" onclick="resetHighlights()"/></a>
+
+
+
+    <div id="login-drawer">
+        <label for="login-email">Email:</label><br>
+        <input id="login-email" type="email" placeholder="Email"> <br>
+        <label for="login-password">Password:</label><br>
+        <input id="login-password" type="password" placeholder="Password"> <br>
+        <input class="btn btn-light my-2 my-sm-0" type="submit" role="button" onclick="login()">
+    </div>
+
+    <div id="admin-drawer">
+        <ul id="admin-links">
+            <li><a id="documents-tab" class="nav-item nav-link" href="{{ .Site.BaseURL }}documents" onclick="updatePage(/documents/);closeAdmin();">Documents</a></li>
+            <li><a id="design-tab" class="nav-item nav-link" href="{{ .Site.BaseURL }}design" onclick="updatePage(/design/);closeAdmin();">Design Contest</a></li>
+            <li><a id="rlab-tab" class="nav-item nav-link" href="{{ .Site.BaseURL }}rlab" onclick="updatePage(/rlab/);closeAdmin();">R-Lab</a></li>
+        </ul>
+
+        <a id="logout-btn" class="btn btn-light my-2 my-sm-0" href="{{ .Site.BaseURL }}" onclick="logout();resetHighlights();" role="button">Logout</a>
+    </div>
+</nav>-->
+
+
+
+
+<!--
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">WebSiteName</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">History</a></li>
+        <li><a href="#">Startups</a></li>
+        <li><a href="#">Events</a></li>
+        <li><a href="#">Spaces</a></li>
+        <li><a href="#">Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+-->

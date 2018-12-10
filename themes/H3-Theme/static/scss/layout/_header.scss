@@ -1,7 +1,7 @@
 .navbar {
     height: 60px;
     width: 100%;
-    background-color: rgba(26, 26, 26, 0.9); // 26 = #1a
+    background-color: rgba(26, 26, 26, 0.9);
     transition: 0.4s ease-in-out; // allows for smooth scrolling fade transitions
 
     img {
@@ -32,3 +32,19 @@
     font-weight: 600;
     color: _palette(highlight) !important;
 }
+
+
+/*
+.navbar-nav {
+    flex-direction: row;
+}
+.navbar>.container, .navbar>.container-fluid {
+    flex-wrap: nowrap;
+}
+
+.navbar-nav.collapse {
+    flex-direction: column;
+}
+.navbar.collapse>.container, .navbar.collapse>.container-fluid {
+    flex-wrap: wrap;
+}*/
