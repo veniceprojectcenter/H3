@@ -32,12 +32,11 @@
   </url>
   
   <url>
-    <loc>https://h3-sdpt.firebaseapp.com/</loc>
-    <priority>0</priority>
+    <loc>https://h3-sdpt.firebaseapp.com/history/</loc>
   </url>
   
   <url>
-    <loc>https://h3-sdpt.firebaseapp.com/history/</loc>
+    <loc>https://h3-sdpt.firebaseapp.com/</loc>
   </url>
   
   <url>

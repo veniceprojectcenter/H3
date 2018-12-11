@@ -17,6 +17,7 @@ window.onscroll = function() {
     prevScrollpos = currentScrollPos;
 };
 
+// highlight the correct tab when loading in
 $(document).ready(function() {
     updatePage(window.location.pathname);
 });

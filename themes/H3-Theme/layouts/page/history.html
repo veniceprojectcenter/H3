@@ -7,6 +7,7 @@
 
     <div id="history" >
 
+        <!-- display each section of the history parameters -->
         {{ range .Params.slides }}
             <div class="history-grid">
                 <div class="title-cell">
@@ -16,6 +17,7 @@
                     {{ range .paragraphs }}
                     <p>{{ . }}</p>
                     {{ end }}
+                    <!-- include buttons in the text cell if there are any --->
                     <div class="content-buttons">
                         {{ range .buttons }}
                             <a class="btn btn-light my-2 my-sm-0" href="{{ .url }}" onclick="updatePage(/history/)">{{ .text }}</a>

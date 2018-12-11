@@ -4,8 +4,10 @@
         <div class="content">
             <div class="section">
 
+                <!-- create one row for all spaces, letting bootstrap realign as needed -->
                 <div class="fade-container row">
                     {{ range .Params.spaces }}
+                        <!-- create a card for this current space -->
                         <div class="shift-card fade-card col my-card">
                             <img class="card-image" src="{{ .image }}" alt="">
                             <h4>{{ .name }}</h4>

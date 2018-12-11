@@ -2,6 +2,7 @@
     <div id="art-gallery" class="pad-top">
         <h1 class="title">{{ .Title }}</h1>
 
+        <!-- display all artwork on the page -->
         {{ range .Params.pictures }}
             <div class="gallery-grid">
 
@@ -16,11 +17,12 @@
                 </div>
 
                 <div class="church-cell">
+                    <!-- display an image of where the artwork was if it exists -->
                     {{ if (and (isset . "churchlocation")  (not (eq .churchlocation ""))) }}
                         <img class="church-location-image" src="/img/art-locations/{{ .churchlocation }}"  alt="">
                     {{ end }}
                 </div>
-                
+
             </div>
         {{ end }}
     </div>

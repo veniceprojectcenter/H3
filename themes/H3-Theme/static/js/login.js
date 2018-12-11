@@ -7,8 +7,8 @@ firebase.auth().onAuthStateChanged(function(user) {
     let loginBtn = document.getElementById("login-btn");
     let adminBtn = document.getElementById("admin-btn");
 
+    // show all regular, guest tabs
     $('.guest-access').each(function(){
-        // show all regular tabs
         $(this).show();
     });
     //username.textContent = user.displayName;
@@ -22,6 +22,7 @@ firebase.auth().onAuthStateChanged(function(user) {
         $("#login-btn").show();
     }
 });
+
 
 /*
  *  register() - takes the first name, last name, email, and password from the
@@ -55,6 +56,9 @@ function register() {
 
 }
 
+/*
+ *  Logs in the user from the login-email and login-pasword input fields
+ */
 function login() {
     let userEmail = document.getElementById("login-email").value;
     let userPassword = document.getElementById("login-password").value;
@@ -68,6 +72,9 @@ function login() {
     $("#login-drawer").hide();
 }
 
+/*
+ *  logout() - logs out the user and closes the admin drawer
+ */
 function logout() {
     $("#admin-drawer").hide();
     firebase.auth().signOut();
@@ -79,8 +86,10 @@ function logout() {
 
 
 
+
+
 /*
- *  LOGIN DRAWER
+ *  Open and close the login/admin drawer
  */
 
 
@@ -99,9 +108,6 @@ $(document).on('mouseup', function(){
         $("#admin-drawer").hide();
     }
 });
-
-
-
 
 function openLogin() {
     $("#login-drawer").show();
