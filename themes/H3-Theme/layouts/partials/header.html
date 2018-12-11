@@ -1,4 +1,4 @@
-<nav class="navbar fixed-top navbar-expand-lg">
+<!--<nav class="navbar fixed-top navbar-expand-lg">
 
     <a href="{{ .Site.BaseURL }}" class="logo"> <img src="{{ .Site.Params.baseURL }}/img/H3 Logo.png" alt="" onclick="resetHighlights()"/></a>
 
@@ -33,7 +33,7 @@
 
         <a id="logout-btn" class="btn btn-light my-2 my-sm-0" href="{{ .Site.BaseURL }}" onclick="logout();resetHighlights();" role="button">Logout</a>
     </div>
-</nav>
+</nav>-->
 
 
 
@@ -89,8 +89,8 @@
 
 
 
-<!--
-<nav class="navbar navbar-inverse">
+
+<!--<nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -110,5 +110,57 @@
       </ul>
     </div>
   </div>
+</nav>-->
+
+<nav class="navbar fixed-top navbar-expand-md">
+
+    <a class="navbar-brand" href="{{ .Site.BaseURL }}"> <img src="{{ .Site.Params.baseURL }}/img/H3 Logo.png" alt="" onclick="resetHighlights()"/></a>
+
+    <button class="navbar-toggler" data-toggle="collapse" data-target="#unique_id_x">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+
+    <div class="collapse navbar-collapse" id="unique_id_x">
+        <ul class="navbar-nav navbar-right ml-auto">
+
+            {{ range .Site.Params.Navigation.links }}
+                {{ if (isset . "target") }}
+                    <li class="nav-item">
+                        <a id="{{ .url }}-tab" class="nav-link guest-access" href="{{ .url | absURL }}" target="{{ .target }}">{{ .name }}</a>
+                    </li>
+                {{ else }}
+                    <li class="nav-item">
+                        <a id="{{ .url }}-tab" class="nav-link guest-access" href="{{ .url | absURL }}" onclick="updatePage(/{{ .url }}/)">{{ .name }}</a>
+                    </li>
+                {{ end }}
+            {{ end }}
+
+            <li class="nav-item">
+                <a id="login-btn" class="btn btn-light my-2 my-sm-0" role="button" onclick="openLogin()">Login</a>
+            </li>
+            <li class="nav-item">
+                <a id="admin-btn" class="btn btn-light my-2 my-sm-0" role="button" onclick="openAdmin()">H3 Admin</a>
+            </li>
+
+        </ul>
+    </div>
+
+    <div id="login-drawer">
+        <label for="login-email">Email:</label><br>
+        <input id="login-email" type="email" placeholder="Email"> <br>
+        <label for="login-password">Password:</label><br>
+        <input id="login-password" type="password" placeholder="Password"> <br>
+        <input class="btn btn-light my-2 my-sm-0" type="submit" role="button" onclick="login()">
+    </div>
+
+    <div id="admin-drawer">
+        <ul id="admin-links">
+            <li><a id="documents-tab" class="nav-item" href="{{ .Site.BaseURL }}documents" onclick="updatePage(/documents/);closeAdmin();">Documents</a></li>
+            <li><a id="design-tab" class="nav-item" href="{{ .Site.BaseURL }}design" onclick="updatePage(/design/);closeAdmin();">Design Contest</a></li>
+            <li><a id="rlab-tab" class="nav-item " href="{{ .Site.BaseURL }}rlab" onclick="updatePage(/rlab/);closeAdmin();">R-Lab</a></li>
+        </ul>
+
+        <a id="logout-btn" class="btn btn-light my-2 my-sm-0" href="{{ .Site.BaseURL }}" onclick="logout();resetHighlights();" role="button">Logout</a>
+    </div>
 </nav>
--->
