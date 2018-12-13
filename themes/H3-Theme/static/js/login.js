@@ -41,6 +41,7 @@ function register() {
             let user = firebase.auth().currentUser;
             if (user) {
                 user.updateProfile({
+                    // display name is full name
                     displayName: firstName + " " + lastName,
                     photoURL: ""
                 });
@@ -92,6 +93,7 @@ function logout() {
  *  Open and close the login/admin drawer
  */
 
+// will close the login and admin drawers once they lose focus
 
 var notHov = 1; // Hover flag
 
@@ -109,14 +111,13 @@ $(document).on('mouseup', function(){
     }
 });
 
+
 function openLogin() {
     $("#login-drawer").show();
 }
-
 function openAdmin() {
     $("#admin-drawer").show();
 }
-
 function closeAdmin() {
     $("#admin-drawer").hide();
 }

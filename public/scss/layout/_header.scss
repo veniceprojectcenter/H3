@@ -1,8 +1,9 @@
 .navbar {
-    height: 60px;
-    width: 100%;
+    z-index: 3;
     background-color: rgba(26, 26, 26, 0.9);
     transition: 0.4s ease-in-out; // allows for smooth scrolling fade transitions
+
+    padding: 0 10px;
 
     img {
         height: 30px;
@@ -15,11 +16,30 @@
         display: none;
     }
 
+    .nav-link {
+        padding: 10px 0px;
+        vertical-align: middle;
+        line-height: 60px;
+    }
+
+    .btn {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        line-height: 60px;
+    }
+
     #login-btn:hover, #admin-btn:hover {
         color: _palette(highlight);
     }
-    #admin-btn {
+    #login-btn, #admin-btn {
         color: black;
+    }
+    #login-drawer, #admin-drawer {
+        padding-left: 15px;
+        padding-right: 15px;
+        .btn {
+            line-height: normal;
+        }
     }
 }
 
@@ -34,17 +54,11 @@
 }
 
 
-/*
-.navbar-nav {
-    flex-direction: row;
-}
-.navbar>.container, .navbar>.container-fluid {
-    flex-wrap: nowrap;
-}
 
-.navbar-nav.collapse {
-    flex-direction: column;
+// change the color of the hamburger collapse icon
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 0.9)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
-.navbar.collapse>.container, .navbar.collapse>.container-fluid {
-    flex-wrap: wrap;
-}*/
+.navbar-toggler {
+  border-color: rgb(255,255,255);
+}

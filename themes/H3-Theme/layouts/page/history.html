@@ -4,7 +4,6 @@
         <h1 id="page-title">{{ .Title }}</h1>
     </div>
 
-
     <div id="history" >
 
         <!-- display each section of the history parameters -->
@@ -24,6 +23,7 @@
                         {{ end }}
                     </div>
                 </div>
+                <!-- include picture in the correct cell if it is not "" in the parameters -->
                 <div class="pic1-cell square-cell">
                     {{ if not (eq (index .images 0) "") }}
                         <img class="square-image" src="{{ index .images 0 }}" alt="">

@@ -1,5 +1,7 @@
 
-// Navbar disappears when scrolling down, reappears scrolling up
+/*
+ *  Navbar disappears when scrolling down, reappears scrolling up
+ */
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
     var currentScrollPos = window.pageYOffset;
@@ -17,7 +19,11 @@ window.onscroll = function() {
     prevScrollpos = currentScrollPos;
 };
 
-// highlight the correct tab when loading in
+
+
+/*
+ *  highlight the correct tab when loading in
+ */
 $(document).ready(function() {
     updatePage(window.location.pathname);
 });

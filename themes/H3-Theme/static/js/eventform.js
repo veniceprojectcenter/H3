@@ -7,21 +7,8 @@ var eventsRef = firebase.database().ref().child("Events");
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*
- *  openTab() -
+ *  openTab() - hides the past tab, and shows the current tab
  */
 function openTab(evt, tabName) {
     var i, tabcontent, tablinks;
@@ -30,7 +17,7 @@ function openTab(evt, tabName) {
     for (i = 0; i < tabcontent.length; i++) {
         tabcontent[i].style.display = "none";
     }
-    // make all active tabs in navbar
+    // make all tabs inactive in navbar
     tablinks = document.getElementsByClassName("tablink");
     for (i = 0; i < tablinks.length; i++) {
         tablinks[i].className = tablinks[i].className.replace(" active", "");
@@ -40,6 +27,12 @@ function openTab(evt, tabName) {
     evt.currentTarget.className += " active";
 }
 
+
+
+/*
+ * loadVenueSelection() - will load in the venue selection tab, with a datepicker
+ *      calender loaded and venues selected for the current date
+ */
 function loadVenueSelection() {
     $("#datepicker").datepicker({
         onSelect: findEvents,
@@ -63,13 +56,14 @@ function loadVenueSelection() {
 }
 
 
+
 /*
  *  validateNumber() - will make sure that the key press event is only numbers
  */
 function validateNumber(evt) {
   var theEvent = evt || window.event;
 
-  // Handle paste
+  // Handle paste (doesn't work?) * * * * *
   if (theEvent.type === 'paste') {
       key = event.clipboardData.getData('text/plain');
   } else {
@@ -89,7 +83,8 @@ function validateNumber(evt) {
 
 
 /*
- *  updateReceiptCheckbox() - adds or removes the item/cost to the receipt and updates the total
+ *  updateReceiptCheckbox() - adds or removes the item and cost to/from the receipt
+ *      if the checkbox is selected or not. Also updates the receipt total.
  */
 function updateReceiptCheckbox(checkbox, item, cost, reference) {
     var totalCost = document.getElementById("receipt-total").innerHTML;
@@ -107,7 +102,7 @@ function updateReceiptCheckbox(checkbox, item, cost, reference) {
 
 
 /*
- *  updateReceiptAmount() - adds or removes the item/cost to the receipt and updates the total
+ *  updateReceiptAmount() - adds or removes the input item and dedicated cost to the receipt and updates the total
  */
 function updateReceiptAmount(input, item, cost, reference) {
     // see if already in table, get count if it is
@@ -153,7 +148,7 @@ function updateReceiptAmount(input, item, cost, reference) {
 
 
 /*
- *  updateReceiptSpace() -
+ *  updateReceiptSpace() - adds or removes a venue space to/from the receipt and updates the total
  */
 function updateReceiptSpace(checkbox, space, type, cost, reference) {
     var receiptTable = document.getElementById("receipt-table");
@@ -202,7 +197,8 @@ function updateReceiptSpace(checkbox, space, type, cost, reference) {
 
 
 /*
- *  addToReceipt() - adds a row to the table with the given item and cost
+ *  addToReceipt() - adds a row to the table with the given item and cost, along with
+ *      what reference tab it will open when the row is clicked.
  */
 function addToReceipt(item, cost, reference) {
     var receiptTable = document.getElementById("receipt-table");
@@ -235,9 +231,8 @@ function deleteFromReceipt(item) {
     }
 }
 
-
 /*
- *  deleteClassFromReceipt() - will delete the entire row with the given refernce class from the receipt table
+ *  deleteClassFromReceipt() - will delete the entire row with the given reference class from the receipt table
  */
 function deleteClassFromReceipt(reference) {
     var receiptTable = document.getElementById("receipt-table");
@@ -289,7 +284,7 @@ function createLabelDiv(label, contentid) {
 }
 
 /*
- *  createVenueDiv() -
+ *  createVenueDiv() - creates the venue review section
  */
 function createVenueReviewDiv(venue, date, times) {
     const venueDiv = document.createElement('div');
@@ -343,7 +338,8 @@ function createVenueReviewDiv(venue, date, times) {
 }
 
 /*
- *  createEventDiv() -
+ *  createEventDiv() - create the event detail review section based off of the
+ *      input fields that were added in the event detail section.
  */
 function createEventReviewDiv() {
     const eventDiv = document.createElement('div');
@@ -361,7 +357,8 @@ function createEventReviewDiv() {
 }
 
 /*
- *  createAmenityDiv() -
+ *  createAmenityDiv() - create the amentiy review section based off of the input
+ *      fields that were marked in the ameneity tab section.
  */
 function createAmenityReviewDiv() {
     const amentiyDiv = document.createElement('div');
@@ -370,13 +367,13 @@ function createAmenityReviewDiv() {
     const title = document.createElement('h4');
     title.textContent = "Amenities";
 
-
     amentiyDiv.appendChild(title);
     return amentiyDiv;
 }
 
 /*
- *  createContactDiv() -
+ *  createContactDiv() - create the contact review section based off of the provided
+ *      contact information that was inputted in the contact tab section.
  */
 function createContactReviewDiv() {
     const contactDiv = document.createElement('div');
@@ -395,7 +392,8 @@ function createContactReviewDiv() {
 
 
 /*
- *  reviewApplication() -
+ *  reviewApplication() - check all information that was selected in the applicaiton
+ *      form and create review sections that summarize this information.
  */
 function reviewApplication() {
     const title = document.createElement('h3');
@@ -418,7 +416,7 @@ function reviewApplication() {
     });
 
 
-    // submit button to push the event to the database
+    // create submit button to push the event to the database
     var submit = document.createElement('input');
     submit.type = "submit";
     submit.onclick = function() {
@@ -441,6 +439,7 @@ function reviewApplication() {
     };
 
 
+    // append the review section together by creating section review divs
     document.getElementById("Review").innerHTML = "";
     document.getElementById("Review").appendChild(title);
     document.getElementById("Review").appendChild(createVenueReviewDiv(venue, date, times));

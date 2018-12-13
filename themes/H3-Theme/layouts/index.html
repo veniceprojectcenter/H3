@@ -26,8 +26,10 @@
                 <!-- Events Section -->
                 <div id="events-section" class="section">
                     <h2>Upcoming Events</h2>
+                    <!-- a single Bootstrap row for all cards -->
                     <div class="fade-container row card-group">
                         {{ range .Params.events }}
+                            <!-- cards have an overlay on hover -->
                             <div class="overlay-container fade-card my-card col shift-card-mild">
                                 <a href="events" onclick="updatePage(/events/)">
                                     <div class="overlay">
@@ -43,15 +45,16 @@
                                 </a>
                             </div>
                         {{ end }}
-
                     </div>
                 </div>
 
                 <!-- Spaces Section -->
                 <div id="spaces-section" class="section">
                     <h2>Spaces</h2>
+                    <!-- a single Bootstrap row for all cards -->
                     <div class="fade-container row card-group">
                         {{ range .Params.spaces }}
+                            <!-- cards have an overlay on hover -->
                             <div class="overlay-container fade-card my-card col shift-card-mild">
                                 <a href="events" onclick="updatePage(/events/)">
                                     <div class="overlay">
@@ -87,6 +90,7 @@
                 <!-- SerenDPT Section -->
                 <div class="section">
                     <h2>SerenDPT</h2>
+                    <!-- a single Bootstrap row for all cards -->
                     <div id="goal-container" class="fade-container row card-group">
                         <div id="company-card" class="fade-card col shift-card-mild">
                             <a href="https://new.serendpt.net/startup/" target="_blank">

@@ -1,6 +1,7 @@
 {{ define "main" }}
     <div class="pad-top">
         <h1 class="title">{{ .Title }}</h1>
+        <!-- the login page that is seperate from the login drawer on the navigation bar -->
         <div id="login-panex" class="content">
             <label>Email:</label> <input id="login-email" type="email" placeholder="Email"> <br>
             <label>Password:</label> <input id="login-password" type="password" placeholder="Password"> <br>
@@ -8,6 +9,7 @@
             <!--<br>
             <br>
             New user? Register <a href="../register">here</a>.-->
+            <!-- DANGER: Registered users automatically get added without approval! -->
         </div>
     </div>
 {{end}}

@@ -1,5 +1,5 @@
 
-// Companies
+// Companies Page overlay
 // https://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_slide_toggle
 $(document).ready(function() {
     $("#flip").hover(function() {
@@ -7,7 +7,10 @@ $(document).ready(function() {
     });
 });
 
+
+
 // Barba.js
+// fade between page loads
 var FadeTransition = Barba.BaseTransition.extend({
     start: function() {
         Promise.all([this.newContainerLoading, this.fadeOut()]).then(this.fadeIn.bind(this));
@@ -48,6 +51,7 @@ Barba.Pjax.getTransition = function() {
 var loadPage = Barba.BaseView.extend({
     namespace: 'page',
     onEnterCompleted: function() {
+        // destroy and add a new scroll magic controller after getting new IDs
         controller = controller.destroy(true);
         controller = new ScrollMagic.Controller({addIndicators: false});
         addScrollMagic();
@@ -65,8 +69,6 @@ $(document).ready(function() {
 });
 
 
-//var controller = new ScrollMagic.Controller({addIndicators: true});
-//addScrollMagic();
 
 
 
@@ -76,12 +78,14 @@ $(document).ready(function() {
 
 
 
+/*
+ *  SCROLL MAGIC
+ */
 
-// SCROLL MAGIC
 
-//var controller = new ScrollMagic.Controller({addIndicators: true});
-//addScrollMagic();
-
+/*
+ *  addScrollMagic() - add each effect to all classes on the page
+ */
 function addScrollMagic() {
     addFade();
     addPin();
@@ -121,6 +125,7 @@ function addPin() {
 
 function addParallax() {
     $('.parallax').each(function(){
+        // have a timeline to fade and parallax at same time
         var parallaxTl = new TimelineMax();
         parallaxTl.from('.parallax-text', 0.2, {autoAlpha: 0, ease:Power0.easeNone}, 0.1)
             .from('.parallax-image', 1, {y: '-30%', ease:Power0.easeNone}, 0);

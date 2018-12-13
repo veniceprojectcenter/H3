@@ -17,6 +17,7 @@
         <!-- The images that rotate around the carousel -->
         <div class="carousel-inner">
             {{ range $index, $element := .Params.events }}
+                <!-- add the active class to the first item in the carousel -->
                 {{ if eq $index 0 }}
                     <div class="carousel-item active">
                         <img class="d-block carousel-image" src="/img/{{ .carousel }}"  alt="">
